@@ -1,0 +1,2879 @@
+{
+  "lastUpdated": "2025-07-27T19:06:33.213Z",
+  "account": {
+    "accountId": "SCHWAB_REAL_ACCOUNT",
+    "accountType": "BROKERAGE",
+    "accountName": "Charles Schwab Brokerage",
+    "currentBalance": 200757.69999999998,
+    "availableCash": 0,
+    "totalSecurities": 200757.69999999998,
+    "dayChange": 0,
+    "dayChangePercent": 0,
+    "totalReturn": 91750.70999999999,
+    "totalReturnPercent": 84.16956563978145,
+    "positions": [
+      {
+        "symbol": "IVV",
+        "description": "ISHARES CORE S&P 500 ETF",
+        "quantity": 73,
+        "marketValue": 46724.38,
+        "averageCost": 640.06,
+        "totalCost": 31967.16,
+        "unrealizedGainLoss": 14757.22,
+        "unrealizedGainLossPercent": 46.16,
+        "dayChange": 181.04,
+        "dayChangePercent": 0.39
+      },
+      {
+        "symbol": "QQQ",
+        "description": "INVESCO QQQ ETF",
+        "quantity": 171,
+        "marketValue": 96849.27,
+        "averageCost": 566.37,
+        "totalCost": 86178.85,
+        "unrealizedGainLoss": 10670.42,
+        "unrealizedGainLossPercent": 12.38,
+        "dayChange": 232.56,
+        "dayChangePercent": 0.24
+      },
+      {
+        "symbol": "VTI",
+        "description": "VANGUARD TOTAL STOCK MARKET ETF",
+        "quantity": 159,
+        "marketValue": 49876.71,
+        "averageCost": 313.69,
+        "totalCost": 34617.31,
+        "unrealizedGainLoss": 15259.4,
+        "unrealizedGainLossPercent": 44.08,
+        "dayChange": 221.01,
+        "dayChangePercent": 0.45
+      },
+      {
+        "symbol": "Cash & Cash Investments",
+        "description": "--",
+        "quantity": 0,
+        "marketValue": 7307.34,
+        "averageCost": 0,
+        "totalCost": 0,
+        "unrealizedGainLoss": 0,
+        "unrealizedGainLossPercent": 0,
+        "dayChange": 0,
+        "dayChangePercent": 0
+      }
+    ]
+  },
+  "performance": {
+    "accountId": "SCHWAB_REAL_ACCOUNT",
+    "timeSeriesData": [
+      {
+        "date": "2021-11-30",
+        "accountValue": 78527.13,
+        "deposits": 78527.13,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": 0,
+        "spyValue": 78527.13,
+        "largeFees": []
+      },
+      {
+        "date": "2021-12-31",
+        "accountValue": 79858.41,
+        "deposits": 78527.13,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": 1331.2799999999988,
+        "spyValue": 78979.3255534343,
+        "largeFees": []
+      },
+      {
+        "date": "2022-01-31",
+        "accountValue": 72398.4,
+        "deposits": 78527.13,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": -6128.7300000000105,
+        "spyValue": 79434.12505812144,
+        "largeFees": []
+      },
+      {
+        "date": "2022-02-28",
+        "accountValue": 69057.08,
+        "deposits": 78527.13,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": -9470.050000000003,
+        "spyValue": 79847.16232999087,
+        "largeFees": []
+      },
+      {
+        "date": "2022-03-31",
+        "accountValue": 71655.94,
+        "deposits": 78527.13,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": -6871.190000000002,
+        "spyValue": 80306.95924043402,
+        "largeFees": []
+      },
+      {
+        "date": "2022-04-30",
+        "accountValue": 62477.2,
+        "deposits": 78527.13,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": -16049.930000000008,
+        "spyValue": 80754.4448219345,
+        "largeFees": []
+      },
+      {
+        "date": "2022-05-31",
+        "accountValue": 60761.32,
+        "deposits": 78527.13,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": -17765.810000000005,
+        "spyValue": 81219.46628481662,
+        "largeFees": []
+      },
+      {
+        "date": "2022-06-30",
+        "accountValue": 55614.44,
+        "deposits": 78527.13,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": -22912.690000000002,
+        "spyValue": 81672.03652833446,
+        "largeFees": []
+      },
+      {
+        "date": "2022-07-31",
+        "accountValue": 62899.05,
+        "deposits": 78527.13,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": -15628.080000000002,
+        "spyValue": 82142.34190888301,
+        "largeFees": []
+      },
+      {
+        "date": "2022-08-31",
+        "accountValue": 61645.44,
+        "deposits": 79527.13,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": -17881.690000000002,
+        "spyValue": 82615.35552544935,
+        "largeFees": []
+      },
+      {
+        "date": "2022-09-30",
+        "accountValue": 56849.93,
+        "deposits": 80527.13,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": -23677.200000000004,
+        "spyValue": 83075.70392810139,
+        "largeFees": []
+      },
+      {
+        "date": "2022-10-31",
+        "accountValue": 62603.57,
+        "deposits": 81527.13,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": -18923.560000000005,
+        "spyValue": 83554.0922750932,
+        "largeFees": []
+      },
+      {
+        "date": "2022-11-30",
+        "accountValue": 67016.88,
+        "deposits": 82527.13,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": -15510.25,
+        "spyValue": 84019.67149664639,
+        "largeFees": []
+      },
+      {
+        "date": "2022-12-31",
+        "accountValue": 64193.12,
+        "deposits": 83527.13,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": -19334.010000000002,
+        "spyValue": 84503.49564572447,
+        "largeFees": []
+      },
+      {
+        "date": "2023-01-31",
+        "accountValue": 69252.85,
+        "deposits": 84527.13,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": -15274.279999999999,
+        "spyValue": 84990.10587814542,
+        "largeFees": []
+      },
+      {
+        "date": "2023-02-28",
+        "accountValue": 68574.85,
+        "deposits": 85527.13,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": -16952.28,
+        "spyValue": 85432.03283890843,
+        "largeFees": []
+      },
+      {
+        "date": "2023-03-31",
+        "accountValue": 72348.9,
+        "deposits": 86527.13,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": -14178.23000000001,
+        "spyValue": 85923.99001817382,
+        "largeFees": []
+      },
+      {
+        "date": "2023-04-30",
+        "accountValue": 74339.04,
+        "deposits": 87527.13,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": -13188.090000000011,
+        "spyValue": 86402.77475864704,
+        "largeFees": []
+      },
+      {
+        "date": "2023-05-31",
+        "accountValue": 76198.35,
+        "deposits": 88527.13,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": -12328.779999999999,
+        "spyValue": 86900.32191910285,
+        "largeFees": []
+      },
+      {
+        "date": "2023-06-30",
+        "accountValue": 81300,
+        "deposits": 89527.13,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": -8227.130000000005,
+        "spyValue": 87384.54696577812,
+        "largeFees": []
+      },
+      {
+        "date": "2023-07-31",
+        "accountValue": 85322.96,
+        "deposits": 90527.13,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": -5204.169999999998,
+        "spyValue": 87887.74762492352,
+        "largeFees": []
+      },
+      {
+        "date": "2023-08-31",
+        "accountValue": 84823.34,
+        "deposits": 91527.13,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": -6703.790000000008,
+        "spyValue": 88393.84594632333,
+        "largeFees": []
+      },
+      {
+        "date": "2023-09-30",
+        "accountValue": 77749.15,
+        "deposits": 95534.12000000001,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": -17784.970000000016,
+        "spyValue": 88886.39319164897,
+        "largeFees": [
+          {
+            "amount": 4000,
+            "date": "2023-09-22",
+            "description": "Advisor Fee MGMTFEE TO ADVISOR"
+          }
+        ]
+      },
+      {
+        "date": "2023-10-31",
+        "accountValue": 77157.9,
+        "deposits": 96534.12000000001,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": -19376.220000000016,
+        "spyValue": 89398.24217635115,
+        "largeFees": []
+      },
+      {
+        "date": "2023-11-30",
+        "accountValue": 85247.68,
+        "deposits": 97534.12000000001,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": -12286.440000000017,
+        "spyValue": 89896.38610763405,
+        "largeFees": []
+      },
+      {
+        "date": "2023-12-31",
+        "accountValue": 90137.44,
+        "deposits": 98534.12000000001,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": -8396.680000000008,
+        "spyValue": 90414.05109892668,
+        "largeFees": []
+      },
+      {
+        "date": "2024-01-31",
+        "accountValue": 92268.22,
+        "deposits": 99534.12000000001,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": -7265.900000000009,
+        "spyValue": 90934.69704479171,
+        "largeFees": []
+      },
+      {
+        "date": "2024-02-29",
+        "accountValue": 97551.78,
+        "deposits": 100534.12000000001,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": -2982.340000000011,
+        "spyValue": 91424.46681322342,
+        "largeFees": []
+      },
+      {
+        "date": "2024-03-31",
+        "accountValue": 101039.51,
+        "deposits": 101534.12000000001,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": -494.61000000001513,
+        "spyValue": 91950.93120034722,
+        "largeFees": []
+      },
+      {
+        "date": "2024-04-30",
+        "accountValue": 98631.97,
+        "deposits": 102534.12000000001,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": -3902.1500000000087,
+        "spyValue": 92463.29919817549,
+        "largeFees": []
+      },
+      {
+        "date": "2024-05-31",
+        "accountValue": 103387.53,
+        "deposits": 103534.12000000001,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": -146.59000000001106,
+        "spyValue": 92995.74566289768,
+        "largeFees": []
+      },
+      {
+        "date": "2024-06-30",
+        "accountValue": 107093.1,
+        "deposits": 104534.12000000001,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": 2558.979999999996,
+        "spyValue": 93513.93556472726,
+        "largeFees": []
+      },
+      {
+        "date": "2024-07-31",
+        "accountValue": 109611.24,
+        "deposits": 105534.12000000001,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": 4077.1199999999953,
+        "spyValue": 94052.43207983626,
+        "largeFees": []
+      },
+      {
+        "date": "2024-08-31",
+        "accountValue": 113297.14,
+        "deposits": 106534.12000000001,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": 6763.0199999999895,
+        "spyValue": 94594.0295070717,
+        "largeFees": []
+      },
+      {
+        "date": "2024-09-30",
+        "accountValue": 116369.13,
+        "deposits": 107534.12000000001,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": 8835.009999999995,
+        "spyValue": 95121.12534908601,
+        "largeFees": []
+      },
+      {
+        "date": "2024-10-31",
+        "accountValue": 214681.8,
+        "deposits": 208534.12,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": 6147.679999999993,
+        "spyValue": 95668.87680670993,
+        "largeFees": []
+      },
+      {
+        "date": "2024-11-30",
+        "accountValue": 196585.91,
+        "deposits": 179534.12,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": 17051.790000000008,
+        "spyValue": 96201.96190137995,
+        "largeFees": []
+      },
+      {
+        "date": "2024-12-31",
+        "accountValue": 191091.66,
+        "deposits": 180534.12,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": 10557.540000000008,
+        "spyValue": 96755.93731603549,
+        "largeFees": []
+      },
+      {
+        "date": "2025-01-31",
+        "accountValue": 193708.59,
+        "deposits": 181534.12,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": 12174.470000000001,
+        "spyValue": 97313.10277748402,
+        "largeFees": [
+          {
+            "amount": 3300,
+            "date": "2025-01-08",
+            "description": "Advisor Fee MGMTFEE TO ADVISOR"
+          }
+        ]
+      },
+      {
+        "date": "2025-02-28",
+        "accountValue": 191057.8,
+        "deposits": 182534.12,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": 8523.679999999993,
+        "spyValue": 97819.1061917465,
+        "largeFees": []
+      },
+      {
+        "date": "2025-03-31",
+        "accountValue": 181978.22,
+        "deposits": 183534.12,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": -1555.8999999999942,
+        "spyValue": 98382.39387156906,
+        "largeFees": []
+      },
+      {
+        "date": "2025-04-30",
+        "accountValue": 181123.78,
+        "deposits": 184534.12,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": -3410.3399999999965,
+        "spyValue": 98930.59919707791,
+        "largeFees": []
+      },
+      {
+        "date": "2025-05-31",
+        "accountValue": 192685.18,
+        "deposits": 185534.12,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": 7151.059999999998,
+        "spyValue": 99500.28736797514,
+        "largeFees": []
+      },
+      {
+        "date": "2025-06-30",
+        "accountValue": 194385.84,
+        "deposits": 186534.12,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": 7851.720000000001,
+        "spyValue": 100054.7218076981,
+        "largeFees": [
+          {
+            "amount": 9500,
+            "date": "2025-06-17",
+            "description": "Advisor Fee MGMTFEE TO ADVISOR"
+          }
+        ]
+      },
+      {
+        "date": "2025-07-27",
+        "accountValue": 200757.69999999998,
+        "deposits": 187534.12,
+        "withdrawals": 0,
+        "fees": 0,
+        "netReturn": 13223.579999999987,
+        "spyValue": 100571.18477231108,
+        "largeFees": []
+      }
+    ],
+    "totalReturn": 91750.70999999999,
+    "totalReturnPercent": 84.16956563978145,
+    "annualizedReturn": 18.202838255954102,
+    "deposits": 139506.99,
+    "withdrawals": 30500,
+    "fees": 20664.489999999998,
+    "netContributions": 109006.98999999999,
+    "realReturn": 91750.70999999999,
+    "realReturnPercent": 84.16956563978145,
+    "benchmarkComparison": {
+      "sp500Return": 45379.56123018807,
+      "sp500ReturnPercent": 41.62995531771685,
+      "outperformance": 42.539610322064604,
+      "outperformancePercent": 42.539610322064604
+    }
+  },
+  "transactions": [
+    {
+      "id": "2021-12-02_347",
+      "date": "2021-12-02",
+      "description": "Sell TDA TRAN - Sold 1 (VIGAX) @159.4200",
+      "amount": 135.42,
+      "type": "SELL",
+      "symbol": "VIGAX",
+      "quantity": 1,
+      "price": 159.42,
+      "fees": 24,
+      "netAmount": 111.41999999999999
+    },
+    {
+      "id": "2021-12-27_345",
+      "date": "2021-12-27",
+      "description": "Cash Dividend TDA TRAN - ORDINARY DIVIDEND (VIGAX)",
+      "amount": 114.51,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 114.51
+    },
+    {
+      "id": "2022-02-03_343",
+      "date": "2022-02-03",
+      "description": "MoneyLink Transfer TDA TRAN - RECURRING ELECTRONIC FUNDING",
+      "amount": 500,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 500
+    },
+    {
+      "id": "2022-02-07_341",
+      "date": "2022-02-07",
+      "description": "MoneyLink Transfer TDA TRAN - RECURRING ELECTRONIC FUNDING",
+      "amount": -500,
+      "type": "WITHDRAWAL",
+      "fees": 0,
+      "netAmount": -500
+    },
+    {
+      "id": "2022-03-23_339",
+      "date": "2022-03-23",
+      "description": "Cash Dividend TDA TRAN - ORDINARY DIVIDEND (VIGAX)",
+      "amount": 72.86,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 72.86
+    },
+    {
+      "id": "2022-06-23_337",
+      "date": "2022-06-23",
+      "description": "Cash Dividend TDA TRAN - ORDINARY DIVIDEND (VIGAX)",
+      "amount": 78.06,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 78.06
+    },
+    {
+      "id": "2022-08-16_330",
+      "date": "2022-08-16",
+      "description": "Sell TDA TRAN - Sold 484.027 (VIGAX) @136.9600",
+      "amount": 66268.34,
+      "type": "SELL",
+      "symbol": "VIGAX",
+      "quantity": 484.027,
+      "price": 136.96,
+      "fees": 24,
+      "netAmount": 66244.34
+    },
+    {
+      "id": "2022-08-16_331",
+      "date": "2022-08-16",
+      "description": "Buy TDA TRAN - Bought 50 (DIA) @342.5187",
+      "amount": -17125.94,
+      "type": "BUY",
+      "symbol": "DIA",
+      "quantity": 50,
+      "price": 342.5187,
+      "fees": 0,
+      "netAmount": -17125.94
+    },
+    {
+      "id": "2022-08-16_332",
+      "date": "2022-08-16",
+      "description": "Buy TDA TRAN - Bought 50 (QQQ) @333.3100",
+      "amount": -16665.5,
+      "type": "BUY",
+      "symbol": "QQQ",
+      "quantity": 50,
+      "price": 333.31,
+      "fees": 0,
+      "netAmount": -16665.5
+    },
+    {
+      "id": "2022-08-16_333",
+      "date": "2022-08-16",
+      "description": "Buy TDA TRAN - Bought 35 (IVV) @433.1650",
+      "amount": -15160.78,
+      "type": "BUY",
+      "symbol": "IVV",
+      "quantity": 35,
+      "price": 433.165,
+      "fees": 0,
+      "netAmount": -15160.78
+    },
+    {
+      "id": "2022-08-16_334",
+      "date": "2022-08-16",
+      "description": "Buy TDA TRAN - Bought 75 (VTI) @216.7300",
+      "amount": -16254.75,
+      "type": "BUY",
+      "symbol": "VTI",
+      "quantity": 75,
+      "price": 216.73,
+      "fees": 0,
+      "netAmount": -16254.75
+    },
+    {
+      "id": "2022-08-24_327",
+      "date": "2022-08-24",
+      "description": "MoneyLink Transfer TDA TRAN - RECURRING ELECTRONIC FUNDING",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2022-08-25_325",
+      "date": "2022-08-25",
+      "description": "Buy TDA TRAN - Bought 3 (IVV) @419.7750",
+      "amount": -1259.33,
+      "type": "BUY",
+      "symbol": "IVV",
+      "quantity": 3,
+      "price": 419.775,
+      "fees": 0,
+      "netAmount": -1259.33
+    },
+    {
+      "id": "2022-08-29_323",
+      "date": "2022-08-29",
+      "description": "Buy TDA TRAN - Bought 1 (VTI) @202.2650",
+      "amount": -202.27,
+      "type": "BUY",
+      "symbol": "VTI",
+      "quantity": 1,
+      "price": 202.265,
+      "fees": 0,
+      "netAmount": -202.27
+    },
+    {
+      "id": "2022-09-12_318",
+      "date": "2022-09-12",
+      "description": "Cash Dividend TDA TRAN - ORDINARY DIVIDEND (DIA)",
+      "amount": 32.81,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 32.81
+    },
+    {
+      "id": "2022-09-26_316",
+      "date": "2022-09-26",
+      "description": "MoneyLink Transfer TDA TRAN - RECURRING ELECTRONIC FUNDING",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2022-09-28_314",
+      "date": "2022-09-28",
+      "description": "Cash Dividend TDA TRAN - ORDINARY DIVIDEND (VTI)",
+      "amount": 60.46,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 60.46
+    },
+    {
+      "id": "2022-09-30_312",
+      "date": "2022-09-30",
+      "description": "Cash Dividend TDA TRAN - ORDINARY DIVIDEND (IVV)",
+      "amount": 72.42,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 72.42
+    },
+    {
+      "id": "2022-10-07_307",
+      "date": "2022-10-07",
+      "description": "Buy TDA TRAN - Bought 7 (GLD) @158.1000",
+      "amount": -1106.7,
+      "type": "BUY",
+      "symbol": "GLD",
+      "quantity": 7,
+      "price": 158.1,
+      "fees": 0,
+      "netAmount": -1106.7
+    },
+    {
+      "id": "2022-10-17_305",
+      "date": "2022-10-17",
+      "description": "Cash Dividend TDA TRAN - ORDINARY DIVIDEND (DIA)",
+      "amount": 41.16,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 41.16
+    },
+    {
+      "id": "2022-10-24_303",
+      "date": "2022-10-24",
+      "description": "MoneyLink Transfer TDA TRAN - RECURRING ELECTRONIC FUNDING",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2022-10-26_301",
+      "date": "2022-10-26",
+      "description": "Buy TDA TRAN - Bought 23 (VTEB) @47.4750",
+      "amount": -1091.93,
+      "type": "BUY",
+      "symbol": "VTEB",
+      "quantity": 23,
+      "price": 47.475,
+      "fees": 0,
+      "netAmount": -1091.93
+    },
+    {
+      "id": "2022-10-31_299",
+      "date": "2022-10-31",
+      "description": "Cash Dividend TDA TRAN - ORDINARY DIVIDEND (QQQ)",
+      "amount": 25.93,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 25.93
+    },
+    {
+      "id": "2022-11-14_292",
+      "date": "2022-11-14",
+      "description": "Cash Dividend TDA TRAN - ORDINARY DIVIDEND (DIA)",
+      "amount": 9.1,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 9.1
+    },
+    {
+      "id": "2022-11-25_290",
+      "date": "2022-11-25",
+      "description": "MoneyLink Transfer TDA TRAN - RECURRING ELECTRONIC FUNDING",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2022-12-12_283",
+      "date": "2022-12-12",
+      "description": "Cash Dividend TDA TRAN - ORDINARY DIVIDEND (DIA)",
+      "amount": 34.05,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 34.05
+    },
+    {
+      "id": "2022-12-19_281",
+      "date": "2022-12-19",
+      "description": "Cash Dividend TDA TRAN - ORDINARY DIVIDEND (IVV)",
+      "amount": 65.5,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 65.5
+    },
+    {
+      "id": "2022-12-27_279",
+      "date": "2022-12-27",
+      "description": "MoneyLink Transfer TDA TRAN - RECURRING ELECTRONIC FUNDING",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2022-12-28_278",
+      "date": "2022-12-28",
+      "description": "Cash Dividend TDA TRAN - ORDINARY DIVIDEND (VTI)",
+      "amount": 70.72,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 70.72
+    },
+    {
+      "id": "2022-12-30_274",
+      "date": "2022-12-30",
+      "description": "Cash Dividend TDA TRAN - ORDINARY DIVIDEND (QQQ)",
+      "amount": 32.77,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 32.77
+    },
+    {
+      "id": "2023-01-04_268",
+      "date": "2023-01-04",
+      "description": "Buy TDA TRAN - Bought 8 (IVV) @387.1850",
+      "amount": -3097.48,
+      "type": "BUY",
+      "symbol": "IVV",
+      "quantity": 8,
+      "price": 387.185,
+      "fees": 0,
+      "netAmount": -3097.48
+    },
+    {
+      "id": "2023-01-04_269",
+      "date": "2023-01-04",
+      "description": "Sell TDA TRAN - Sold 7 (GLD) @172.9500",
+      "amount": 1210.62,
+      "type": "SELL",
+      "symbol": "GLD",
+      "quantity": 7,
+      "price": 172.95,
+      "fees": 0.03,
+      "netAmount": 1210.59
+    },
+    {
+      "id": "2023-01-05_267",
+      "date": "2023-01-05",
+      "description": "Buy TDA TRAN - Bought 1 (VTI) @189.9700",
+      "amount": -189.97,
+      "type": "BUY",
+      "symbol": "VTI",
+      "quantity": 1,
+      "price": 189.97,
+      "fees": 0,
+      "netAmount": -189.97
+    },
+    {
+      "id": "2023-01-17_264",
+      "date": "2023-01-17",
+      "description": "Cash Dividend TDA TRAN - ORDINARY DIVIDEND (DIA)",
+      "amount": 37.52,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 37.52
+    },
+    {
+      "id": "2023-01-24_262",
+      "date": "2023-01-24",
+      "description": "MoneyLink Transfer TDA TRAN - RECURRING ELECTRONIC FUNDING",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2023-02-13_255",
+      "date": "2023-02-13",
+      "description": "Cash Dividend TDA TRAN - ORDINARY DIVIDEND (DIA)",
+      "amount": 14.02,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 14.02
+    },
+    {
+      "id": "2023-02-24_253",
+      "date": "2023-02-24",
+      "description": "MoneyLink Transfer TDA TRAN - RECURRING ELECTRONIC FUNDING",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2023-03-13_246",
+      "date": "2023-03-13",
+      "description": "Cash Dividend TDA TRAN - ORDINARY DIVIDEND (DIA)",
+      "amount": 27.61,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 27.61
+    },
+    {
+      "id": "2023-03-24_244",
+      "date": "2023-03-24",
+      "description": "MoneyLink Transfer TDA TRAN - RECURRING ELECTRONIC FUNDING",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2023-03-28_242",
+      "date": "2023-03-28",
+      "description": "Cash Dividend TDA TRAN - ORDINARY DIVIDEND (VTI)",
+      "amount": 60.54,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 60.54
+    },
+    {
+      "id": "2023-03-29_241",
+      "date": "2023-03-29",
+      "description": "Cash Dividend TDA TRAN - ORDINARY DIVIDEND (IVV)",
+      "amount": 75.8,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 75.8
+    },
+    {
+      "id": "2023-04-17_234",
+      "date": "2023-04-17",
+      "description": "Cash Dividend TDA TRAN - ORDINARY DIVIDEND (DIA)",
+      "amount": 42.9,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 42.9
+    },
+    {
+      "id": "2023-04-24_232",
+      "date": "2023-04-24",
+      "description": "MoneyLink Transfer TDA TRAN - RECURRING ELECTRONIC FUNDING",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2023-04-28_230",
+      "date": "2023-04-28",
+      "description": "Cash Dividend TDA TRAN - ORDINARY DIVIDEND (QQQ)",
+      "amount": 23.61,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 23.61
+    },
+    {
+      "id": "2023-05-10_223",
+      "date": "2023-05-10",
+      "description": "Buy TDA TRAN - Bought 20 (VTI) @204.1650",
+      "amount": -4083.3,
+      "type": "BUY",
+      "symbol": "VTI",
+      "quantity": 20,
+      "price": 204.165,
+      "fees": 0,
+      "netAmount": -4083.3
+    },
+    {
+      "id": "2023-05-15_221",
+      "date": "2023-05-15",
+      "description": "Cash Dividend TDA TRAN - ORDINARY DIVIDEND (DIA)",
+      "amount": 9.22,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 9.22
+    },
+    {
+      "id": "2023-05-24_219",
+      "date": "2023-05-24",
+      "description": "MoneyLink Transfer TDA TRAN - RECURRING ELECTRONIC FUNDING",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2023-06-12_212",
+      "date": "2023-06-12",
+      "description": "Cash Dividend TDA TRAN - ORDINARY DIVIDEND (DIA)",
+      "amount": 36.3,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 36.3
+    },
+    {
+      "id": "2023-06-13_210",
+      "date": "2023-06-13",
+      "description": "Cash Dividend TDA TRAN - ORDINARY DIVIDEND (IVV)",
+      "amount": 61.57,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 61.57
+    },
+    {
+      "id": "2023-06-26_207",
+      "date": "2023-06-26",
+      "description": "Sell TDA TRAN - Sold 50 (DIA) @337.8200",
+      "amount": 16890.85,
+      "type": "SELL",
+      "symbol": "DIA",
+      "quantity": 50,
+      "price": 337.82,
+      "fees": 0.15,
+      "netAmount": 16890.699999999997
+    },
+    {
+      "id": "2023-06-26_208",
+      "date": "2023-06-26",
+      "description": "MoneyLink Transfer TDA TRAN - RECURRING ELECTRONIC FUNDING",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2023-06-28_205",
+      "date": "2023-06-28",
+      "description": "Cash Dividend TDA TRAN - ORDINARY DIVIDEND (VTI)",
+      "amount": 80.17,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 80.17
+    },
+    {
+      "id": "2023-06-29_203",
+      "date": "2023-06-29",
+      "description": "Sell TDA TRAN - Sold 23 (VTEB) @50.1200",
+      "amount": 1152.75,
+      "type": "SELL",
+      "symbol": "VTEB",
+      "quantity": 23,
+      "price": 50.12,
+      "fees": 0.01,
+      "netAmount": 1152.74
+    },
+    {
+      "id": "2023-07-10_198",
+      "date": "2023-07-10",
+      "description": "Buy TDA TRAN - Bought 45 (IVV) @441.2550",
+      "amount": -19856.48,
+      "type": "BUY",
+      "symbol": "IVV",
+      "quantity": 45,
+      "price": 441.255,
+      "fees": 0,
+      "netAmount": -19856.48
+    },
+    {
+      "id": "2023-07-17_196",
+      "date": "2023-07-17",
+      "description": "Cash Dividend TDA TRAN - ORDINARY DIVIDEND (DIA)",
+      "amount": 38.79,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 38.79
+    },
+    {
+      "id": "2023-07-24_194",
+      "date": "2023-07-24",
+      "description": "MoneyLink Transfer TDA TRAN - RECURRING ELECTRONIC FUNDING",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2023-07-31_192",
+      "date": "2023-07-31",
+      "description": "Cash Dividend TDA TRAN - ORDINARY DIVIDEND (QQQ)",
+      "amount": 25.2,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 25.2
+    },
+    {
+      "id": "2023-08-24_187",
+      "date": "2023-08-24",
+      "description": "MoneyLink Transfer TDA TRAN - RECURRING ELECTRONIC FUNDING",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2023-09-01_184",
+      "date": "2023-09-01",
+      "description": "Bond Interest TDA TRAN - OFF-CYCLE INTEREST (MMDA12)",
+      "amount": 0.12,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 0.12
+    },
+    {
+      "id": "2023-09-05_179",
+      "date": "2023-09-05",
+      "description": "Internal Transfer VANGUARD TOTAL STOCK MARKET ETF",
+      "amount": 0,
+      "type": "WITHDRAWAL",
+      "symbol": "VTI",
+      "quantity": 97,
+      "fees": 0,
+      "netAmount": 0
+    },
+    {
+      "id": "2023-09-05_180",
+      "date": "2023-09-05",
+      "description": "Internal Transfer INVSC QQQ TRUST SRS 1 ETF IV",
+      "amount": 0,
+      "type": "WITHDRAWAL",
+      "symbol": "QQQ",
+      "quantity": 50,
+      "fees": 0,
+      "netAmount": 0
+    },
+    {
+      "id": "2023-09-05_181",
+      "date": "2023-09-05",
+      "description": "Internal Transfer ISHARES CORE S&P ...500 ETF",
+      "amount": 0,
+      "type": "WITHDRAWAL",
+      "symbol": "IVV",
+      "quantity": 91,
+      "fees": 0,
+      "netAmount": 0
+    },
+    {
+      "id": "2023-09-05_182",
+      "date": "2023-09-05",
+      "description": "Internal Transfer TDA TO CS&CO TRANSFER",
+      "amount": 3006.99,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 3006.99
+    },
+    {
+      "id": "2023-09-11_174",
+      "date": "2023-09-11",
+      "description": "Advisor Fee MGMTFEE TO ADVISOR",
+      "amount": -106.03,
+      "type": "FEE",
+      "fees": 0,
+      "netAmount": -106.03
+    },
+    {
+      "id": "2023-09-15_173",
+      "date": "2023-09-15",
+      "description": "Buy SCHWAB VALUE ADVANTAGE MONEY INV",
+      "amount": -2064.63,
+      "type": "BUY",
+      "symbol": "SWVXX",
+      "quantity": 2,
+      "price": 1,
+      "fees": 0,
+      "netAmount": -2064.63
+    },
+    {
+      "id": "2023-09-18_171",
+      "date": "2023-09-18",
+      "description": "Sell ISHARES CORE S&P ...500 ETF",
+      "amount": 4039.82,
+      "type": "SELL",
+      "symbol": "IVV",
+      "quantity": 9,
+      "price": 448.872,
+      "fees": 0.03,
+      "netAmount": 4039.79
+    },
+    {
+      "id": "2023-09-18_172",
+      "date": "2023-09-18",
+      "description": "Bank Interest BANK INT ...523 TD BANK NA",
+      "amount": 0.4,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 0.4
+    },
+    {
+      "id": "2023-09-22_170",
+      "date": "2023-09-22",
+      "description": "Advisor Fee MGMTFEE TO ADVISOR",
+      "amount": -4000,
+      "type": "FEE",
+      "fees": 0,
+      "netAmount": -4000
+    },
+    {
+      "id": "2023-09-25_169",
+      "date": "2023-09-25",
+      "description": "MoneyLink Transfer Tfr CAPITAL ONE NATION, RICHARD SARVATE",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2023-09-26_168",
+      "date": "2023-09-26",
+      "description": "Cash Dividend VANGUARD TOTAL STOCK MARKET ETF",
+      "amount": 77.44,
+      "type": "DIVIDEND",
+      "symbol": "VTI",
+      "fees": 0,
+      "netAmount": 77.44
+    },
+    {
+      "id": "2023-10-02_166",
+      "date": "2023-10-02",
+      "description": "Advisor Fee MGMTFEE TO ADVISOR",
+      "amount": -97.19,
+      "type": "FEE",
+      "fees": 0,
+      "netAmount": -97.19
+    },
+    {
+      "id": "2023-10-02_167",
+      "date": "2023-10-02",
+      "description": "Cash Dividend ISHARES CORE S&P ...500 ETF",
+      "amount": 162.93,
+      "type": "DIVIDEND",
+      "symbol": "IVV",
+      "fees": 0,
+      "netAmount": 162.93
+    },
+    {
+      "id": "2023-10-16_163",
+      "date": "2023-10-16",
+      "description": "Reinvest Dividend SCHWAB VALUE ADVANTAGE MONEY INV",
+      "amount": 8.66,
+      "type": "DIVIDEND",
+      "symbol": "SWVXX",
+      "fees": 0,
+      "netAmount": 8.66
+    },
+    {
+      "id": "2023-10-16_165",
+      "date": "2023-10-16",
+      "description": "Bank Interest BANK INT ...523 TD BANK NA",
+      "amount": 0.89,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 0.89
+    },
+    {
+      "id": "2023-10-25_162",
+      "date": "2023-10-25",
+      "description": "MoneyLink Transfer Tfr CAPITAL ONE NATION, RICHARD SARVATE",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2023-10-31_161",
+      "date": "2023-10-31",
+      "description": "Cash Dividend INVSC QQQ TRUST SRS 1 ETF IV",
+      "amount": 26.78,
+      "type": "DIVIDEND",
+      "symbol": "QQQ",
+      "fees": 0,
+      "netAmount": 26.78
+    },
+    {
+      "id": "2023-11-01_160",
+      "date": "2023-11-01",
+      "description": "Advisor Fee MGMTFEE TO ADVISOR",
+      "amount": -95.89,
+      "type": "FEE",
+      "fees": 0,
+      "netAmount": -95.89
+    },
+    {
+      "id": "2023-11-14_157",
+      "date": "2023-11-14",
+      "description": "Buy VANGUARD TOTAL STOCK MARKET ETF",
+      "amount": -11551.96,
+      "type": "BUY",
+      "symbol": "VTI",
+      "quantity": 52,
+      "price": 222.153,
+      "fees": 0,
+      "netAmount": -11551.96
+    },
+    {
+      "id": "2023-11-14_158",
+      "date": "2023-11-14",
+      "description": "Buy ISHARES CORE S&P ...500 ETF",
+      "amount": -9463.86,
+      "type": "BUY",
+      "symbol": "IVV",
+      "quantity": 21,
+      "price": 450.66,
+      "fees": 0,
+      "netAmount": -9463.86
+    },
+    {
+      "id": "2023-11-14_159",
+      "date": "2023-11-14",
+      "description": "Sell INVSC QQQ TRUST SRS 1 ETF IV",
+      "amount": 19294.64,
+      "type": "SELL",
+      "symbol": "QQQ",
+      "quantity": 50,
+      "price": 385.8959,
+      "fees": 0.16,
+      "netAmount": 19294.48
+    },
+    {
+      "id": "2023-11-15_155",
+      "date": "2023-11-15",
+      "description": "Reinvest Dividend SCHWAB VALUE ADVANTAGE MONEY INV",
+      "amount": 8.98,
+      "type": "DIVIDEND",
+      "symbol": "SWVXX",
+      "fees": 0,
+      "netAmount": 8.98
+    },
+    {
+      "id": "2023-11-16_154",
+      "date": "2023-11-16",
+      "description": "Bank Interest BANK INT ...523 TD BANK NA",
+      "amount": 1.02,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 1.02
+    },
+    {
+      "id": "2023-11-17_153",
+      "date": "2023-11-17",
+      "description": "Buy INVSC QQQ TRUST SRS 1 ETF IV",
+      "amount": -384.77,
+      "type": "BUY",
+      "symbol": "QQQ",
+      "quantity": 1,
+      "price": 384.77,
+      "fees": 0,
+      "netAmount": -384.77
+    },
+    {
+      "id": "2023-11-27_152",
+      "date": "2023-11-27",
+      "description": "MoneyLink Transfer Tfr CAPITAL ONE NATION, RICHARD SARVATE",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2023-12-01_151",
+      "date": "2023-12-01",
+      "description": "Advisor Fee MGMTFEE TO ADVISOR",
+      "amount": -106.18,
+      "type": "FEE",
+      "fees": 0,
+      "netAmount": -106.18
+    },
+    {
+      "id": "2023-12-18_150",
+      "date": "2023-12-18",
+      "description": "Bank Interest BANK INT ...523 TD BANK NA",
+      "amount": 0.54,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 0.54
+    },
+    {
+      "id": "2023-12-26_148",
+      "date": "2023-12-26",
+      "description": "Sell INVSC QQQ TRUST SRS 1 ETF IV",
+      "amount": 410.09,
+      "type": "SELL",
+      "symbol": "QQQ",
+      "quantity": 1,
+      "price": 410.0885,
+      "fees": 0,
+      "netAmount": 410.09
+    },
+    {
+      "id": "2023-12-26_149",
+      "date": "2023-12-26",
+      "description": "MoneyLink Transfer Tfr CAPITAL ONE NATION, RICHARD SARVATE",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2023-12-27_146",
+      "date": "2023-12-27",
+      "description": "Cash Dividend ISHARES CORE S&P ...500 ETF",
+      "amount": 198.31,
+      "type": "DIVIDEND",
+      "symbol": "IVV",
+      "fees": 0,
+      "netAmount": 198.31
+    },
+    {
+      "id": "2023-12-27_147",
+      "date": "2023-12-27",
+      "description": "Cash Dividend VANGUARD TOTAL STOCK MARKET ETF",
+      "amount": 149.25,
+      "type": "DIVIDEND",
+      "symbol": "VTI",
+      "fees": 0,
+      "netAmount": 149.25
+    },
+    {
+      "id": "2023-12-29_143",
+      "date": "2023-12-29",
+      "description": "Cash Dividend INVSC QQQ TRUST SRS 1 ETF IV",
+      "amount": 0.81,
+      "type": "DIVIDEND",
+      "symbol": "QQQ",
+      "fees": 0,
+      "netAmount": 0.81
+    },
+    {
+      "id": "2023-12-29_144",
+      "date": "2023-12-29",
+      "description": "Reinvest Dividend SCHWAB VALUE ADVANTAGE MONEY INV",
+      "amount": 14.1,
+      "type": "DIVIDEND",
+      "symbol": "SWVXX",
+      "fees": 0,
+      "netAmount": 14.1
+    },
+    {
+      "id": "2024-01-02_142",
+      "date": "2024-01-02",
+      "description": "Advisor Fee MGMTFEE TO ADVISOR",
+      "amount": -112.99,
+      "type": "FEE",
+      "fees": 0,
+      "netAmount": -112.99
+    },
+    {
+      "id": "2024-01-16_139",
+      "date": "2024-01-16",
+      "description": "Reinvest Dividend SCHWAB VALUE ADVANTAGE MONEY INV",
+      "amount": 4.5,
+      "type": "DIVIDEND",
+      "symbol": "SWVXX",
+      "fees": 0,
+      "netAmount": 4.5
+    },
+    {
+      "id": "2024-01-16_141",
+      "date": "2024-01-16",
+      "description": "Bank Interest BANK INT ...524 TD BANK NA",
+      "amount": 1.07,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 1.07
+    },
+    {
+      "id": "2024-01-17_138",
+      "date": "2024-01-17",
+      "description": "Buy VANGUARD TOTAL STOCK MARKET ETF",
+      "amount": -2335.06,
+      "type": "BUY",
+      "symbol": "VTI",
+      "quantity": 10,
+      "price": 233.5062,
+      "fees": 0,
+      "netAmount": -2335.06
+    },
+    {
+      "id": "2024-01-25_137",
+      "date": "2024-01-25",
+      "description": "MoneyLink Transfer Tfr CAPITAL ONE NATION, RICHARD SARVATE",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2024-01-26_135",
+      "date": "2024-01-26",
+      "description": "Buy SCHWAB US TREASURY MONEY INVESTOR",
+      "amount": -2100.87,
+      "type": "BUY",
+      "symbol": "SNSXX",
+      "quantity": 2,
+      "price": 1,
+      "fees": 0,
+      "netAmount": -2100.87
+    },
+    {
+      "id": "2024-01-26_136",
+      "date": "2024-01-26",
+      "description": "Sell SCHWAB VALUE ADVANTAGE MONEY INVESTOR SHARES",
+      "amount": 2100.87,
+      "type": "SELL",
+      "symbol": "SWVXX",
+      "quantity": 2,
+      "price": 1,
+      "fees": 0,
+      "netAmount": 2100.87
+    },
+    {
+      "id": "2024-02-01_134",
+      "date": "2024-02-01",
+      "description": "Advisor Fee MGMTFEE TO ADVISOR",
+      "amount": -115.34,
+      "type": "FEE",
+      "fees": 0,
+      "netAmount": -115.34
+    },
+    {
+      "id": "2024-02-15_131",
+      "date": "2024-02-15",
+      "description": "Cash Dividend SCHWAB VALUE ADVANTAGE MONEY INVESTOR SHARES",
+      "amount": 3.6,
+      "type": "DIVIDEND",
+      "symbol": "SWVXX",
+      "fees": 0,
+      "netAmount": 3.6
+    },
+    {
+      "id": "2024-02-15_132",
+      "date": "2024-02-15",
+      "description": "Reinvest Dividend SCHWAB US TREASURY MONEY INVESTOR",
+      "amount": 5.23,
+      "type": "DIVIDEND",
+      "symbol": "SNSXX",
+      "fees": 0,
+      "netAmount": 5.23
+    },
+    {
+      "id": "2024-02-16_128",
+      "date": "2024-02-16",
+      "description": "Buy SCHWAB US TREASURY MONEY INVESTOR",
+      "amount": -14500,
+      "type": "BUY",
+      "symbol": "SNSXX",
+      "quantity": 14,
+      "price": 1,
+      "fees": 0,
+      "netAmount": -14500
+    },
+    {
+      "id": "2024-02-16_129",
+      "date": "2024-02-16",
+      "description": "Sell ISHARES CORE S&P ...500 ETF",
+      "amount": 15081.21,
+      "type": "SELL",
+      "symbol": "IVV",
+      "quantity": 30,
+      "price": 502.711,
+      "fees": 0.12,
+      "netAmount": 15081.089999999998
+    },
+    {
+      "id": "2024-02-16_130",
+      "date": "2024-02-16",
+      "description": "Bank Interest BANK INT ...524 TD BANK NA",
+      "amount": 0.72,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 0.72
+    },
+    {
+      "id": "2024-02-26_127",
+      "date": "2024-02-26",
+      "description": "MoneyLink Transfer Tfr CAPITAL ONE NATION, RICHARD SARVATE",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2024-03-01_126",
+      "date": "2024-03-01",
+      "description": "Advisor Fee MGMTFEE TO ADVISOR",
+      "amount": -121.94,
+      "type": "FEE",
+      "fees": 0,
+      "netAmount": -121.94
+    },
+    {
+      "id": "2024-03-15_124",
+      "date": "2024-03-15",
+      "description": "Reinvest Dividend SCHWAB US TREASURY MONEY INVESTOR",
+      "amount": 62.96,
+      "type": "DIVIDEND",
+      "symbol": "SNSXX",
+      "fees": 0,
+      "netAmount": 62.96
+    },
+    {
+      "id": "2024-03-18_123",
+      "date": "2024-03-18",
+      "description": "Bank Interest BANK INT ...524 TD BANK NA",
+      "amount": 1.05,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 1.05
+    },
+    {
+      "id": "2024-03-25_122",
+      "date": "2024-03-25",
+      "description": "MoneyLink Transfer Tfr CAPITAL ONE NATION, RICHARD SARVATE",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2024-03-27_120",
+      "date": "2024-03-27",
+      "description": "Cash Dividend ISHARES CORE S&P ...500 ETF",
+      "amount": 121.57,
+      "type": "DIVIDEND",
+      "symbol": "IVV",
+      "fees": 0,
+      "netAmount": 121.57
+    },
+    {
+      "id": "2024-03-27_121",
+      "date": "2024-03-27",
+      "description": "Cash Dividend VANGUARD TOTAL STOCK MARKET ETF",
+      "amount": 144.77,
+      "type": "DIVIDEND",
+      "symbol": "VTI",
+      "fees": 0,
+      "netAmount": 144.77
+    },
+    {
+      "id": "2024-04-01_119",
+      "date": "2024-04-01",
+      "description": "Advisor Fee MGMTFEE TO ADVISOR",
+      "amount": -126.3,
+      "type": "FEE",
+      "fees": 0,
+      "netAmount": -126.3
+    },
+    {
+      "id": "2024-04-15_117",
+      "date": "2024-04-15",
+      "description": "Reinvest Dividend SCHWAB US TREASURY MONEY INVESTOR",
+      "amount": 66.44,
+      "type": "DIVIDEND",
+      "symbol": "SNSXX",
+      "fees": 0,
+      "netAmount": 66.44
+    },
+    {
+      "id": "2024-04-16_116",
+      "date": "2024-04-16",
+      "description": "Bank Interest BANK INT ...524 TD BANK NA",
+      "amount": 1.6,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 1.6
+    },
+    {
+      "id": "2024-04-25_115",
+      "date": "2024-04-25",
+      "description": "MoneyLink Transfer Tfr CAPITAL ONE NATION, RICHARD SARVATE",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2024-05-01_114",
+      "date": "2024-05-01",
+      "description": "Advisor Fee MGMTFEE TO ADVISOR",
+      "amount": -123.29,
+      "type": "FEE",
+      "fees": 0,
+      "netAmount": -123.29
+    },
+    {
+      "id": "2024-05-14_113",
+      "date": "2024-05-14",
+      "description": "Buy INVSC QQQ TRUST SRS 1 ETF",
+      "amount": -3992.4,
+      "type": "BUY",
+      "symbol": "QQQ",
+      "quantity": 9,
+      "price": 443.5999,
+      "fees": 0,
+      "netAmount": -3992.4
+    },
+    {
+      "id": "2024-05-15_112",
+      "date": "2024-05-15",
+      "description": "Cash Dividend SCHWAB US TREASURY MONEY INVESTOR",
+      "amount": 69.02,
+      "type": "DIVIDEND",
+      "symbol": "SNSXX",
+      "fees": 0,
+      "netAmount": 69.02
+    },
+    {
+      "id": "2024-05-16_111",
+      "date": "2024-05-16",
+      "description": "Bank Interest BANK INT ...524 TD BANK NA",
+      "amount": 1.91,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 1.91
+    },
+    {
+      "id": "2024-05-28_110",
+      "date": "2024-05-28",
+      "description": "MoneyLink Transfer Tfr CAPITAL ONE NATION, RICHARD SARVATE",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2024-06-03_109",
+      "date": "2024-06-03",
+      "description": "Advisor Fee MGMTFEE TO ADVISOR",
+      "amount": -129.23,
+      "type": "FEE",
+      "fees": 0,
+      "netAmount": -129.23
+    },
+    {
+      "id": "2024-06-17_106",
+      "date": "2024-06-17",
+      "description": "Cash Dividend SCHWAB US TREASURY MONEY INVESTOR",
+      "amount": 75.97,
+      "type": "DIVIDEND",
+      "symbol": "SNSXX",
+      "fees": 0,
+      "netAmount": 75.97
+    },
+    {
+      "id": "2024-06-17_107",
+      "date": "2024-06-17",
+      "description": "Cash Dividend ISHARES CORE S&P ...500 ETF",
+      "amount": 117.61,
+      "type": "DIVIDEND",
+      "symbol": "IVV",
+      "fees": 0,
+      "netAmount": 117.61
+    },
+    {
+      "id": "2024-06-17_108",
+      "date": "2024-06-17",
+      "description": "Bank Interest BANK INT ...524 TD BANK NA",
+      "amount": 0.78,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 0.78
+    },
+    {
+      "id": "2024-06-25_105",
+      "date": "2024-06-25",
+      "description": "MoneyLink Transfer Tfr CAPITAL ONE NATION, RICHARD SARVATE",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2024-07-01_104",
+      "date": "2024-07-01",
+      "description": "Advisor Fee MGMTFEE TO ADVISOR",
+      "amount": -133.92,
+      "type": "FEE",
+      "fees": 0,
+      "netAmount": -133.92
+    },
+    {
+      "id": "2024-07-02_103",
+      "date": "2024-07-02",
+      "description": "Cash Dividend VANGUARD TOTAL STOCK MARKET ETF",
+      "amount": 151.35,
+      "type": "DIVIDEND",
+      "symbol": "VTI",
+      "fees": 0,
+      "netAmount": 151.35
+    },
+    {
+      "id": "2024-07-15_102",
+      "date": "2024-07-15",
+      "description": "Cash Dividend SCHWAB US TREASURY MONEY INVESTOR",
+      "amount": 64.41,
+      "type": "DIVIDEND",
+      "symbol": "SNSXX",
+      "fees": 0,
+      "netAmount": 64.41
+    },
+    {
+      "id": "2024-07-16_101",
+      "date": "2024-07-16",
+      "description": "Bank Interest BANK INT ...524 TD BANK NA",
+      "amount": 1.2,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 1.2
+    },
+    {
+      "id": "2024-07-18_100",
+      "date": "2024-07-18",
+      "description": "Buy INVSC QQQ TRUST SRS 1 ETF",
+      "amount": -2397.65,
+      "type": "BUY",
+      "symbol": "QQQ",
+      "quantity": 5,
+      "price": 479.5294,
+      "fees": 0,
+      "netAmount": -2397.65
+    },
+    {
+      "id": "2024-07-25_99",
+      "date": "2024-07-25",
+      "description": "MoneyLink Transfer Tfr CAPITAL ONE NATION, RICHARD SARVATE",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2024-07-26_96",
+      "date": "2024-07-26",
+      "description": "Sell SCHWAB US TREASURY MONEY INVESTOR",
+      "amount": 16735.5,
+      "type": "SELL",
+      "symbol": "SNSXX",
+      "quantity": 16,
+      "price": 1,
+      "fees": 0,
+      "netAmount": 16735.5
+    },
+    {
+      "id": "2024-07-26_97",
+      "date": "2024-07-26",
+      "description": "Buy VANGUARD REAL ESTATE ETF",
+      "amount": -11109.99,
+      "type": "BUY",
+      "symbol": "VNQ",
+      "quantity": 125,
+      "price": 88.8799,
+      "fees": 0,
+      "netAmount": -11109.99
+    },
+    {
+      "id": "2024-07-26_98",
+      "date": "2024-07-26",
+      "description": "Buy VANGUARD FTSE DEVELOPED MARKETS ETF",
+      "amount": -6261.21,
+      "type": "BUY",
+      "symbol": "VEA",
+      "quantity": 125,
+      "price": 50.0897,
+      "fees": 0,
+      "netAmount": -6261.21
+    },
+    {
+      "id": "2024-07-31_95",
+      "date": "2024-07-31",
+      "description": "Cash Dividend INVSC QQQ TRUST SRS 1 ETF",
+      "amount": 6.85,
+      "type": "DIVIDEND",
+      "symbol": "QQQ",
+      "fees": 0,
+      "netAmount": 6.85
+    },
+    {
+      "id": "2024-08-01_94",
+      "date": "2024-08-01",
+      "description": "Advisor Fee MGMTFEE TO ADVISOR",
+      "amount": -137.01,
+      "type": "FEE",
+      "fees": 0,
+      "netAmount": -137.01
+    },
+    {
+      "id": "2024-08-15_91",
+      "date": "2024-08-15",
+      "description": "Cash Dividend SCHWAB US TREASURY MONEY INVESTOR",
+      "amount": 29.83,
+      "type": "DIVIDEND",
+      "symbol": "SNSXX",
+      "fees": 0,
+      "netAmount": 29.83
+    },
+    {
+      "id": "2024-08-15_92",
+      "date": "2024-08-15",
+      "description": "Buy VANGUARD MID CAP ETF",
+      "amount": -1250.58,
+      "type": "BUY",
+      "symbol": "VO",
+      "quantity": 5,
+      "price": 250.1155,
+      "fees": 0,
+      "netAmount": -1250.58
+    },
+    {
+      "id": "2024-08-15_93",
+      "date": "2024-08-15",
+      "description": "MoneyLink Transfer Tfr CAPITAL ONE NATION, RICHARD S SARVAT",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2024-08-16_90",
+      "date": "2024-08-16",
+      "description": "Bank Interest BANK INT ...524 TD BANK NA",
+      "amount": 0.68,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 0.68
+    },
+    {
+      "id": "2024-09-03_89",
+      "date": "2024-09-03",
+      "description": "Advisor Fee MGMTFEE TO ADVISOR",
+      "amount": -141.62,
+      "type": "FEE",
+      "fees": 0,
+      "netAmount": -141.62
+    },
+    {
+      "id": "2024-09-16_87",
+      "date": "2024-09-16",
+      "description": "Bank Interest BANK INT ...524 TD BANK NA",
+      "amount": 0.46,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 0.46
+    },
+    {
+      "id": "2024-09-16_88",
+      "date": "2024-09-16",
+      "description": "MoneyLink Transfer Tfr CAPITAL ONE NATION, RICHARD S SARVAT",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2024-09-24_86",
+      "date": "2024-09-24",
+      "description": "Cash Dividend VANGUARD FTSE DEVELOPED MARKETS ETF",
+      "amount": 18.05,
+      "type": "DIVIDEND",
+      "symbol": "VEA",
+      "fees": 0,
+      "netAmount": 18.05
+    },
+    {
+      "id": "2024-09-30_84",
+      "date": "2024-09-30",
+      "description": "Cash Dividend ISHARES CORE S&P ...500 ETF",
+      "amount": 163.13,
+      "type": "DIVIDEND",
+      "symbol": "IVV",
+      "fees": 0,
+      "netAmount": 163.13
+    },
+    {
+      "id": "2024-09-30_85",
+      "date": "2024-09-30",
+      "description": "Cash Dividend VANGUARD MID CAP ETF",
+      "amount": 4.74,
+      "type": "DIVIDEND",
+      "symbol": "VO",
+      "fees": 0,
+      "netAmount": 4.74
+    },
+    {
+      "id": "2024-10-01_81",
+      "date": "2024-10-01",
+      "description": "Advisor Fee MGMTFEE TO ADVISOR",
+      "amount": -145.46,
+      "type": "FEE",
+      "fees": 0,
+      "netAmount": -145.46
+    },
+    {
+      "id": "2024-10-01_82",
+      "date": "2024-10-01",
+      "description": "Cash Dividend VANGUARD REAL ESTATE ETF",
+      "amount": 101.6,
+      "type": "DIVIDEND",
+      "symbol": "VNQ",
+      "fees": 0,
+      "netAmount": 101.6
+    },
+    {
+      "id": "2024-10-01_83",
+      "date": "2024-10-01",
+      "description": "Cash Dividend VANGUARD TOTAL STOCK MARKET ETF",
+      "amount": 138.44,
+      "type": "DIVIDEND",
+      "symbol": "VTI",
+      "fees": 0,
+      "netAmount": 138.44
+    },
+    {
+      "id": "2024-10-15_80",
+      "date": "2024-10-15",
+      "description": "MoneyLink Transfer Tfr CAPITAL ONE NATION, RICHARD S SARVAT",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2024-10-16_79",
+      "date": "2024-10-16",
+      "description": "Bank Interest BANK INT ...524 TD BANK NA",
+      "amount": 0.42,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 0.42
+    },
+    {
+      "id": "2024-10-22_78",
+      "date": "2024-10-22",
+      "description": "Buy VANGUARD MID CAP ETF",
+      "amount": -2667.78,
+      "type": "BUY",
+      "symbol": "VO",
+      "quantity": 10,
+      "price": 266.7784,
+      "fees": 0,
+      "netAmount": -2667.78
+    },
+    {
+      "id": "2024-10-29_73",
+      "date": "2024-10-29",
+      "description": "Buy INVSC QQQ TRUST SRS 1 ETF",
+      "amount": -35197.54,
+      "type": "BUY",
+      "symbol": "QQQ",
+      "quantity": 71,
+      "price": 495.74,
+      "fees": 0,
+      "netAmount": -35197.54
+    },
+    {
+      "id": "2024-10-29_74",
+      "date": "2024-10-29",
+      "description": "Buy VANGUARD SMALL CAP ETF",
+      "amount": -17850,
+      "type": "BUY",
+      "symbol": "VB",
+      "quantity": 75,
+      "price": 238,
+      "fees": 0,
+      "netAmount": -17850
+    },
+    {
+      "id": "2024-10-29_75",
+      "date": "2024-10-29",
+      "description": "Buy VANGUARD MID CAP ETF",
+      "amount": -9301.6,
+      "type": "BUY",
+      "symbol": "VO",
+      "quantity": 35,
+      "price": 265.76,
+      "fees": 0,
+      "netAmount": -9301.6
+    },
+    {
+      "id": "2024-10-29_76",
+      "date": "2024-10-29",
+      "description": "Buy VANGUARD FTSE DEVELOPED MARKETS ETF",
+      "amount": -5075,
+      "type": "BUY",
+      "symbol": "VEA",
+      "quantity": 100,
+      "price": 50.75,
+      "fees": 0,
+      "netAmount": -5075
+    },
+    {
+      "id": "2024-10-29_77",
+      "date": "2024-10-29",
+      "description": "MoneyLink Transfer Tfr CAPITAL ONE NATION, RICHARD S SARVAT",
+      "amount": 100000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 100000
+    },
+    {
+      "id": "2024-10-31_72",
+      "date": "2024-10-31",
+      "description": "Cash Dividend INVSC QQQ TRUST SRS 1 ETF",
+      "amount": 9.48,
+      "type": "DIVIDEND",
+      "symbol": "QQQ",
+      "fees": 0,
+      "netAmount": 9.48
+    },
+    {
+      "id": "2024-11-01_70",
+      "date": "2024-11-01",
+      "description": "Advisor Fee MGMTFEE TO ADVISOR",
+      "amount": -268.86,
+      "type": "FEE",
+      "fees": 0,
+      "netAmount": -268.86
+    },
+    {
+      "id": "2024-11-01_71",
+      "date": "2024-11-01",
+      "description": "MoneyLink Transfer Tfr CAPITAL ONE NATION, RICHARD S SARVAT",
+      "amount": -30000,
+      "type": "WITHDRAWAL",
+      "fees": 0,
+      "netAmount": -30000
+    },
+    {
+      "id": "2024-11-15_69",
+      "date": "2024-11-15",
+      "description": "MoneyLink Transfer Tfr CAPITAL ONE NATION, RICHARD S SARVAT",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2024-11-18_68",
+      "date": "2024-11-18",
+      "description": "Bank Interest BANK INT ...524 TD BANK NA",
+      "amount": 1.26,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 1.26
+    },
+    {
+      "id": "2024-12-02_67",
+      "date": "2024-12-02",
+      "description": "Advisor Fee MGMTFEE TO ADVISOR",
+      "amount": -245.73,
+      "type": "FEE",
+      "fees": 0,
+      "netAmount": -245.73
+    },
+    {
+      "id": "2024-12-05_66",
+      "date": "2024-12-05",
+      "description": "Buy VANGUARD MID CAP ETF",
+      "amount": -1704.18,
+      "type": "BUY",
+      "symbol": "VO",
+      "quantity": 6,
+      "price": 284.0293,
+      "fees": 0,
+      "netAmount": -1704.18
+    },
+    {
+      "id": "2024-12-16_64",
+      "date": "2024-12-16",
+      "description": "Bank Interest BANK INT ...524 TD BANK NA",
+      "amount": 0.28,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 0.28
+    },
+    {
+      "id": "2024-12-16_65",
+      "date": "2024-12-16",
+      "description": "MoneyLink Transfer Tfr CAPITAL ONE NATION, RICHARD S SARVAT",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2024-12-20_63",
+      "date": "2024-12-20",
+      "description": "Cash Dividend ISHARES CORE S&P ...500 ETF IV",
+      "amount": 155.8,
+      "type": "DIVIDEND",
+      "symbol": "IVV",
+      "fees": 0,
+      "netAmount": 155.8
+    },
+    {
+      "id": "2024-12-24_59",
+      "date": "2024-12-24",
+      "description": "Cash Dividend VANGUARD FTSE DEVELOPED MARKETS ETF",
+      "amount": 160.34,
+      "type": "DIVIDEND",
+      "symbol": "VEA",
+      "fees": 0,
+      "netAmount": 160.34
+    },
+    {
+      "id": "2024-12-24_60",
+      "date": "2024-12-24",
+      "description": "Sell VANGUARD FTSE DEVELOPED MARKETS ETF",
+      "amount": 10756.91,
+      "type": "SELL",
+      "symbol": "VEA",
+      "quantity": 225,
+      "price": 47.81,
+      "fees": 0.34,
+      "netAmount": 10756.57
+    },
+    {
+      "id": "2024-12-24_61",
+      "date": "2024-12-24",
+      "description": "Buy VANGUARD GLBAL EX US REAL ESTATE ETF",
+      "amount": -11189.82,
+      "type": "BUY",
+      "symbol": "VNQI",
+      "quantity": 283,
+      "price": 39.54,
+      "fees": 0,
+      "netAmount": -11189.82
+    },
+    {
+      "id": "2024-12-24_62",
+      "date": "2024-12-24",
+      "description": "Buy VGRD FTSE ALL WRLD EX USSML CAP ETF",
+      "amount": -803.46,
+      "type": "BUY",
+      "symbol": "VSS",
+      "quantity": 7,
+      "price": 114.78,
+      "fees": 0,
+      "netAmount": -803.46
+    },
+    {
+      "id": "2024-12-26_55",
+      "date": "2024-12-26",
+      "description": "Cash Dividend VANGUARD MID CAP ETF",
+      "amount": 61.2,
+      "type": "DIVIDEND",
+      "symbol": "VO",
+      "fees": 0,
+      "netAmount": 61.2
+    },
+    {
+      "id": "2024-12-26_56",
+      "date": "2024-12-26",
+      "description": "Cash Dividend VANGUARD REAL ESTATE ETF",
+      "amount": 106.94,
+      "type": "DIVIDEND",
+      "symbol": "VNQ",
+      "fees": 0,
+      "netAmount": 106.94
+    },
+    {
+      "id": "2024-12-26_57",
+      "date": "2024-12-26",
+      "description": "Cash Dividend VANGUARD TOTAL STOCK MARKET ETF",
+      "amount": 149.65,
+      "type": "DIVIDEND",
+      "symbol": "VTI",
+      "fees": 0,
+      "netAmount": 149.65
+    },
+    {
+      "id": "2024-12-26_58",
+      "date": "2024-12-26",
+      "description": "Cash Dividend VANGUARD SMALL CAP ETF",
+      "amount": 67.77,
+      "type": "DIVIDEND",
+      "symbol": "VB",
+      "fees": 0,
+      "netAmount": 67.77
+    },
+    {
+      "id": "2024-12-31_54",
+      "date": "2024-12-31",
+      "description": "Cash Dividend INVSC QQQ TRUST SRS 1 ETF",
+      "amount": 70.95,
+      "type": "DIVIDEND",
+      "symbol": "QQQ",
+      "fees": 0,
+      "netAmount": 70.95
+    },
+    {
+      "id": "2025-01-02_53",
+      "date": "2025-01-02",
+      "description": "Advisor Fee MGMTFEE TO ADVISOR",
+      "amount": -238.86,
+      "type": "FEE",
+      "fees": 0,
+      "netAmount": -238.86
+    },
+    {
+      "id": "2025-01-07_52",
+      "date": "2025-01-07",
+      "description": "Sell VANGUARD REAL ESTATE ETF",
+      "amount": 2216.94,
+      "type": "SELL",
+      "symbol": "VNQ",
+      "quantity": 25,
+      "price": 88.68,
+      "fees": 0.06,
+      "netAmount": 2216.88
+    },
+    {
+      "id": "2025-01-08_51",
+      "date": "2025-01-08",
+      "description": "Advisor Fee MGMTFEE TO ADVISOR",
+      "amount": -3300,
+      "type": "FEE",
+      "fees": 0,
+      "netAmount": -3300
+    },
+    {
+      "id": "2025-01-15_50",
+      "date": "2025-01-15",
+      "description": "MoneyLink Transfer Tfr CAPITAL ONE NATION, RICHARD S SARVAT",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2025-01-16_49",
+      "date": "2025-01-16",
+      "description": "Bank Interest BANK INT ...525 TD BANK NA",
+      "amount": 0.12,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 0.12
+    },
+    {
+      "id": "2025-01-27_47",
+      "date": "2025-01-27",
+      "description": "Buy VANGUARD GLBAL EX US REAL ESTATE ETF",
+      "amount": -2995.88,
+      "type": "BUY",
+      "symbol": "VNQI",
+      "quantity": 75,
+      "price": 39.945,
+      "fees": 0,
+      "netAmount": -2995.88
+    },
+    {
+      "id": "2025-01-27_48",
+      "date": "2025-01-27",
+      "description": "Sell VANGUARD MID CAP ETF",
+      "amount": 1647.25,
+      "type": "SELL",
+      "symbol": "VO",
+      "quantity": 6,
+      "price": 274.55,
+      "fees": 0.05,
+      "netAmount": 1647.2
+    },
+    {
+      "id": "2025-02-03_46",
+      "date": "2025-02-03",
+      "description": "Advisor Fee MGMTFEE TO ADVISOR",
+      "amount": -242.14,
+      "type": "FEE",
+      "fees": 0,
+      "netAmount": -242.14
+    },
+    {
+      "id": "2025-02-18_44",
+      "date": "2025-02-18",
+      "description": "Bank Interest BANK INT ...525 TD BANK NA",
+      "amount": 0.06,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 0.06
+    },
+    {
+      "id": "2025-02-18_45",
+      "date": "2025-02-18",
+      "description": "MoneyLink Transfer Tfr CAPITAL ONE NATION, RICHARD S SARVAT",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2025-02-21_43",
+      "date": "2025-02-21",
+      "description": "Buy VANGUARD GLBAL EX US REAL ESTATE ETF",
+      "amount": -730.08,
+      "type": "BUY",
+      "symbol": "VNQI",
+      "quantity": 18,
+      "price": 40.5599,
+      "fees": 0,
+      "netAmount": -730.08
+    },
+    {
+      "id": "2025-03-03_42",
+      "date": "2025-03-03",
+      "description": "Advisor Fee MGMTFEE TO ADVISOR",
+      "amount": -238.8,
+      "type": "FEE",
+      "fees": 0,
+      "netAmount": -238.8
+    },
+    {
+      "id": "2025-03-04_35",
+      "date": "2025-03-04",
+      "description": "Buy VANGUARD S&P ...500 VALUE ETF",
+      "amount": -41238.58,
+      "type": "BUY",
+      "symbol": "VOOV",
+      "quantity": 221,
+      "price": 186.5999,
+      "fees": 0,
+      "netAmount": -41238.58
+    },
+    {
+      "id": "2025-03-04_36",
+      "date": "2025-03-04",
+      "description": "Buy VANGUARD VALUE ETF",
+      "amount": -173.58,
+      "type": "BUY",
+      "symbol": "VTV",
+      "quantity": 1,
+      "price": 173.5781,
+      "fees": 0,
+      "netAmount": -173.58
+    },
+    {
+      "id": "2025-03-04_37",
+      "date": "2025-03-04",
+      "description": "Buy VANGUARD MID CAP VALUE ETF",
+      "amount": -1134.6,
+      "type": "BUY",
+      "symbol": "VOE",
+      "quantity": 7,
+      "price": 162.086,
+      "fees": 0,
+      "netAmount": -1134.6
+    },
+    {
+      "id": "2025-03-04_38",
+      "date": "2025-03-04",
+      "description": "Sell VANGUARD GLBAL EX US REAL ESTATE ETF",
+      "amount": 15297.22,
+      "type": "SELL",
+      "symbol": "VNQI",
+      "quantity": 376,
+      "price": 40.6854,
+      "fees": 0.49,
+      "netAmount": 15296.73
+    },
+    {
+      "id": "2025-03-04_39",
+      "date": "2025-03-04",
+      "description": "Sell VGRD FTSE ALL WRLD EX USSML CAP ETF",
+      "amount": 809.01,
+      "type": "SELL",
+      "symbol": "VSS",
+      "quantity": 7,
+      "price": 115.5751,
+      "fees": 0.02,
+      "netAmount": 808.99
+    },
+    {
+      "id": "2025-03-04_40",
+      "date": "2025-03-04",
+      "description": "Sell VANGUARD REAL ESTATE ETF",
+      "amount": 9370.97,
+      "type": "SELL",
+      "symbol": "VNQ",
+      "quantity": 100,
+      "price": 93.7125,
+      "fees": 0.28,
+      "netAmount": 9370.689999999999
+    },
+    {
+      "id": "2025-03-04_41",
+      "date": "2025-03-04",
+      "description": "Sell VANGUARD SMALL CAP ETF",
+      "amount": 17238.27,
+      "type": "SELL",
+      "symbol": "VB",
+      "quantity": 75,
+      "price": 229.8501,
+      "fees": 0.49,
+      "netAmount": 17237.78
+    },
+    {
+      "id": "2025-03-17_33",
+      "date": "2025-03-17",
+      "description": "Bank Interest BANK INT ...525 TD BANK NA",
+      "amount": 0.04,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 0.04
+    },
+    {
+      "id": "2025-03-17_34",
+      "date": "2025-03-17",
+      "description": "MoneyLink Transfer Tfr CAPITAL ONE NATION, RICHARD S SARVAT",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2025-03-21_31",
+      "date": "2025-03-21",
+      "description": "Special Dividend ISHARES CORE S&P ...500 ETF",
+      "amount": 2.66,
+      "type": "DIVIDEND",
+      "symbol": "IVV",
+      "fees": 0,
+      "netAmount": 2.66
+    },
+    {
+      "id": "2025-03-21_32",
+      "date": "2025-03-21",
+      "description": "Cash Dividend ISHARES CORE S&P ...500 ETF",
+      "amount": 126.15,
+      "type": "DIVIDEND",
+      "symbol": "IVV",
+      "fees": 0,
+      "netAmount": 126.15
+    },
+    {
+      "id": "2025-03-27_30",
+      "date": "2025-03-27",
+      "description": "Cash Dividend VANGUARD S&P ...500 VALUE ETF",
+      "amount": 189.09,
+      "type": "DIVIDEND",
+      "symbol": "VOOV",
+      "fees": 0,
+      "netAmount": 189.09
+    },
+    {
+      "id": "2025-03-31_26",
+      "date": "2025-03-31",
+      "description": "Cash Dividend VANGUARD MID CAP VALUE ETF",
+      "amount": 7.38,
+      "type": "DIVIDEND",
+      "symbol": "VOE",
+      "fees": 0,
+      "netAmount": 7.38
+    },
+    {
+      "id": "2025-03-31_27",
+      "date": "2025-03-31",
+      "description": "Cash Dividend VANGUARD MID CAP ETF",
+      "amount": 58.36,
+      "type": "DIVIDEND",
+      "symbol": "VO",
+      "fees": 0,
+      "netAmount": 58.36
+    },
+    {
+      "id": "2025-03-31_28",
+      "date": "2025-03-31",
+      "description": "Cash Dividend VANGUARD VALUE ETF",
+      "amount": 1.01,
+      "type": "DIVIDEND",
+      "symbol": "VTV",
+      "fees": 0,
+      "netAmount": 1.01
+    },
+    {
+      "id": "2025-03-31_29",
+      "date": "2025-03-31",
+      "description": "Cash Dividend VANGUARD TOTAL STOCK MARKET ETF",
+      "amount": 156.68,
+      "type": "DIVIDEND",
+      "symbol": "VTI",
+      "fees": 0,
+      "netAmount": 156.68
+    },
+    {
+      "id": "2025-04-01_25",
+      "date": "2025-04-01",
+      "description": "Advisor Fee MGMTFEE TO ADVISOR",
+      "amount": -227.47,
+      "type": "FEE",
+      "fees": 0,
+      "netAmount": -227.47
+    },
+    {
+      "id": "2025-04-03_24",
+      "date": "2025-04-03",
+      "description": "Buy INVESCO QQQ TRUST",
+      "amount": -1357.8,
+      "type": "BUY",
+      "symbol": "QQQ",
+      "quantity": 3,
+      "price": 452.5999,
+      "fees": 0,
+      "netAmount": -1357.8
+    },
+    {
+      "id": "2025-04-15_23",
+      "date": "2025-04-15",
+      "description": "MoneyLink Transfer Tfr CAPITAL ONE NATION, RICHARD S SARVAT",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2025-04-16_22",
+      "date": "2025-04-16",
+      "description": "Bank Interest BANK INT ...525 TD BANK NA",
+      "amount": 0.07,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 0.07
+    },
+    {
+      "id": "2025-04-28_21",
+      "date": "2025-04-28",
+      "description": "Buy INVESCO QQQ TRUST",
+      "amount": -939.32,
+      "type": "BUY",
+      "symbol": "QQQ",
+      "quantity": 2,
+      "price": 469.6594,
+      "fees": 0,
+      "netAmount": -939.32
+    },
+    {
+      "id": "2025-04-30_20",
+      "date": "2025-04-30",
+      "description": "Cash Dividend INVESCO QQQ TRUST",
+      "amount": 60.84,
+      "type": "DIVIDEND",
+      "symbol": "QQQ",
+      "fees": 0,
+      "netAmount": 60.84
+    },
+    {
+      "id": "2025-05-01_19",
+      "date": "2025-05-01",
+      "description": "Advisor Fee MGMTFEE TO ADVISOR",
+      "amount": -226.4,
+      "type": "FEE",
+      "fees": 0,
+      "netAmount": -226.4
+    },
+    {
+      "id": "2025-05-15_18",
+      "date": "2025-05-15",
+      "description": "MoneyLink Transfer Tfr CAPITAL ONE NATION, RICHARD S SARVAT",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2025-05-16_17",
+      "date": "2025-05-16",
+      "description": "Bank Interest BANK INT ...525 TD BANK NA",
+      "amount": 0.05,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 0.05
+    },
+    {
+      "id": "2025-05-29_13",
+      "date": "2025-05-29",
+      "description": "Buy INVESCO QQQ TRUST",
+      "amount": -42294.14,
+      "type": "BUY",
+      "symbol": "QQQ",
+      "quantity": 81,
+      "price": 522.1499,
+      "fees": 0,
+      "netAmount": -42294.14
+    },
+    {
+      "id": "2025-05-29_14",
+      "date": "2025-05-29",
+      "description": "Sell VANGUARD MID CAP VALUE ETF",
+      "amount": 1123.72,
+      "type": "SELL",
+      "symbol": "VOE",
+      "quantity": 7,
+      "price": 160.5322,
+      "fees": 0,
+      "netAmount": 1123.72
+    },
+    {
+      "id": "2025-05-29_15",
+      "date": "2025-05-29",
+      "description": "Sell VANGUARD VALUE ETF",
+      "amount": 170.56,
+      "type": "SELL",
+      "symbol": "VTV",
+      "quantity": 1,
+      "price": 170.5643,
+      "fees": 0,
+      "netAmount": 170.56
+    },
+    {
+      "id": "2025-05-29_16",
+      "date": "2025-05-29",
+      "description": "Sell VANGUARD S&P ...500 VALUE ETF",
+      "amount": 40313.14,
+      "type": "SELL",
+      "symbol": "VOOV",
+      "quantity": 221,
+      "price": 182.4127,
+      "fees": 0.04,
+      "netAmount": 40313.1
+    },
+    {
+      "id": "2025-06-02_12",
+      "date": "2025-06-02",
+      "description": "Advisor Fee MGMTFEE TO ADVISOR",
+      "amount": -240.86,
+      "type": "FEE",
+      "fees": 0,
+      "netAmount": -240.86
+    },
+    {
+      "id": "2025-06-03_10",
+      "date": "2025-06-03",
+      "description": "Buy VANGUARD SMALL CAP ETF",
+      "amount": -13168.97,
+      "type": "BUY",
+      "symbol": "VB",
+      "quantity": 57,
+      "price": 231.0345,
+      "fees": 0,
+      "netAmount": -13168.97
+    },
+    {
+      "id": "2025-06-03_11",
+      "date": "2025-06-03",
+      "description": "Sell VANGUARD MID CAP ETF",
+      "amount": 13649.56,
+      "type": "SELL",
+      "symbol": "VO",
+      "quantity": 50,
+      "price": 272.9913,
+      "fees": 0.01,
+      "netAmount": 13649.55
+    },
+    {
+      "id": "2025-06-11_9",
+      "date": "2025-06-11",
+      "description": "Sell VANGUARD SMALL CAP ETF",
+      "amount": 13437.17,
+      "type": "SELL",
+      "symbol": "VB",
+      "quantity": 57,
+      "price": 235.74,
+      "fees": 0.01,
+      "netAmount": 13437.16
+    },
+    {
+      "id": "2025-06-16_7",
+      "date": "2025-06-16",
+      "description": "Bank Interest BANK INT ...525 TD BANK NA",
+      "amount": 0.14,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 0.14
+    },
+    {
+      "id": "2025-06-16_8",
+      "date": "2025-06-16",
+      "description": "MoneyLink Transfer Tfr CAPITAL ONE NATION, RICHARD S SARVAT",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2025-06-17_6",
+      "date": "2025-06-17",
+      "description": "Advisor Fee MGMTFEE TO ADVISOR",
+      "amount": -9500,
+      "type": "FEE",
+      "fees": 0,
+      "netAmount": -9500
+    },
+    {
+      "id": "2025-06-20_5",
+      "date": "2025-06-20",
+      "description": "Cash Dividend ISHARES CORE S&P ...500 ETF",
+      "amount": 136.29,
+      "type": "DIVIDEND",
+      "symbol": "IVV",
+      "fees": 0,
+      "netAmount": 136.29
+    },
+    {
+      "id": "2025-07-01_4",
+      "date": "2025-07-01",
+      "description": "Advisor Fee MGMTFEE TO ADVISOR",
+      "amount": -242.98,
+      "type": "FEE",
+      "fees": 0,
+      "netAmount": -242.98
+    },
+    {
+      "id": "2025-07-02_3",
+      "date": "2025-07-02",
+      "description": "Cash Dividend VANGUARD TOTAL STOCK MARKET ETF",
+      "amount": 145.2,
+      "type": "DIVIDEND",
+      "symbol": "VTI",
+      "fees": 0,
+      "netAmount": 145.2
+    },
+    {
+      "id": "2025-07-15_2",
+      "date": "2025-07-15",
+      "description": "MoneyLink Transfer Tfr CAPITAL ONE NATION, RICHARD S SARVAT",
+      "amount": 1000,
+      "type": "DEPOSIT",
+      "fees": 0,
+      "netAmount": 1000
+    },
+    {
+      "id": "2025-07-16_1",
+      "date": "2025-07-16",
+      "description": "Bank Interest BANK INT ...525 TD BANK NA",
+      "amount": 0.29,
+      "type": "DIVIDEND",
+      "fees": 0,
+      "netAmount": 0.29
+    }
+  ],
+  "summary": {
+    "totalPositions": 4,
+    "totalTransactions": 230,
+    "portfolioValue": 200757.69999999998,
+    "totalInvested": 109006.98999999999,
+    "totalGains": 91750.70999999999,
+    "totalFeespaid": 20664.489999999998,
+    "yearsInvested": 3.651735024178011,
+    "annualizedReturn": 18.202838255954102
+  }
+}
