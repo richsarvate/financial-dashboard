@@ -1,6 +1,11 @@
 # Vercel
 .vercel
 
+# Sensitive financial data
+bankdata/
+data/schwab-data.json
+data/statement-balances.json
+
 # Dependencies
 node_modules
 npm-debug.log*
