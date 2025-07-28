@@ -23,6 +23,11 @@ export interface DashboardMetrics {
   sp500Gains: number;
   sp500Return: number;
   
+  // VFIFX benchmark metrics
+  vfifxValue: number;
+  vfifxGains: number;
+  vfifxReturn: number;
+  
   // Comparison metrics
   outperformanceAmount: number;
   isOutperforming: boolean;
@@ -88,6 +93,15 @@ export function useDashboardMetrics(
       timePeriodYears
     );
     
+    // VFIFX benchmark calculations
+    const vfifxValue = FinancialCalculator.getVFIFXValue(timeSeriesData, principalInvested);
+    const vfifxGains = FinancialCalculator.calculateInvestmentGains(vfifxValue, principalInvested);
+    const vfifxReturn = FinancialCalculator.calculateAnnualizedReturn(
+      vfifxValue,
+      principalInvested,
+      timePeriodYears
+    );
+    
     // Comparison calculations
     const outperformanceAmount = Math.abs(actualInvestmentGains - sp500Gains);
     const isOutperforming = actualInvestmentGains > sp500Gains;
@@ -105,6 +119,9 @@ export function useDashboardMetrics(
       sp500Value,
       sp500Gains,
       sp500Return,
+      vfifxValue,
+      vfifxGains,
+      vfifxReturn,
       outperformanceAmount,
       isOutperforming,
     };

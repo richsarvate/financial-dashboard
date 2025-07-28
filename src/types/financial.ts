@@ -61,6 +61,7 @@ export interface PerformanceDataPoint {
   fees: number
   netReturn: number // Account value - contributions + withdrawals
   spyValue?: number // S&P 500 benchmark value
+  vfifxValue?: number // VFIFX Target Date Fund benchmark value
 }
 
 export interface BenchmarkComparison {

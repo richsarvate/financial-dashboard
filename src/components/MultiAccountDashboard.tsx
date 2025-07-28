@@ -233,6 +233,7 @@ export default function MultiAccountDashboard() {
                 <DashboardSummary 
                   metrics={dashboardMetrics!}
                   showSP500={showSP500}
+                  showVFIFX={showVFIFX}
                   showWithoutFees={showWithoutFees}
                 />
               </div>

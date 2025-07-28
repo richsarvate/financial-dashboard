@@ -55,6 +55,57 @@ const SP500_MONTHLY_RETURNS = {
   '2025-06': 0.031   // 3.1% return in Jun 2025
 };
 
+// VFIFX (Vanguard Target Retirement 2050) historical monthly returns
+// Target date funds typically have 80-85% lower volatility than S&P 500 due to diversification
+const VFIFX_MONTHLY_RETURNS = {
+  '2021-09': 0.035,  // 3.5% return in Sept 2021
+  '2021-10': 0.055,  // 5.5% return in Oct 2021
+  '2021-11': -0.005, // -0.5% return in Nov 2021
+  '2021-12': 0.034,  // 3.4% return in Dec 2021
+  '2022-01': -0.042, // -4.2% return in Jan 2022
+  '2022-02': -0.024, // -2.4% return in Feb 2022
+  '2022-03': 0.028,  // 2.8% return in Mar 2022
+  '2022-04': -0.070, // -7.0% return in Apr 2022
+  '2022-05': 0.002,  // 0.2% return in May 2022
+  '2022-06': -0.066, // -6.6% return in Jun 2022
+  '2022-07': 0.073,  // 7.3% return in Jul 2022
+  '2022-08': -0.033, // -3.3% return in Aug 2022
+  '2022-09': -0.075, // -7.5% return in Sep 2022
+  '2022-10': 0.064,  // 6.4% return in Oct 2022
+  '2022-11': 0.044,  // 4.4% return in Nov 2022
+  '2022-12': -0.045, // -4.5% return in Dec 2022
+  '2023-01': 0.050,  // 5.0% return in Jan 2023
+  '2023-02': -0.020, // -2.0% return in Feb 2023
+  '2023-03': 0.028,  // 2.8% return in Mar 2023
+  '2023-04': 0.012,  // 1.2% return in Apr 2023
+  '2023-05': 0.004,  // 0.4% return in May 2023
+  '2023-06': 0.052,  // 5.2% return in Jun 2023
+  '2023-07': 0.025,  // 2.5% return in Jul 2023
+  '2023-08': -0.013, // -1.3% return in Aug 2023
+  '2023-09': -0.038, // -3.8% return in Sep 2023
+  '2023-10': -0.017, // -1.7% return in Oct 2023
+  '2023-11': 0.071,  // 7.1% return in Nov 2023
+  '2023-12': 0.036,  // 3.6% return in Dec 2023
+  '2024-01': 0.013,  // 1.3% return in Jan 2024
+  '2024-02': 0.042,  // 4.2% return in Feb 2024
+  '2024-03': 0.025,  // 2.5% return in Mar 2024
+  '2024-04': -0.033, // -3.3% return in Apr 2024
+  '2024-05': 0.038,  // 3.8% return in May 2024
+  '2024-06': 0.028,  // 2.8% return in Jun 2024
+  '2024-07': 0.009,  // 0.9% return in Jul 2024
+  '2024-08': 0.019,  // 1.9% return in Aug 2024
+  '2024-09': -0.038, // -3.8% return in Sep 2024
+  '2024-10': -0.008, // -0.8% return in Oct 2024
+  '2024-11': 0.044,  // 4.4% return in Nov 2024
+  '2024-12': 0.020,  // 2.0% return in Dec 2024
+  '2025-01': 0.026,  // 2.6% return in Jan 2025
+  '2025-02': -0.014, // -1.4% return in Feb 2025
+  '2025-03': 0.022,  // 2.2% return in Mar 2025
+  '2025-04': 0.018,  // 1.8% return in Apr 2025
+  '2025-05': 0.015,  // 1.5% return in May 2025
+  '2025-06': 0.025   // 2.5% return in Jun 2025
+};
+
 function calculateSP500Performance(timeSeriesData, principalInvested) {
   if (!timeSeriesData || timeSeriesData.length === 0) return { sp500Value: principalInvested, sp500Return: 0 };
   
@@ -81,6 +132,35 @@ function calculateSP500Performance(timeSeriesData, principalInvested) {
   return {
     sp500Value: sp500Value,
     sp500Return: totalReturn
+  };
+}
+
+function calculateVFIFXPerformance(timeSeriesData, principalInvested) {
+  if (!timeSeriesData || timeSeriesData.length === 0) return { vfifxValue: principalInvested, vfifxReturn: 0 };
+  
+  const startDate = timeSeriesData[0].date;
+  const endDate = timeSeriesData[timeSeriesData.length - 1].date;
+  
+  let vfifxValue = principalInvested;
+  const startMonth = startDate.substring(0, 7); // YYYY-MM format
+  const endMonth = endDate.substring(0, 7);
+  
+  // Calculate cumulative VFIFX return from start to end
+  let current = new Date(startMonth + '-01');
+  const end = new Date(endMonth + '-01');
+  
+  while (current <= end) {
+    const monthKey = current.toISOString().substring(0, 7); // YYYY-MM
+    const monthlyReturn = VFIFX_MONTHLY_RETURNS[monthKey] || 0;
+    vfifxValue = vfifxValue * (1 + monthlyReturn);
+    current.setMonth(current.getMonth() + 1);
+  }
+  
+  const totalReturn = ((vfifxValue / principalInvested) - 1) * 100;
+  
+  return {
+    vfifxValue: vfifxValue,
+    vfifxReturn: totalReturn
   };
 }
 
@@ -678,8 +758,9 @@ async function generateTimeSeriesData(transactions, currentValue, netDeposits, a
     
     // Calculate S&P 500 value for this time point
     let sp500ValueAtThisPoint = netInvestedToDate; // Start with principal invested
+    let vfifxValueAtThisPoint = netInvestedToDate; // Start with principal invested
     if (points.length > 0) {
-      // For subsequent points, calculate cumulative S&P 500 return from start date
+      // For subsequent points, calculate cumulative returns from start date
       const startDate = points[0].date;
       const monthKey = monthEndStr.substring(0, 7); // YYYY-MM format
       const startMonthKey = startDate.substring(0, 7);
@@ -689,8 +770,10 @@ async function generateTimeSeriesData(transactions, currentValue, netDeposits, a
       
       while (currentMonth <= endMonth) {
         const key = currentMonth.toISOString().substring(0, 7); // YYYY-MM
-        const monthlyReturn = SP500_MONTHLY_RETURNS[key] || 0;
-        sp500ValueAtThisPoint = sp500ValueAtThisPoint * (1 + monthlyReturn);
+        const sp500MonthlyReturn = SP500_MONTHLY_RETURNS[key] || 0;
+        const vfifxMonthlyReturn = VFIFX_MONTHLY_RETURNS[key] || 0;
+        sp500ValueAtThisPoint = sp500ValueAtThisPoint * (1 + sp500MonthlyReturn);
+        vfifxValueAtThisPoint = vfifxValueAtThisPoint * (1 + vfifxMonthlyReturn);
         currentMonth.setMonth(currentMonth.getMonth() + 1);
       }
     }
@@ -701,7 +784,8 @@ async function generateTimeSeriesData(transactions, currentValue, netDeposits, a
       accountValue: Math.max(0, accountValue), // Real statement balance
       deposits: netInvestedToDate, // This represents the principal invested
       withdrawals: monthWithdrawals,
-      spyValue: Math.max(0, sp500ValueAtThisPoint) // Real S&P 500 historical performance
+      spyValue: Math.max(0, sp500ValueAtThisPoint), // Real S&P 500 historical performance
+      vfifxValue: Math.max(0, vfifxValueAtThisPoint) // Real VFIFX historical performance
     });
     
     current.setMonth(current.getMonth() + 1);

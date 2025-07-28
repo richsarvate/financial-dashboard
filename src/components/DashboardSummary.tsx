@@ -6,6 +6,7 @@ import { UI_CONSTANTS } from '@/constants/financial';
 interface DashboardSummaryProps {
   metrics: DashboardMetrics;
   showSP500: boolean;
+  showVFIFX: boolean;
   showWithoutFees: boolean;
 }
 
@@ -16,11 +17,14 @@ interface DashboardSummaryProps {
 export const DashboardSummary: React.FC<DashboardSummaryProps> = ({
   metrics,
   showSP500,
+  showVFIFX,
   showWithoutFees,
 }) => {
   const getGridClasses = () => {
-    if (showSP500 && showWithoutFees) return `grid-cols-1 gap-4 sm:gap-6 ${UI_CONSTANTS.THREE_COLUMNS}`;
-    if (showSP500 || showWithoutFees) return `grid-cols-1 gap-4 sm:gap-6 ${UI_CONSTANTS.TWO_COLUMNS}`;
+    const activeToggles = [showSP500, showVFIFX, showWithoutFees].filter(Boolean).length;
+    
+    if (activeToggles >= 2) return `grid-cols-1 gap-4 sm:gap-6 ${UI_CONSTANTS.THREE_COLUMNS}`;
+    if (activeToggles === 1) return `grid-cols-1 gap-4 sm:gap-6 ${UI_CONSTANTS.TWO_COLUMNS}`;
     return `grid-cols-1 gap-4 sm:gap-6 ${UI_CONSTANTS.SINGLE_COLUMN}`;
   };
 
@@ -81,6 +85,26 @@ export const DashboardSummary: React.FC<DashboardSummaryProps> = ({
             label: metrics.isOutperforming ? 'Outperformed by' : 'Underperformed by',
             value: metrics.outperformanceAmount,
             color: metrics.isOutperforming ? UI_CONSTANTS.COLORS.SUCCESS : UI_CONSTANTS.COLORS.ERROR,
+          }}
+        />
+      )}
+
+      {/* VFIFX Alternative Card */}
+      {showVFIFX && (
+        <PortfolioCard
+          title="VFIFX Alternative"
+          badge="TARGET DATE"
+          badgeColor="bg-red-600"
+          backgroundColor="bg-red-50"
+          borderColor="border-red-500"
+          annualReturn={metrics.vfifxReturn}
+          currentBalance={metrics.vfifxValue}
+          principalInvested={metrics.principalInvested}
+          investmentGains={metrics.vfifxGains}
+          additionalMetric={{
+            label: metrics.actualInvestmentGains > metrics.vfifxGains ? 'Outperformed by' : 'Underperformed by',
+            value: Math.abs(metrics.actualInvestmentGains - metrics.vfifxGains),
+            color: metrics.actualInvestmentGains > metrics.vfifxGains ? UI_CONSTANTS.COLORS.SUCCESS : UI_CONSTANTS.COLORS.ERROR,
           }}
         />
       )}

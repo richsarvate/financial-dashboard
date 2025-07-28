@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2025-07-28T06:10:22.593Z",
+  "lastUpdated": "2025-07-28T06:35:18.008Z",
   "accounts": {
     "Contributory IRA": {
-      "lastUpdated": "2025-07-28T06:10:16.952Z",
+      "lastUpdated": "2025-07-28T06:35:12.280Z",
       "accountName": "Contributory IRA",
       "account": {
         "accountId": "CONTRIBUTORY_IRA",
@@ -51,7 +51,8 @@
             "accountValue": 411247.47,
             "deposits": 411247.47,
             "withdrawals": 0,
-            "spyValue": 411247.47
+            "spyValue": 411247.47,
+            "vfifxValue": 411247.47
           },
           {
             "date": "2021-10-31",
@@ -59,7 +60,8 @@
             "accountValue": 435014.11,
             "deposits": 411247.47,
             "withdrawals": 0,
-            "spyValue": 429753.60614999995
+            "spyValue": 429753.60614999995,
+            "vfifxValue": 425641.1314499999
           },
           {
             "date": "2021-11-30",
@@ -67,7 +69,8 @@
             "accountValue": 429912.79,
             "deposits": 411247.47,
             "withdrawals": 0,
-            "spyValue": 459406.6049743499
+            "spyValue": 459406.6049743499,
+            "vfifxValue": 449051.3936797499
           },
           {
             "date": "2021-12-31",
@@ -75,7 +78,8 @@
             "accountValue": 441059.8,
             "deposits": 411247.47,
             "withdrawals": 0,
-            "spyValue": 455731.3521345551
+            "spyValue": 455731.3521345551,
+            "vfifxValue": 446806.13671135117
           },
           {
             "date": "2022-01-31",
@@ -83,7 +87,8 @@
             "accountValue": 407417.11,
             "deposits": 411247.47,
             "withdrawals": 0,
-            "spyValue": 475327.800276341
+            "spyValue": 475327.800276341,
+            "vfifxValue": 461997.5453595371
           },
           {
             "date": "2022-02-28",
@@ -91,7 +96,8 @@
             "accountValue": 397183.35,
             "deposits": 411247.47,
             "withdrawals": 0,
-            "spyValue": 450610.75466197124
+            "spyValue": 450610.75466197124,
+            "vfifxValue": 442593.64845443657
           },
           {
             "date": "2022-03-31",
@@ -99,7 +105,8 @@
             "accountValue": 407927.67,
             "deposits": 411247.47,
             "withdrawals": 0,
-            "spyValue": 437092.4320221121
+            "spyValue": 437092.4320221121,
+            "vfifxValue": 431971.4008915301
           },
           {
             "date": "2022-04-30",
@@ -107,7 +114,8 @@
             "accountValue": 364945.61,
             "deposits": 411247.47,
             "withdrawals": 0,
-            "spyValue": 452390.66714288597
+            "spyValue": 452390.66714288597,
+            "vfifxValue": 444066.60011649295
           },
           {
             "date": "2022-05-31",
@@ -115,7 +123,8 @@
             "accountValue": 361477.83,
             "deposits": 411247.47,
             "withdrawals": 0,
-            "spyValue": 413032.6791014549
+            "spyValue": 413032.6791014549,
+            "vfifxValue": 412981.9381083384
           },
           {
             "date": "2022-06-30",
@@ -123,7 +132,8 @@
             "accountValue": 329274.78,
             "deposits": 411247.47,
             "withdrawals": 0,
-            "spyValue": 413445.7117805563
+            "spyValue": 413445.7117805563,
+            "vfifxValue": 413807.90198455506
           },
           {
             "date": "2022-07-31",
@@ -131,7 +141,8 @@
             "accountValue": 361818.64,
             "deposits": 411247.47,
             "withdrawals": 0,
-            "spyValue": 379543.1634145507
+            "spyValue": 379543.1634145507,
+            "vfifxValue": 386496.5804535744
           },
           {
             "date": "2022-08-31",
@@ -139,7 +150,8 @@
             "accountValue": 346638.89,
             "deposits": 411247.47,
             "withdrawals": 0,
-            "spyValue": 414081.59128527483
+            "spyValue": 414081.59128527483,
+            "vfifxValue": 414710.83082668536
           },
           {
             "date": "2022-09-30",
@@ -147,7 +159,8 @@
             "accountValue": 312881.65,
             "deposits": 411247.47,
             "withdrawals": 0,
-            "spyValue": 397104.24604257854
+            "spyValue": 397104.24604257854,
+            "vfifxValue": 401025.3734094047
           },
           {
             "date": "2022-10-31",
@@ -155,7 +168,8 @@
             "accountValue": 335047.07,
             "deposits": 411247.47,
             "withdrawals": 0,
-            "spyValue": 360173.5511606187
+            "spyValue": 360173.5511606187,
+            "vfifxValue": 370948.4704036994
           },
           {
             "date": "2022-11-30",
@@ -163,7 +177,8 @@
             "accountValue": 355001.73,
             "deposits": 411247.47,
             "withdrawals": 0,
-            "spyValue": 388987.4352534682
+            "spyValue": 388987.4352534682,
+            "vfifxValue": 394689.17250953615
           },
           {
             "date": "2022-12-31",
@@ -171,7 +186,8 @@
             "accountValue": 333007.11,
             "deposits": 411247.47,
             "withdrawals": 0,
-            "spyValue": 410381.744192409
+            "spyValue": 410381.744192409,
+            "vfifxValue": 412055.49609995575
           },
           {
             "date": "2023-01-31",
@@ -179,7 +195,8 @@
             "accountValue": 359884.54,
             "deposits": 411247.47,
             "withdrawals": 0,
-            "spyValue": 387400.3665176341
+            "spyValue": 387400.3665176341,
+            "vfifxValue": 393512.99877545773
           },
           {
             "date": "2023-02-28",
@@ -187,7 +204,8 @@
             "accountValue": 353043.83,
             "deposits": 411247.47,
             "withdrawals": 0,
-            "spyValue": 411419.1892417274
+            "spyValue": 411419.1892417274,
+            "vfifxValue": 413188.6487142306
           },
           {
             "date": "2023-03-31",
@@ -195,7 +213,8 @@
             "accountValue": 369238.17,
             "deposits": 411247.47,
             "withdrawals": 0,
-            "spyValue": 401133.7095106842
+            "spyValue": 401133.7095106842,
+            "vfifxValue": 404924.87573994603
           },
           {
             "date": "2023-04-30",
@@ -203,7 +222,8 @@
             "accountValue": 372636.09,
             "deposits": 411247.47,
             "withdrawals": 0,
-            "spyValue": 415173.3893435581
+            "spyValue": 415173.3893435581,
+            "vfifxValue": 416262.77226066455
           },
           {
             "date": "2023-05-31",
@@ -211,7 +231,8 @@
             "accountValue": 382420.6,
             "deposits": 411247.47,
             "withdrawals": 0,
-            "spyValue": 421400.99018371146
+            "spyValue": 421400.99018371146,
+            "vfifxValue": 421257.92552779254
           },
           {
             "date": "2023-06-30",
@@ -219,7 +240,8 @@
             "accountValue": 405862.99,
             "deposits": 411247.47,
             "withdrawals": 0,
-            "spyValue": 423507.99513462995
+            "spyValue": 423507.99513462995,
+            "vfifxValue": 422942.9572299037
           },
           {
             "date": "2023-07-31",
@@ -227,7 +249,8 @@
             "accountValue": 419217.66,
             "deposits": 411247.47,
             "withdrawals": 0,
-            "spyValue": 451036.0148183809
+            "spyValue": 451036.0148183809,
+            "vfifxValue": 444935.99100585876
           },
           {
             "date": "2023-08-31",
@@ -235,7 +258,8 @@
             "accountValue": 412773.13,
             "deposits": 411247.47,
             "withdrawals": 0,
-            "spyValue": 465018.13127775065
+            "spyValue": 465018.13127775065,
+            "vfifxValue": 456059.3907810052
           },
           {
             "date": "2023-09-30",
@@ -243,7 +267,8 @@
             "accountValue": 395526.73,
             "deposits": 415606.75,
             "withdrawals": 0,
-            "spyValue": 462428.22951279575
+            "spyValue": 462428.22951279575,
+            "vfifxValue": 454902.0654491815
           },
           {
             "date": "2023-10-31",
@@ -251,7 +276,8 @@
             "accountValue": 387940.58,
             "deposits": 415606.76,
             "withdrawals": 0,
-            "spyValue": 440231.68508868694
+            "spyValue": 440231.68508868694,
+            "vfifxValue": 437615.7974916767
           },
           {
             "date": "2023-11-30",
@@ -259,7 +285,8 @@
             "accountValue": 418713.04,
             "deposits": 415606.76,
             "withdrawals": 0,
-            "spyValue": 430986.8197018245
+            "spyValue": 430986.8197018245,
+            "vfifxValue": 430176.3289343182
           },
           {
             "date": "2023-12-31",
@@ -267,7 +294,8 @@
             "accountValue": 436361.84,
             "deposits": 415606.76,
             "withdrawals": 0,
-            "spyValue": 469344.6466552869
+            "spyValue": 469344.6466552869,
+            "vfifxValue": 460718.84828865476
           },
           {
             "date": "2024-01-31",
@@ -275,7 +303,8 @@
             "accountValue": 440192.37,
             "deposits": 415606.76,
             "withdrawals": 0,
-            "spyValue": 490465.15575477475
+            "spyValue": 490465.15575477475,
+            "vfifxValue": 477304.72682704637
           },
           {
             "date": "2024-02-29",
@@ -283,7 +312,8 @@
             "accountValue": 453794.78,
             "deposits": 415606.76,
             "withdrawals": 0,
-            "spyValue": 498312.5982468512
+            "spyValue": 498312.5982468512,
+            "vfifxValue": 483509.68827579793
           },
           {
             "date": "2024-03-31",
@@ -291,7 +321,8 @@
             "accountValue": 457437.84,
             "deposits": 415606.76,
             "withdrawals": 0,
-            "spyValue": 524723.1659539343
+            "spyValue": 524723.1659539343,
+            "vfifxValue": 503817.09518338146
           },
           {
             "date": "2024-04-30",
@@ -299,7 +330,8 @@
             "accountValue": 454603.35,
             "deposits": 415606.76,
             "withdrawals": 0,
-            "spyValue": 540989.5840985063
+            "spyValue": 540989.5840985063,
+            "vfifxValue": 516412.5225629659
           },
           {
             "date": "2024-05-31",
@@ -307,7 +339,8 @@
             "accountValue": 459547.11,
             "deposits": 415606.76,
             "withdrawals": 0,
-            "spyValue": 518809.0111504675
+            "spyValue": 518809.0111504675,
+            "vfifxValue": 499370.90931838803
           },
           {
             "date": "2024-06-30",
@@ -315,7 +348,8 @@
             "accountValue": 463049.24,
             "deposits": 415606.76,
             "withdrawals": 0,
-            "spyValue": 543711.84368569
+            "spyValue": 543711.84368569,
+            "vfifxValue": 518347.0038724868
           },
           {
             "date": "2024-07-31",
@@ -323,7 +357,8 @@
             "accountValue": 467557.95,
             "deposits": 415606.76,
             "withdrawals": 0,
-            "spyValue": 562741.7582146891
+            "spyValue": 562741.7582146891,
+            "vfifxValue": 532860.7199809165
           },
           {
             "date": "2024-08-31",
@@ -331,7 +366,8 @@
             "accountValue": 479848.97,
             "deposits": 415606.76,
             "withdrawals": 0,
-            "spyValue": 568931.9175550506
+            "spyValue": 568931.9175550506,
+            "vfifxValue": 537656.4664607446
           },
           {
             "date": "2024-09-30",
@@ -339,7 +375,8 @@
             "accountValue": 487272.89,
             "deposits": 415606.76,
             "withdrawals": 0,
-            "spyValue": 582586.2835763718
+            "spyValue": 582586.2835763718,
+            "vfifxValue": 547871.9393234988
           },
           {
             "date": "2024-10-31",
@@ -347,7 +384,8 @@
             "accountValue": 485557.46,
             "deposits": 415606.76,
             "withdrawals": 0,
-            "spyValue": 554622.141964706
+            "spyValue": 554622.141964706,
+            "vfifxValue": 527052.8056292058
           },
           {
             "date": "2024-11-30",
@@ -355,7 +393,8 @@
             "accountValue": 506879.75,
             "deposits": 415606.76,
             "withdrawals": 0,
-            "spyValue": 549075.9205450589
+            "spyValue": 549075.9205450589,
+            "vfifxValue": 522836.3831841721
           },
           {
             "date": "2024-12-31",
@@ -363,7 +402,8 @@
             "accountValue": 497181.75,
             "deposits": 415606.76,
             "withdrawals": 0,
-            "spyValue": 579275.0961750371
+            "spyValue": 579275.0961750371,
+            "vfifxValue": 545841.1840442757
           },
           {
             "date": "2025-01-31",
@@ -371,7 +411,8 @@
             "accountValue": 505238.54,
             "deposits": 415606.76,
             "withdrawals": 0,
-            "spyValue": 593756.973579413
+            "spyValue": 593756.973579413,
+            "vfifxValue": 556758.0077251612
           },
           {
             "date": "2025-02-28",
@@ -379,7 +420,8 @@
             "accountValue": 500193.67,
             "deposits": 415606.76,
             "withdrawals": 0,
-            "spyValue": 612757.1967339542
+            "spyValue": 612757.1967339542,
+            "vfifxValue": 571233.7159260154
           },
           {
             "date": "2025-03-31",
@@ -387,7 +429,8 @@
             "accountValue": 480256.65,
             "deposits": 415606.76,
             "withdrawals": 0,
-            "spyValue": 601727.5671927431
+            "spyValue": 601727.5671927431,
+            "vfifxValue": 563236.4439030512
           },
           {
             "date": "2025-04-30",
@@ -395,7 +438,8 @@
             "accountValue": 476643.51,
             "deposits": 415606.76,
             "withdrawals": 0,
-            "spyValue": 618575.9390741399
+            "spyValue": 618575.9390741399,
+            "vfifxValue": 575627.6456689184
           },
           {
             "date": "2025-05-31",
@@ -403,7 +447,8 @@
             "accountValue": 489565.17,
             "deposits": 415606.76,
             "withdrawals": 0,
-            "spyValue": 632184.6097337711
+            "spyValue": 632184.6097337711,
+            "vfifxValue": 585988.9432909589
           },
           {
             "date": "2025-06-30",
@@ -411,12 +456,13 @@
             "accountValue": 505570.92,
             "deposits": 415606.76,
             "withdrawals": 0,
-            "spyValue": 644196.1173187126
+            "spyValue": 644196.1173187126,
+            "vfifxValue": 594778.7774403233
           }
         ],
         "totalReturn": -415532.63999999996,
         "totalReturnPercent": -99.98216583387624,
-        "annualizedReturn": -89.40883826267071,
+        "annualizedReturn": -89.40854519644972,
         "deposits": 4359.29,
         "withdrawals": 0,
         "fees": 13324.249999999998,
@@ -3491,12 +3537,12 @@
         "totalInvested": 415606.75999999995,
         "totalGains": -428856.88999999996,
         "totalFeespaid": 13324.249999999998,
-        "yearsInvested": 3.8446465178594065,
-        "annualizedReturn": -89.40883826267071
+        "yearsInvested": 3.844693901944381,
+        "annualizedReturn": -89.40854519644972
       }
     },
     "General Investment Account": {
-      "lastUpdated": "2025-07-28T06:10:19.798Z",
+      "lastUpdated": "2025-07-28T06:35:15.221Z",
       "accountName": "General Investment Account",
       "account": {
         "accountId": "GENERAL_INVESTMENT_ACCOUNT",
@@ -3569,7 +3615,8 @@
             "accountValue": 413279,
             "deposits": 413279,
             "withdrawals": 0,
-            "spyValue": 413279
+            "spyValue": 413279,
+            "vfifxValue": 413279
           },
           {
             "date": "2021-10-31",
@@ -3577,7 +3624,8 @@
             "accountValue": 424404.63,
             "deposits": 413279,
             "withdrawals": 0,
-            "spyValue": 431876.555
+            "spyValue": 431876.555,
+            "vfifxValue": 427743.76499999996
           },
           {
             "date": "2021-11-30",
@@ -3585,7 +3633,8 @@
             "accountValue": 415752.89,
             "deposits": 413279,
             "withdrawals": 0,
-            "spyValue": 461676.037295
+            "spyValue": 461676.037295,
+            "vfifxValue": 451269.67207499995
           },
           {
             "date": "2021-12-31",
@@ -3593,7 +3642,8 @@
             "accountValue": 425844.29,
             "deposits": 413279,
             "withdrawals": 0,
-            "spyValue": 457982.62899664
+            "spyValue": 457982.62899664,
+            "vfifxValue": 449013.323714625
           },
           {
             "date": "2022-01-31",
@@ -3601,7 +3651,8 @@
             "accountValue": 395915.13,
             "deposits": 413279,
             "withdrawals": 0,
-            "spyValue": 477675.8820434955
+            "spyValue": 477675.8820434955,
+            "vfifxValue": 464279.77672092227
           },
           {
             "date": "2022-02-28",
@@ -3609,7 +3660,8 @@
             "accountValue": 390209.66,
             "deposits": 413279,
             "withdrawals": 0,
-            "spyValue": 452836.7361772337
+            "spyValue": 452836.7361772337,
+            "vfifxValue": 444780.0260986435
           },
           {
             "date": "2022-03-31",
@@ -3617,7 +3669,8 @@
             "accountValue": 389242.01,
             "deposits": 413279,
             "withdrawals": 0,
-            "spyValue": 439251.63409191667
+            "spyValue": 439251.63409191667,
+            "vfifxValue": 434105.30547227606
           },
           {
             "date": "2022-04-30",
@@ -3625,7 +3678,8 @@
             "accountValue": 362101.94,
             "deposits": 413279,
             "withdrawals": 0,
-            "spyValue": 454625.4412851337
+            "spyValue": 454625.4412851337,
+            "vfifxValue": 446260.2540254998
           },
           {
             "date": "2022-05-31",
@@ -3633,7 +3687,8 @@
             "accountValue": 363624.69,
             "deposits": 413279,
             "withdrawals": 0,
-            "spyValue": 415073.0278933271
+            "spyValue": 415073.0278933271,
+            "vfifxValue": 415022.0362437148
           },
           {
             "date": "2022-06-30",
@@ -3641,7 +3696,8 @@
             "accountValue": 330305.06,
             "deposits": 403279,
             "withdrawals": 10000,
-            "spyValue": 405434.6479047056
+            "spyValue": 405434.6479047056,
+            "vfifxValue": 405789.8201888741
           },
           {
             "date": "2022-07-31",
@@ -3649,7 +3705,8 @@
             "accountValue": 353001.51,
             "deposits": 403279,
             "withdrawals": 10000,
-            "spyValue": 372189.00677651976
+            "spyValue": 372189.00677651976,
+            "vfifxValue": 379007.6920564084
           },
           {
             "date": "2022-08-31",
@@ -3657,7 +3714,8 @@
             "accountValue": 340057.65,
             "deposits": 403279,
             "withdrawals": 10000,
-            "spyValue": 406058.20639318303
+            "spyValue": 406058.20639318303,
+            "vfifxValue": 406675.2535765262
           },
           {
             "date": "2022-09-30",
@@ -3665,7 +3723,8 @@
             "accountValue": 313182.69,
             "deposits": 403279,
             "withdrawals": 10000,
-            "spyValue": 389409.8199310625
+            "spyValue": 389409.8199310625,
+            "vfifxValue": 393254.9702085008
           },
           {
             "date": "2022-10-31",
@@ -3673,7 +3732,8 @@
             "accountValue": 327715.77,
             "deposits": 403279,
             "withdrawals": 10000,
-            "spyValue": 353194.70667747373
+            "spyValue": 353194.70667747373,
+            "vfifxValue": 363760.8474428633
           },
           {
             "date": "2022-11-30",
@@ -3681,7 +3741,8 @@
             "accountValue": 347040.7,
             "deposits": 403279,
             "withdrawals": 10000,
-            "spyValue": 381450.28321167163
+            "spyValue": 381450.28321167163,
+            "vfifxValue": 387041.54167920654
           },
           {
             "date": "2022-12-31",
@@ -3689,7 +3750,8 @@
             "accountValue": 334477.11,
             "deposits": 403279,
             "withdrawals": 10000,
-            "spyValue": 402430.0487883135
+            "spyValue": 402430.0487883135,
+            "vfifxValue": 404071.36951309163
           },
           {
             "date": "2023-01-31",
@@ -3697,7 +3759,8 @@
             "accountValue": 354596.44,
             "deposits": 403279,
             "withdrawals": 10000,
-            "spyValue": 379893.96605616796
+            "spyValue": 379893.96605616796,
+            "vfifxValue": 385888.1578850025
           },
           {
             "date": "2023-02-28",
@@ -3705,7 +3768,8 @@
             "accountValue": 346424.59,
             "deposits": 403279,
             "withdrawals": 10000,
-            "spyValue": 403447.3919516504
+            "spyValue": 403447.3919516504,
+            "vfifxValue": 405182.5657792526
           },
           {
             "date": "2023-03-31",
@@ -3713,7 +3777,8 @@
             "accountValue": 357116.53,
             "deposits": 403279,
             "withdrawals": 10000,
-            "spyValue": 393361.20715285913
+            "spyValue": 393361.20715285913,
+            "vfifxValue": 397078.91446366755
           },
           {
             "date": "2023-04-30",
@@ -3721,7 +3786,8 @@
             "accountValue": 359398.92,
             "deposits": 403279,
             "withdrawals": 10000,
-            "spyValue": 407128.84940320917
+            "spyValue": 407128.84940320917,
+            "vfifxValue": 408197.12406865024
           },
           {
             "date": "2023-05-31",
@@ -3729,7 +3795,8 @@
             "accountValue": 361713.15,
             "deposits": 403279,
             "withdrawals": 10000,
-            "spyValue": 413235.7821442573
+            "spyValue": 413235.7821442573,
+            "vfifxValue": 413095.48955747404
           },
           {
             "date": "2023-06-30",
@@ -3737,7 +3804,8 @@
             "accountValue": 378518.16,
             "deposits": 403279,
             "withdrawals": 10000,
-            "spyValue": 415301.96105497854
+            "spyValue": 415301.96105497854,
+            "vfifxValue": 414747.8715157039
           },
           {
             "date": "2023-07-31",
@@ -3745,7 +3813,8 @@
             "accountValue": 386287.46,
             "deposits": 403279,
             "withdrawals": 10000,
-            "spyValue": 442296.5885235521
+            "spyValue": 442296.5885235521,
+            "vfifxValue": 436314.7608345205
           },
           {
             "date": "2023-08-31",
@@ -3753,7 +3822,8 @@
             "accountValue": 382719.9,
             "deposits": 403279,
             "withdrawals": 10000,
-            "spyValue": 456007.78276778216
+            "spyValue": 456007.78276778216,
+            "vfifxValue": 447222.6298553835
           },
           {
             "date": "2023-09-30",
@@ -3761,7 +3831,8 @@
             "accountValue": 371844.49,
             "deposits": 407204.16000000003,
             "withdrawals": 10000,
-            "spyValue": 453079.01943133806
+            "spyValue": 453079.01943133806,
+            "vfifxValue": 445705.0166858431
           },
           {
             "date": "2023-10-31",
@@ -3769,7 +3840,8 @@
             "accountValue": 347783.88,
             "deposits": 387204.17000000004,
             "withdrawals": 30000,
-            "spyValue": 410146.22628483333
+            "spyValue": 410146.22628483333,
+            "vfifxValue": 407709.1085973982
           },
           {
             "date": "2023-11-30",
@@ -3777,7 +3849,8 @@
             "accountValue": 368239.03,
             "deposits": 387204.17000000004,
             "withdrawals": 30000,
-            "spyValue": 401533.1555328518
+            "spyValue": 401533.1555328518,
+            "vfifxValue": 400778.05375124246
           },
           {
             "date": "2023-12-31",
@@ -3785,7 +3858,8 @@
             "accountValue": 379430.49,
             "deposits": 387204.17000000004,
             "withdrawals": 30000,
-            "spyValue": 437269.6063752756
+            "spyValue": 437269.6063752756,
+            "vfifxValue": 429233.2955675807
           },
           {
             "date": "2024-01-31",
@@ -3793,7 +3867,8 @@
             "accountValue": 382672.51,
             "deposits": 387204.17000000004,
             "withdrawals": 30000,
-            "spyValue": 456946.73866216297
+            "spyValue": 456946.73866216297,
+            "vfifxValue": 444685.6942080136
           },
           {
             "date": "2024-02-29",
@@ -3801,7 +3876,8 @@
             "accountValue": 395133.07,
             "deposits": 387204.17000000004,
             "withdrawals": 30000,
-            "spyValue": 464257.88648075756
+            "spyValue": 464257.88648075756,
+            "vfifxValue": 450466.6082327177
           },
           {
             "date": "2024-03-31",
@@ -3809,7 +3885,8 @@
             "accountValue": 403454.89,
             "deposits": 387204.17000000004,
             "withdrawals": 30000,
-            "spyValue": 488863.5544642377
+            "spyValue": 488863.5544642377,
+            "vfifxValue": 469386.2057784919
           },
           {
             "date": "2024-04-30",
@@ -3817,7 +3894,8 @@
             "accountValue": 393020.83,
             "deposits": 387204.17000000004,
             "withdrawals": 30000,
-            "spyValue": 504018.32465262903
+            "spyValue": 504018.32465262903,
+            "vfifxValue": 481120.86092295416
           },
           {
             "date": "2024-05-31",
@@ -3825,7 +3903,8 @@
             "accountValue": 405320.28,
             "deposits": 387204.17000000004,
             "withdrawals": 30000,
-            "spyValue": 483353.5733418712
+            "spyValue": 483353.5733418712,
+            "vfifxValue": 465243.87251249666
           },
           {
             "date": "2024-06-30",
@@ -3833,7 +3912,8 @@
             "accountValue": 414064.94,
             "deposits": 387204.17000000004,
             "withdrawals": 30000,
-            "spyValue": 506554.54486228107
+            "spyValue": 506554.54486228107,
+            "vfifxValue": 482923.1396679715
           },
           {
             "date": "2024-07-31",
@@ -3841,7 +3921,8 @@
             "accountValue": 419774.27,
             "deposits": 387204.17000000004,
             "withdrawals": 30000,
-            "spyValue": 524283.95393246086
+            "spyValue": 524283.95393246086,
+            "vfifxValue": 496444.98757867474
           },
           {
             "date": "2024-08-31",
@@ -3849,7 +3930,8 @@
             "accountValue": 424348.74,
             "deposits": 387204.17000000004,
             "withdrawals": 30000,
-            "spyValue": 530051.0774257178
+            "spyValue": 530051.0774257178,
+            "vfifxValue": 500912.99246688274
           },
           {
             "date": "2024-09-30",
@@ -3857,7 +3939,8 @@
             "accountValue": 411766.07,
             "deposits": 367204.17000000004,
             "withdrawals": 50000,
-            "spyValue": 514736.84574824077
+            "spyValue": 514736.84574824077,
+            "vfifxValue": 484065.41978666483
           },
           {
             "date": "2024-10-31",
@@ -3865,7 +3948,8 @@
             "accountValue": 407187.62,
             "deposits": 367204.17000000004,
             "withdrawals": 50000,
-            "spyValue": 490029.4771523252
+            "spyValue": 490029.4771523252,
+            "vfifxValue": 465670.93383477157
           },
           {
             "date": "2024-11-30",
@@ -3873,7 +3957,8 @@
             "accountValue": 431437.65,
             "deposits": 367204.17000000004,
             "withdrawals": 50000,
-            "spyValue": 485129.18238080194
+            "spyValue": 485129.18238080194,
+            "vfifxValue": 461945.5663640934
           },
           {
             "date": "2024-12-31",
@@ -3881,7 +3966,8 @@
             "accountValue": 418473.65,
             "deposits": 367204.17000000004,
             "withdrawals": 50000,
-            "spyValue": 511811.28741174605
+            "spyValue": 511811.28741174605,
+            "vfifxValue": 482271.17128411354
           },
           {
             "date": "2025-01-31",
@@ -3889,7 +3975,8 @@
             "accountValue": 409613.77,
             "deposits": 347204.17000000004,
             "withdrawals": 70000,
-            "spyValue": 496033.55150756444
+            "spyValue": 496033.55150756444,
+            "vfifxValue": 465124.0561223502
           },
           {
             "date": "2025-02-28",
@@ -3897,7 +3984,8 @@
             "accountValue": 402300.9,
             "deposits": 347204.17000000004,
             "withdrawals": 70000,
-            "spyValue": 511906.6251558065
+            "spyValue": 511906.6251558065,
+            "vfifxValue": 477217.28158153134
           },
           {
             "date": "2025-03-31",
@@ -3905,7 +3993,8 @@
             "accountValue": 379575.81,
             "deposits": 347204.17000000004,
             "withdrawals": 70000,
-            "spyValue": 502692.305903002
+            "spyValue": 502692.305903002,
+            "vfifxValue": 470536.2396393899
           },
           {
             "date": "2025-04-30",
@@ -3913,7 +4002,8 @@
             "accountValue": 376582.26,
             "deposits": 347204.17000000004,
             "withdrawals": 70000,
-            "spyValue": 516767.69046828605
+            "spyValue": 516767.69046828605,
+            "vfifxValue": 480888.0369114565
           },
           {
             "date": "2025-05-31",
@@ -3921,7 +4011,8 @@
             "accountValue": 399229.66,
             "deposits": 347204.17000000004,
             "withdrawals": 70000,
-            "spyValue": 528136.5796585884
+            "spyValue": 528136.5796585884,
+            "vfifxValue": 489544.0215758627
           },
           {
             "date": "2025-06-30",
@@ -3929,12 +4020,13 @@
             "accountValue": 419826.52,
             "deposits": 347204.17000000004,
             "withdrawals": 70000,
-            "spyValue": 538171.1746721015
+            "spyValue": 538171.1746721015,
+            "vfifxValue": 496887.1818995006
           }
         ],
         "totalReturn": -127377.89000000001,
         "totalReturnPercent": -23.27793557073124,
-        "annualizedReturn": -6.687655567196815,
+        "annualizedReturn": -6.687575617868157,
         "deposits": 203925.17,
         "withdrawals": 70000,
         "fees": 14594.789999999999,
@@ -7189,12 +7281,12 @@
         "totalInvested": 547204.41,
         "totalGains": -141972.68000000002,
         "totalFeespaid": 14594.789999999999,
-        "yearsInvested": 3.8282195033209114,
-        "annualizedReturn": -6.687655567196815
+        "yearsInvested": 3.8282668904162547,
+        "annualizedReturn": -6.687575617868157
       }
     },
     "Joint LLC": {
-      "lastUpdated": "2025-07-28T06:10:22.593Z",
+      "lastUpdated": "2025-07-28T06:35:18.008Z",
       "accountName": "Joint LLC",
       "account": {
         "accountId": "JOINT_LLC",
@@ -7255,7 +7347,8 @@
             "accountValue": 78527.13,
             "deposits": 78527.13,
             "withdrawals": 0,
-            "spyValue": 78527.13
+            "spyValue": 78527.13,
+            "vfifxValue": 78527.13
           },
           {
             "date": "2022-01-31",
@@ -7263,7 +7356,8 @@
             "accountValue": 72398.4,
             "deposits": 78527.13,
             "withdrawals": 0,
-            "spyValue": 85425.65984337
+            "spyValue": 85425.65984337,
+            "vfifxValue": 83957.75220228001
           },
           {
             "date": "2022-02-28",
@@ -7271,7 +7365,8 @@
             "accountValue": 69057.08,
             "deposits": 78527.13,
             "withdrawals": 500,
-            "spyValue": 80983.52553151475
+            "spyValue": 80983.52553151475,
+            "vfifxValue": 80431.52660978425
           },
           {
             "date": "2022-03-31",
@@ -7279,7 +7374,8 @@
             "accountValue": 71655.94,
             "deposits": 78527.13,
             "withdrawals": 500,
-            "spyValue": 80983.52553151475
+            "spyValue": 80983.52553151475,
+            "vfifxValue": 80431.52660978425
           },
           {
             "date": "2022-04-30",
@@ -7287,7 +7383,8 @@
             "accountValue": 62477.2,
             "deposits": 78527.13,
             "withdrawals": 500,
-            "spyValue": 83817.94892511776
+            "spyValue": 83817.94892511776,
+            "vfifxValue": 82683.60935485821
           },
           {
             "date": "2022-05-31",
@@ -7295,7 +7392,8 @@
             "accountValue": 60761.32,
             "deposits": 78527.13,
             "withdrawals": 500,
-            "spyValue": 76525.78736863252
+            "spyValue": 76525.78736863252,
+            "vfifxValue": 76895.75670001813
           },
           {
             "date": "2022-06-30",
@@ -7303,7 +7401,8 @@
             "accountValue": 55614.44,
             "deposits": 78527.13,
             "withdrawals": 500,
-            "spyValue": 76602.31315600114
+            "spyValue": 76602.31315600114,
+            "vfifxValue": 77049.54821341817
           },
           {
             "date": "2022-07-31",
@@ -7311,7 +7410,8 @@
             "accountValue": 62899.05,
             "deposits": 78527.13,
             "withdrawals": 500,
-            "spyValue": 70320.92347720904
+            "spyValue": 70320.92347720904,
+            "vfifxValue": 71964.27803133256
           },
           {
             "date": "2022-08-31",
@@ -7319,7 +7419,8 @@
             "accountValue": 61645.44,
             "deposits": 79527.13,
             "withdrawals": 500,
-            "spyValue": 77697.11632646492
+            "spyValue": 77697.11632646492,
+            "vfifxValue": 78200.99507573708
           },
           {
             "date": "2022-09-30",
@@ -7327,7 +7428,8 @@
             "accountValue": 56849.93,
             "deposits": 80527.13,
             "withdrawals": 500,
-            "spyValue": 75448.46682858367
+            "spyValue": 75448.46682858367,
+            "vfifxValue": 76571.23726966715
           },
           {
             "date": "2022-10-31",
@@ -7335,7 +7437,8 @@
             "accountValue": 62603.57,
             "deposits": 81527.13,
             "withdrawals": 500,
-            "spyValue": 69281.55698377936
+            "spyValue": 69281.55698377936,
+            "vfifxValue": 71707.95387851426
           },
           {
             "date": "2022-11-30",
@@ -7343,7 +7446,8 @@
             "accountValue": 67016.88,
             "deposits": 82527.13,
             "withdrawals": 500,
-            "spyValue": 75741.862918356
+            "spyValue": 75741.862918356,
+            "vfifxValue": 77233.11413267197
           },
           {
             "date": "2022-12-31",
@@ -7351,7 +7455,8 @@
             "accountValue": 64193.12,
             "deposits": 83527.13,
             "withdrawals": 500,
-            "spyValue": 80875.92473041294
+            "spyValue": 80875.92473041294,
+            "vfifxValue": 81608.39981350338
           },
           {
             "date": "2023-01-31",
@@ -7359,7 +7464,8 @@
             "accountValue": 69252.85,
             "deposits": 84527.13,
             "withdrawals": 500,
-            "spyValue": 77260.90977337056
+            "spyValue": 77260.90977337056,
+            "vfifxValue": 78869.0841912348
           },
           {
             "date": "2023-02-28",
@@ -7367,7 +7473,8 @@
             "accountValue": 68574.85,
             "deposits": 85527.13,
             "withdrawals": 500,
-            "spyValue": 83021.79329050759
+            "spyValue": 83021.79329050759,
+            "vfifxValue": 83792.25388860263
           },
           {
             "date": "2023-03-31",
@@ -7375,7 +7482,8 @@
             "accountValue": 72348.9,
             "deposits": 86527.13,
             "withdrawals": 500,
-            "spyValue": 81892.68789165326
+            "spyValue": 81892.68789165326,
+            "vfifxValue": 83076.52998888052
           },
           {
             "date": "2023-04-30",
@@ -7383,7 +7491,8 @@
             "accountValue": 74339.04,
             "deposits": 87527.13,
             "withdrawals": 500,
-            "spyValue": 85738.49678143884
+            "spyValue": 85738.49678143884,
+            "vfifxValue": 86389.67739960451
           },
           {
             "date": "2023-05-31",
@@ -7391,7 +7500,8 @@
             "accountValue": 76198.35,
             "deposits": 88527.13,
             "withdrawals": 500,
-            "spyValue": 88018.83251894171
+            "spyValue": 88018.83251894171,
+            "vfifxValue": 88425.20215428754
           },
           {
             "date": "2023-06-30",
@@ -7399,7 +7509,8 @@
             "accountValue": 81300,
             "deposits": 89527.13,
             "withdrawals": 500,
-            "spyValue": 89458.15625874668
+            "spyValue": 89458.15625874668,
+            "vfifxValue": 89781.74698329599
           },
           {
             "date": "2023-07-31",
@@ -7407,7 +7518,8 @@
             "accountValue": 85322.96,
             "deposits": 90527.13,
             "withdrawals": 500,
-            "spyValue": 96337.11591529414
+            "spyValue": 96337.11591529414,
+            "vfifxValue": 95505.38973587906
           },
           {
             "date": "2023-08-31",
@@ -7415,7 +7527,8 @@
             "accountValue": 84823.34,
             "deposits": 91527.13,
             "withdrawals": 500,
-            "spyValue": 100420.73557288873
+            "spyValue": 100420.73557288873,
+            "vfifxValue": 98974.39118646398
           },
           {
             "date": "2023-09-30",
@@ -7423,7 +7536,8 @@
             "accountValue": 77749.15,
             "deposits": 95534.12,
             "withdrawals": 500,
-            "spyValue": 103140.0077448652
+            "spyValue": 103140.0077448652,
+            "vfifxValue": 101964.42035050856
           },
           {
             "date": "2023-10-31",
@@ -7431,7 +7545,8 @@
             "accountValue": 77157.9,
             "deposits": 96534.12,
             "withdrawals": 500,
-            "spyValue": 99217.08024306333
+            "spyValue": 99217.08024306333,
+            "vfifxValue": 99116.52357746391
           },
           {
             "date": "2023-11-30",
@@ -7439,7 +7554,8 @@
             "accountValue": 85247.68,
             "deposits": 97534.12,
             "withdrawals": 500,
-            "spyValue": 98139.73077764177
+            "spyValue": 98139.73077764177,
+            "vfifxValue": 98440.83910651712
           },
           {
             "date": "2023-12-31",
@@ -7447,7 +7563,8 @@
             "accountValue": 90137.44,
             "deposits": 98534.12,
             "withdrawals": 500,
-            "spyValue": 107969.92865708635
+            "spyValue": 107969.92865708635,
+            "vfifxValue": 106511.09515947063
           },
           {
             "date": "2024-01-31",
@@ -7455,7 +7572,8 @@
             "accountValue": 92268.22,
             "deposits": 99534.12,
             "withdrawals": 500,
-            "spyValue": 113973.64656970026
+            "spyValue": 113973.64656970026,
+            "vfifxValue": 111465.36549475252
           },
           {
             "date": "2024-02-29",
@@ -7463,7 +7581,8 @@
             "accountValue": 97551.78,
             "deposits": 100534.12,
             "withdrawals": 500,
-            "spyValue": 116960.61717582929
+            "spyValue": 116960.61717582929,
+            "vfifxValue": 114048.84447754915
           },
           {
             "date": "2024-03-31",
@@ -7471,7 +7590,8 @@
             "accountValue": 101039.51,
             "deposits": 101534.12,
             "withdrawals": 500,
-            "spyValue": 124384.58193699572
+            "spyValue": 124384.58193699572,
+            "vfifxValue": 120020.97120468848
           },
           {
             "date": "2024-04-30",
@@ -7479,7 +7599,8 @@
             "accountValue": 98631.97,
             "deposits": 102534.12,
             "withdrawals": 500,
-            "spyValue": 129503.53264146633
+            "spyValue": 129503.53264146633,
+            "vfifxValue": 124233.12262536504
           },
           {
             "date": "2024-05-31",
@@ -7487,7 +7608,8 @@
             "accountValue": 103387.53,
             "deposits": 103534.12,
             "withdrawals": 500,
-            "spyValue": 125405.13229234862
+            "spyValue": 125405.13229234862,
+            "vfifxValue": 121305.07302364882
           },
           {
             "date": "2024-06-30",
@@ -7495,7 +7617,8 @@
             "accountValue": 107093.1,
             "deposits": 104534.12,
             "withdrawals": 500,
-            "spyValue": 132693.96286704444
+            "spyValue": 132693.96286704444,
+            "vfifxValue": 127130.83169437537
           },
           {
             "date": "2024-07-31",
@@ -7503,7 +7626,8 @@
             "accountValue": 109611.24,
             "deposits": 105534.12,
             "withdrawals": 500,
-            "spyValue": 138652.06423991735
+            "spyValue": 138652.06423991735,
+            "vfifxValue": 131940.71352272882
           },
           {
             "date": "2024-08-31",
@@ -7511,7 +7635,8 @@
             "accountValue": 113297.14,
             "deposits": 106534.12,
             "withdrawals": 500,
-            "spyValue": 141505.50155848064
+            "spyValue": 141505.50155848064,
+            "vfifxValue": 134389.65045221255
           },
           {
             "date": "2024-09-30",
@@ -7519,7 +7644,8 @@
             "accountValue": 116369.13,
             "deposits": 107534.12,
             "withdrawals": 500,
-            "spyValue": 146261.7765584945
+            "spyValue": 146261.7765584945,
+            "vfifxValue": 138228.49225823165
           },
           {
             "date": "2024-10-31",
@@ -7527,7 +7653,8 @@
             "accountValue": 214681.8,
             "deposits": 208534.12,
             "withdrawals": 500,
-            "spyValue": 270021.67742459493
+            "spyValue": 270021.67742459493,
+            "vfifxValue": 257871.57998132374
           },
           {
             "date": "2024-11-30",
@@ -7535,7 +7662,8 @@
             "accountValue": 196585.91,
             "deposits": 179534.12,
             "withdrawals": 30500,
-            "spyValue": 230146.14200772054
+            "spyValue": 230146.14200772054,
+            "vfifxValue": 220234.33482960446
           },
           {
             "date": "2024-12-31",
@@ -7543,7 +7671,8 @@
             "accountValue": 191091.66,
             "deposits": 180534.12,
             "withdrawals": 30500,
-            "spyValue": 244156.59227221314
+            "spyValue": 244156.59227221314,
+            "vfifxValue": 231205.31937253437
           },
           {
             "date": "2025-01-31",
@@ -7551,7 +7680,8 @@
             "accountValue": 193708.59,
             "deposits": 181534.12,
             "withdrawals": 30500,
-            "spyValue": 251646.72984443835
+            "spyValue": 251646.72984443835,
+            "vfifxValue": 237135.71304662083
           },
           {
             "date": "2025-02-28",
@@ -7559,7 +7689,8 @@
             "accountValue": 191057.8,
             "deposits": 182534.12,
             "withdrawals": 30500,
-            "spyValue": 261130.00709337342
+            "spyValue": 261130.00709337342,
+            "vfifxValue": 244641.4923419213
           },
           {
             "date": "2025-03-31",
@@ -7567,7 +7698,8 @@
             "accountValue": 181978.22,
             "deposits": 183534.12,
             "withdrawals": 30500,
-            "spyValue": 257834.49838551544
+            "spyValue": 257834.49838551544,
+            "vfifxValue": 242537.99869463747
           },
           {
             "date": "2025-04-30",
@@ -7575,7 +7707,8 @@
             "accountValue": 181123.78,
             "deposits": 184534.12,
             "withdrawals": 30500,
-            "spyValue": 266498.03103988763
+            "spyValue": 266498.03103988763,
+            "vfifxValue": 249224.39463082378
           },
           {
             "date": "2025-05-31",
@@ -7583,7 +7716,8 @@
             "accountValue": 192685.18,
             "deposits": 185534.12,
             "withdrawals": 30500,
-            "spyValue": 273836.9260897338
+            "spyValue": 273836.9260897338,
+            "vfifxValue": 255085.303778451
           },
           {
             "date": "2025-06-30",
@@ -7591,12 +7725,13 @@
             "accountValue": 194385.84,
             "deposits": 186534.12,
             "withdrawals": 30500,
-            "spyValue": 280543.80888137943
+            "spyValue": 280543.80888137943,
+            "vfifxValue": 260307.0764300642
           }
         ],
         "totalReturn": -186014,
         "totalReturnPercent": -99.1894168378533,
-        "annualizedReturn": -73.23680871791245,
+        "annualizedReturn": -73.23635109597015,
         "deposits": 139506.99,
         "withdrawals": 30500,
         "fees": 20664.489999999998,
@@ -9934,8 +10069,8 @@
         "totalInvested": 187534.12,
         "totalGains": -206678.49,
         "totalFeespaid": 20664.489999999998,
-        "yearsInvested": 3.6529971415126625,
-        "annualizedReturn": -73.23680871791245
+        "yearsInvested": 3.653044528354501,
+        "annualizedReturn": -73.23635109597015
       }
     }
   },

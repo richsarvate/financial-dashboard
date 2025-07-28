@@ -160,6 +160,23 @@ export class FinancialCalculator {
   }
 
   /**
+   * Get VFIFX alternative value from time series data
+   */
+  static getVFIFXValue(timeSeriesData: PerformanceDataPoint[], fallbackPrincipal: number): number {
+    if (!timeSeriesData.length) return this.validateFinancialValue(fallbackPrincipal, 0);
+    
+    const mostRecent = timeSeriesData[timeSeriesData.length - 1];
+    if (!mostRecent) return this.validateFinancialValue(fallbackPrincipal, 0);
+    
+    // Check if vfifxValue exists in the data
+    const vfifxValue = mostRecent.vfifxValue ?? fallbackPrincipal;
+    const validatedValue = this.validateFinancialValue(vfifxValue, fallbackPrincipal);
+    
+    // VFIFX value should not be negative
+    return Math.max(validatedValue, 0);
+  }
+
+  /**
    * Calculate time period from time series data
    */
   static calculateTimePeriodFromSeries(timeSeriesData: PerformanceDataPoint[]): number {

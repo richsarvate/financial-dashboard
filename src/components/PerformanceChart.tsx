@@ -175,14 +175,14 @@ export default function PerformanceChart({ performanceData, showSP500, setShowSP
               <>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600 dark:text-gray-400">VFIFX Alternative:</span>
-                  <span className="font-semibold text-blue-600 dark:text-blue-400">
+                  <span className="font-semibold text-red-600 dark:text-red-400">
                     {formatCurrency(payload?.[0]?.payload?.vfifxAlternative || 0)}
                   </span>
                 </div>
                 
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600 dark:text-gray-400">VFIFX Gains:</span>
-                  <span className={`font-semibold ${((payload?.[0]?.payload?.vfifxAlternative || 0) - cumulativePrincipal) >= 0 ? 'text-blue-600 dark:text-blue-400' : 'text-red-600 dark:text-red-400'}`}>
+                  <span className={`font-semibold ${((payload?.[0]?.payload?.vfifxAlternative || 0) - cumulativePrincipal) >= 0 ? 'text-red-600 dark:text-red-400' : 'text-red-600 dark:text-red-400'}`}>
                     {((payload?.[0]?.payload?.vfifxAlternative || 0) - cumulativePrincipal) >= 0 ? '+' : ''}{formatCurrency((payload?.[0]?.payload?.vfifxAlternative || 0) - cumulativePrincipal)}
                   </span>
                 </div>
@@ -259,10 +259,10 @@ export default function PerformanceChart({ performanceData, showSP500, setShowSP
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-4 gap-4">
           <div>
             <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2">
-              Portfolio Growth vs Principal Investment vs S&P 500 Alternative
+              Portfolio Growth vs Principal Investment vs Benchmarks
             </h3>
             <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
-              See how your managed portfolio compares to what you would have earned investing the same amounts directly in S&P 500
+              See how your managed portfolio compares to investing the same amounts directly in S&P 500 (SPY) or Target Date Fund (VFIFX)
             </p>
           </div>
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
@@ -282,6 +282,25 @@ export default function PerformanceChart({ performanceData, showSP500, setShowSP
               </div>
               <span className="ml-3 text-sm font-medium text-gray-700 dark:text-gray-300">
                 Compare to S&P
+              </span>
+            </label>
+
+            <label className="flex items-center cursor-pointer">
+              <input
+                type="checkbox"
+                checked={showVFIFX}
+                onChange={(e) => setShowVFIFX(e.target.checked)}
+                className="sr-only"
+              />
+              <div className={`relative w-11 h-6 rounded-full transition-colors ${
+                showVFIFX ? 'bg-red-600' : 'bg-gray-300 dark:bg-gray-600'
+              }`}>
+                <div className={`absolute w-4 h-4 bg-white rounded-full top-1 transition-transform ${
+                  showVFIFX ? 'translate-x-6' : 'translate-x-1'
+                }`}></div>
+              </div>
+              <span className="ml-3 text-sm font-medium text-gray-700 dark:text-gray-300">
+                Compare to VFIFX
               </span>
             </label>
             
@@ -403,15 +422,15 @@ export default function PerformanceChart({ performanceData, showSP500, setShowSP
               />
             )}
 
-            {/* VFIFX Alternative Line - Blue */}
+            {/* VFIFX Alternative Line - Vanguard Red */}
             {showVFIFX && (
               <Line 
                 type="monotone" 
                 dataKey="vfifxAlternative" 
-                stroke="#2563eb" 
+                stroke="#dc2626" 
                 strokeWidth={2}
-                dot={{ fill: '#2563eb', strokeWidth: 2, r: 3 }}
-                activeDot={{ r: 5, stroke: '#2563eb', strokeWidth: 2, fill: '#fff' }}
+                dot={{ fill: '#dc2626', strokeWidth: 2, r: 3 }}
+                activeDot={{ r: 5, stroke: '#dc2626', strokeWidth: 2, fill: '#fff' }}
                 name="VFIFX Alternative"
               />
             )}
