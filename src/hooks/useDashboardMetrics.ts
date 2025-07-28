@@ -28,6 +28,11 @@ export interface DashboardMetrics {
   vfifxGains: number;
   vfifxReturn: number;
   
+  // Nancy Pelosi benchmark metrics
+  pelosiValue: number;
+  pelosiGains: number;
+  pelosiReturn: number;
+  
   // Comparison metrics
   outperformanceAmount: number;
   isOutperforming: boolean;
@@ -102,6 +107,15 @@ export function useDashboardMetrics(
       timePeriodYears
     );
     
+    // Nancy Pelosi benchmark calculations
+    const pelosiValue = FinancialCalculator.getPelosiValue(timeSeriesData, principalInvested);
+    const pelosiGains = FinancialCalculator.calculateInvestmentGains(pelosiValue, principalInvested);
+    const pelosiReturn = FinancialCalculator.calculateAnnualizedReturn(
+      pelosiValue,
+      principalInvested,
+      timePeriodYears
+    );
+    
     // Comparison calculations
     const outperformanceAmount = Math.abs(actualInvestmentGains - sp500Gains);
     const isOutperforming = actualInvestmentGains > sp500Gains;
@@ -122,6 +136,9 @@ export function useDashboardMetrics(
       vfifxValue,
       vfifxGains,
       vfifxReturn,
+      pelosiValue,
+      pelosiGains,
+      pelosiReturn,
       outperformanceAmount,
       isOutperforming,
     };

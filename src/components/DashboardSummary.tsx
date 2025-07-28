@@ -1,12 +1,12 @@
 import React from 'react';
 import { PortfolioCard } from './PortfolioCard';
 import { DashboardMetrics } from '@/hooks/useDashboardMetrics';
+import { BENCHMARK_CONFIGS } from '@/config/benchmarks';
 import { UI_CONSTANTS } from '@/constants/financial';
 
 interface DashboardSummaryProps {
   metrics: DashboardMetrics;
-  showSP500: boolean;
-  showVFIFX: boolean;
+  activeBenchmarks: Set<string>;
   showWithoutFees: boolean;
 }
 
@@ -16,16 +16,15 @@ interface DashboardSummaryProps {
  */
 export const DashboardSummary: React.FC<DashboardSummaryProps> = ({
   metrics,
-  showSP500,
-  showVFIFX,
+  activeBenchmarks,
   showWithoutFees,
 }) => {
   const getGridClasses = () => {
-    const activeToggles = [showSP500, showVFIFX, showWithoutFees].filter(Boolean).length;
+    const activeToggleCount = activeBenchmarks.size + (showWithoutFees ? 1 : 0);
     
-    if (activeToggles >= 2) return `grid-cols-1 gap-4 sm:gap-6 ${UI_CONSTANTS.THREE_COLUMNS}`;
-    if (activeToggles === 1) return `grid-cols-1 gap-4 sm:gap-6 ${UI_CONSTANTS.TWO_COLUMNS}`;
-    return `grid-cols-1 gap-4 sm:gap-6 ${UI_CONSTANTS.SINGLE_COLUMN}`;
+    if (activeToggleCount >= 2) return `grid-cols-1 gap-6 sm:gap-8 ${UI_CONSTANTS.THREE_COLUMNS}`;
+    if (activeToggleCount === 1) return `grid-cols-1 gap-6 sm:gap-8 ${UI_CONSTANTS.TWO_COLUMNS}`;
+    return `grid-cols-1 gap-6 sm:gap-8 ${UI_CONSTANTS.SINGLE_COLUMN}`;
   };
 
   return (
@@ -69,45 +68,52 @@ export const DashboardSummary: React.FC<DashboardSummaryProps> = ({
         />
       )}
 
-      {/* S&P 500 Alternative Card */}
-      {showSP500 && (
-        <PortfolioCard
-          title="S&P 500 Alternative"
-          badge="BENCHMARK"
-          badgeColor="bg-purple-600"
-          backgroundColor="bg-purple-50"
-          borderColor="border-purple-500"
-          annualReturn={metrics.sp500Return}
-          currentBalance={metrics.sp500Value}
-          principalInvested={metrics.principalInvested}
-          investmentGains={metrics.sp500Gains}
-          additionalMetric={{
-            label: metrics.isOutperforming ? 'Outperformed by' : 'Underperformed by',
-            value: metrics.outperformanceAmount,
-            color: metrics.isOutperforming ? UI_CONSTANTS.COLORS.SUCCESS : UI_CONSTANTS.COLORS.ERROR,
-          }}
-        />
-      )}
-
-      {/* VFIFX Alternative Card */}
-      {showVFIFX && (
-        <PortfolioCard
-          title="VFIFX Alternative"
-          badge="TARGET DATE"
-          badgeColor="bg-red-600"
-          backgroundColor="bg-red-50"
-          borderColor="border-red-500"
-          annualReturn={metrics.vfifxReturn}
-          currentBalance={metrics.vfifxValue}
-          principalInvested={metrics.principalInvested}
-          investmentGains={metrics.vfifxGains}
-          additionalMetric={{
-            label: metrics.actualInvestmentGains > metrics.vfifxGains ? 'Outperformed by' : 'Underperformed by',
-            value: Math.abs(metrics.actualInvestmentGains - metrics.vfifxGains),
-            color: metrics.actualInvestmentGains > metrics.vfifxGains ? UI_CONSTANTS.COLORS.SUCCESS : UI_CONSTANTS.COLORS.ERROR,
-          }}
-        />
-      )}
+      {/* Dynamic Benchmark Cards */}
+      {Array.from(activeBenchmarks).map(benchmarkId => {
+        const config = BENCHMARK_CONFIGS[benchmarkId];
+        if (!config) return null;
+        
+        // Map benchmark metrics dynamically
+        const benchmarkMetrics = benchmarkId === 'SP500' ? {
+          value: metrics.sp500Value,
+          gains: metrics.sp500Gains,
+          return: metrics.sp500Return
+        } : benchmarkId === 'VFIFX' ? {
+          value: metrics.vfifxValue,
+          gains: metrics.vfifxGains,
+          return: metrics.vfifxReturn
+        } : benchmarkId === 'PELOSI' ? {
+          value: metrics.pelosiValue,
+          gains: metrics.pelosiGains,
+          return: metrics.pelosiReturn
+        } : {
+          value: metrics.principalInvested,
+          gains: 0,
+          return: 0
+        };
+        
+        const isOutperforming = metrics.actualInvestmentGains > benchmarkMetrics.gains;
+        
+        return (
+          <PortfolioCard
+            key={benchmarkId}
+            title={`${config.name} Alternative`}
+            badge={config.category}
+            badgeColor={`bg-[${config.color}]`}
+            backgroundColor={config.color + '10'} // Light version
+            borderColor={`border-[${config.color}]`}
+            annualReturn={benchmarkMetrics.return}
+            currentBalance={benchmarkMetrics.value}
+            principalInvested={metrics.principalInvested}
+            investmentGains={benchmarkMetrics.gains}
+            additionalMetric={{
+              label: isOutperforming ? 'Outperformed by' : 'Underperformed by',
+              value: Math.abs(metrics.actualInvestmentGains - benchmarkMetrics.gains),
+              color: isOutperforming ? UI_CONSTANTS.COLORS.SUCCESS : UI_CONSTANTS.COLORS.ERROR,
+            }}
+          />
+        );
+      })}
     </div>
   );
 };

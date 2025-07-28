@@ -4,9 +4,10 @@ import { useState, useEffect, useCallback } from 'react'
 import { MultiAccountSchwabService } from '@/services/multiAccountSchwabService'
 import { AccountData, Transaction, PerformanceData } from '@/types/financial'
 import { useDashboardMetrics, useDebugDashboard } from '@/hooks/useDashboardMetrics'
+import { BENCHMARK_CONFIGS } from '@/config/benchmarks'
 import { ErrorBoundary } from './ErrorBoundary'
 import { DashboardSummary } from './DashboardSummary'
-import { ToggleSwitch } from './ToggleSwitch'
+import { BenchmarkSelector } from './BenchmarkSelector'
 import { AccountLoadingState } from './LoadingSpinner'
 import { AccountListError, AccountDataError } from './ErrorDisplay'
 import { AccountTabs } from './AccountTabs'
@@ -30,10 +31,26 @@ export default function MultiAccountDashboard() {
   const [error, setError] = useState<string | null>(null)
   const [schwabService] = useState(() => new MultiAccountSchwabService())
   
-  // UI state
-  const [showSP500, setShowSP500] = useState(false)
+  // Dynamic benchmark state - replaces individual showSP500, showVFIFX etc.
+  const [activeBenchmarks, setActiveBenchmarks] = useState<Set<string>>(new Set())
   const [showWithoutFees, setShowWithoutFees] = useState(false)
-  const [showVFIFX, setShowVFIFX] = useState(false)
+
+  // Helper functions for benchmark management
+  const toggleBenchmark = useCallback((benchmarkId: string) => {
+    setActiveBenchmarks(prev => {
+      const newSet = new Set(prev)
+      if (newSet.has(benchmarkId)) {
+        newSet.delete(benchmarkId)
+      } else {
+        newSet.add(benchmarkId)
+      }
+      return newSet
+    })
+  }, [])
+
+  const isBenchmarkActive = useCallback((benchmarkId: string) => {
+    return activeBenchmarks.has(benchmarkId)
+  }, [activeBenchmarks])
 
   // Get current account data
   const currentAccountData = accountsData[activeAccount]
@@ -187,74 +204,82 @@ export default function MultiAccountDashboard() {
   }
 
   // Constants for consistent styling
-  const CARD_STYLES = "bg-white p-4 sm:p-6 rounded-lg shadow"
+  const CARD_STYLES = "bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-gray-100"
 
   return (
     <ErrorBoundary>
-      <div className="space-y-6">
+      <div className="space-y-8">
         {/* Account Tabs */}
         <AccountTabs
           accountList={accountList}
           activeAccount={activeAccount}
           accountsData={accountsData}
           onTabClick={setActiveAccount}
-        />      {/* Account Content */}
-      {activeAccount && (
-        <div className="space-y-6">
-          {currentAccountData?.loading && (
-            <AccountLoadingState accountName={activeAccount} />
-          )}
+        />
 
-          {currentAccountData?.error && (
-            <AccountDataError 
-              accountName={activeAccount}
-              error={currentAccountData.error}
-              onRetry={retryLoadAccount}
-            />
-          )}
+        {/* Account Content */}
+        {activeAccount && (
+          <div className="space-y-8">{currentAccountData?.loading && (
+              <AccountLoadingState accountName={activeAccount} />
+            )}
 
-          {isDataReady && (
-            <>
+            {currentAccountData?.error && (
+              <AccountDataError 
+                accountName={activeAccount}
+                error={currentAccountData.error}
+                onRetry={retryLoadAccount}
+              />
+            )}
+
+            {isDataReady && (
+              <>
               {/* Dashboard Header & Summary */}
               <div className={CARD_STYLES}>
-                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-6 gap-4">
-                  <h2 className="text-xl sm:text-2xl font-bold">{activeAccount} Dashboard</h2>
-                  <div className="flex items-center justify-center sm:justify-end">
-                    <ToggleSwitch
-                      checked={showSP500}
-                      onChange={setShowSP500}
-                      label="Compare to S&P"
-                      id="sp500-toggle"
+                <div className="flex flex-col xl:flex-row xl:justify-between xl:items-start mb-8 gap-6">
+                  <div className="flex-1">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">{activeAccount} Dashboard</h2>
+                    <p className="text-gray-600 text-lg">Compare your portfolio performance against market benchmarks</p>
+                  </div>
+                  
+                  {/* Dynamic Benchmark Selector */}
+                  <div className="flex-shrink-0 xl:max-w-md w-full">
+                    <BenchmarkSelector
+                      benchmarks={BENCHMARK_CONFIGS}
+                      activeBenchmarks={activeBenchmarks}
+                      onToggleBenchmark={toggleBenchmark}
+                      maxActive={4}
                     />
                   </div>
                 </div>
                 
-                {/* Clean, Simple Dashboard Summary */}
+                {/* Dashboard Summary */}
                 <DashboardSummary 
                   metrics={dashboardMetrics!}
-                  showSP500={showSP500}
-                  showVFIFX={showVFIFX}
+                  activeBenchmarks={activeBenchmarks}
                   showWithoutFees={showWithoutFees}
                 />
               </div>
 
               {/* Performance Chart */}
               <div className={CARD_STYLES}>
-                <h3 className="text-lg font-semibold mb-4">Performance Over Time</h3>
+                <div className="mb-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Performance Over Time</h3>
+                  <p className="text-gray-600">Track your portfolio growth compared to benchmark investments</p>
+                </div>
                 <PerformanceChart 
                   performanceData={currentAccountData.performanceData!}
-                  showSP500={showSP500}
-                  setShowSP500={setShowSP500}
+                  activeBenchmarks={activeBenchmarks}
                   showWithoutFees={showWithoutFees}
                   setShowWithoutFees={setShowWithoutFees}
-                  showVFIFX={showVFIFX}
-                  setShowVFIFX={setShowVFIFX}
                 />
               </div>
 
               {/* Transaction History */}
               <div className={CARD_STYLES}>
-                <h3 className="text-lg font-semibold mb-4">Transaction History</h3>
+                <div className="mb-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Transaction History</h3>
+                  <p className="text-gray-600">Complete record of all account activity</p>
+                </div>
                 <TransactionHistory transactions={currentAccountData.transactions} />
               </div>
             </>

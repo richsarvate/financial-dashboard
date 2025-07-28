@@ -4,18 +4,17 @@ import { PerformanceData } from '@/types/financial'
 import { ComposedChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine, Area, Brush } from 'recharts'
 import { format, parseISO } from 'date-fns'
 import { useState } from 'react'
+import { BENCHMARK_CONFIGS, BENCHMARK_MONTHLY_RETURNS } from '@/config/benchmarks'
+import { FinancialCalculator } from '@/utils/financialCalculations'
 
 interface PerformanceChartProps {
   performanceData: PerformanceData
-  showSP500: boolean
-  setShowSP500: (show: boolean) => void
-  showVFIFX: boolean
-  setShowVFIFX: (show: boolean) => void
+  activeBenchmarks: Set<string>
   showWithoutFees: boolean
   setShowWithoutFees: (show: boolean) => void
 }
 
-export default function PerformanceChart({ performanceData, showSP500, setShowSP500, showVFIFX, setShowVFIFX, showWithoutFees, setShowWithoutFees }: PerformanceChartProps) {
+export default function PerformanceChart({ performanceData, activeBenchmarks, showWithoutFees, setShowWithoutFees }: PerformanceChartProps) {
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
@@ -72,13 +71,37 @@ export default function PerformanceChart({ performanceData, showSP500, setShowSP
   // Initial balance ($78,527) + Monthly contributions (~$31k) + Net Oct 2024 contribution ($70k) = ~$180k
   const initialBalance = performanceData.timeSeriesData[0]?.deposits || 0 // $78,527.13
   
+  // Calculate progressive Pelosi values for each time point
+  const startDate = performanceData.timeSeriesData[0]?.date || '2021-11-30';
+  let pelosiProgressiveValue = initialBalance; // Start with initial investment
+  
   // Only use the real statement balance for accountValue; do not estimate or override
-  const chartDataWithCumulative = chartData.map((point) => {
+  const chartDataWithCumulative = chartData.map((point, index) => {
     const cumulativePrincipal = point.principalInvested;
     const accountValueWithoutFees = point.accountValue; // No synthetic fee adjustment
     const isPositive = point.accountValue >= cumulativePrincipal;
     let sp500Alternative = point.spyValue || 0;
     let vfifxAlternative = point.vfifxValue || 0;
+    
+    // Calculate progressive Pelosi value for this specific date
+    let pelosiAlternative = (point as any).pelosiValue || 0;
+    if (pelosiAlternative === 0) {
+      // Calculate Pelosi performance from start date to this point's date
+      if (index === 0) {
+        pelosiAlternative = cumulativePrincipal; // Start with principal
+      } else {
+        // Get the previous month's value and apply this month's return
+        const currentMonth = point.rawDate.substring(0, 7); // YYYY-MM format
+        const monthlyReturn = BENCHMARK_MONTHLY_RETURNS['PELOSI']?.[currentMonth] || 0;
+        const prevPoint = chartData[index - 1];
+        const prevPrincipal = (prevPoint as any).principalInvested || ((prevPoint.deposits || 0) - (prevPoint.withdrawals || 0));
+        const principalChange = cumulativePrincipal - prevPrincipal;
+        
+        // Apply monthly return to previous value, then add any new principal
+        pelosiProgressiveValue = pelosiProgressiveValue * (1 + monthlyReturn) + principalChange;
+        pelosiAlternative = pelosiProgressiveValue;
+      }
+    }
     return {
       ...point,
       cumulativePrincipal: Math.max(0, cumulativePrincipal),
@@ -89,6 +112,8 @@ export default function PerformanceChart({ performanceData, showSP500, setShowSP
       sp500Gains: 0,
       vfifxAlternative: Math.max(0, vfifxAlternative),
       vfifxGains: 0,
+      pelosiAlternative: Math.max(0, pelosiAlternative),
+      pelosiGains: 0,
       isPositive,
       winningValue: isPositive ? point.accountValue : cumulativePrincipal,
       losingValue: !isPositive ? point.accountValue : cumulativePrincipal,
@@ -146,55 +171,50 @@ export default function PerformanceChart({ performanceData, showSP500, setShowSP
 
             <hr className="border-gray-200 dark:border-gray-600 my-2" />
             
-            {showSP500 && (
-              <>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600 dark:text-gray-400">S&P 500 Alternative:</span>
-                  <span className="font-semibold text-purple-600 dark:text-purple-400">
-                    {formatCurrency(sp500Alternative)}
-                  </span>
+            {/* Dynamic Benchmark Tooltips */}
+            {Array.from(activeBenchmarks).map(benchmarkId => {
+              const config = BENCHMARK_CONFIGS[benchmarkId];
+              if (!config) return null;
+              
+              // Map benchmark IDs to their data keys
+              const dataKeyMap: Record<string, string> = {
+                'SP500': 'sp500Alternative',
+                'VFIFX': 'vfifxAlternative',
+                'PELOSI': 'pelosiAlternative'
+              };
+              
+              const dataKey = dataKeyMap[benchmarkId];
+              if (!dataKey) return null;
+              
+              const alternativeValue = payload?.[0]?.payload?.[dataKey] || 0;
+              const gains = alternativeValue - cumulativePrincipal;
+              const vsPortfolio = accountValue - alternativeValue;
+              
+              return (
+                <div key={benchmarkId}>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600 dark:text-gray-400">{config.name} Alternative:</span>
+                    <span className="font-semibold" style={{ color: config.color }}>
+                      {formatCurrency(alternativeValue)}
+                    </span>
+                  </div>
+                  
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600 dark:text-gray-400">{config.name} Gains:</span>
+                    <span className={`font-semibold ${gains >= 0 ? 'text-emerald-600 dark:text-emerald-400' : 'text-red-600 dark:text-red-400'}`}>
+                      {gains >= 0 ? '+' : ''}{formatCurrency(gains)}
+                    </span>
+                  </div>
+                  
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600 dark:text-gray-400">vs {config.name}:</span>
+                    <span className={`font-semibold ${vsPortfolio >= 0 ? 'text-emerald-600 dark:text-emerald-400' : 'text-red-600 dark:text-red-400'}`}>
+                      {vsPortfolio >= 0 ? '+' : ''}{formatCurrency(vsPortfolio)}
+                    </span>
+                  </div>
                 </div>
-                
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600 dark:text-gray-400">S&P 500 Gains:</span>
-                  <span className={`font-semibold ${sp500Gains >= 0 ? 'text-purple-600 dark:text-purple-400' : 'text-red-600 dark:text-red-400'}`}>
-                    {sp500Gains >= 0 ? '+' : ''}{formatCurrency(sp500Gains)}
-                  </span>
-                </div>
-                
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600 dark:text-gray-400">vs S&P 500:</span>
-                  <span className={`font-semibold ${(accountValue - sp500Alternative) >= 0 ? 'text-emerald-600 dark:text-emerald-400' : 'text-red-600 dark:text-red-400'}`}>
-                    {(accountValue - sp500Alternative) >= 0 ? '+' : ''}{formatCurrency(accountValue - sp500Alternative)}
-                  </span>
-                </div>
-              </>
-            )}
-
-            {showVFIFX && (
-              <>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600 dark:text-gray-400">VFIFX Alternative:</span>
-                  <span className="font-semibold text-red-600 dark:text-red-400">
-                    {formatCurrency(payload?.[0]?.payload?.vfifxAlternative || 0)}
-                  </span>
-                </div>
-                
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600 dark:text-gray-400">VFIFX Gains:</span>
-                  <span className={`font-semibold ${((payload?.[0]?.payload?.vfifxAlternative || 0) - cumulativePrincipal) >= 0 ? 'text-red-600 dark:text-red-400' : 'text-red-600 dark:text-red-400'}`}>
-                    {((payload?.[0]?.payload?.vfifxAlternative || 0) - cumulativePrincipal) >= 0 ? '+' : ''}{formatCurrency((payload?.[0]?.payload?.vfifxAlternative || 0) - cumulativePrincipal)}
-                  </span>
-                </div>
-                
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600 dark:text-gray-400">vs VFIFX:</span>
-                  <span className={`font-semibold ${(accountValue - (payload?.[0]?.payload?.vfifxAlternative || 0)) >= 0 ? 'text-emerald-600 dark:text-emerald-400' : 'text-red-600 dark:text-red-400'}`}>
-                    {(accountValue - (payload?.[0]?.payload?.vfifxAlternative || 0)) >= 0 ? '+' : ''}{formatCurrency(accountValue - (payload?.[0]?.payload?.vfifxAlternative || 0))}
-                  </span>
-                </div>
-              </>
-            )}
+              );
+            })}
 
             <hr className="border-gray-200 dark:border-gray-600 my-2" />
             
@@ -262,48 +282,10 @@ export default function PerformanceChart({ performanceData, showSP500, setShowSP
               Portfolio Growth vs Principal Investment vs Benchmarks
             </h3>
             <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
-              See how your managed portfolio compares to investing the same amounts directly in S&P 500 (SPY) or Target Date Fund (VFIFX)
+              See how your managed portfolio compares to investing the same amounts directly in various benchmarks
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
-            <label className="flex items-center cursor-pointer">
-              <input
-                type="checkbox"
-                checked={showSP500}
-                onChange={(e) => setShowSP500(e.target.checked)}
-                className="sr-only"
-              />
-              <div className={`relative w-11 h-6 rounded-full transition-colors ${
-                showSP500 ? 'bg-purple-600' : 'bg-gray-300 dark:bg-gray-600'
-              }`}>
-                <div className={`absolute w-4 h-4 bg-white rounded-full top-1 transition-transform ${
-                  showSP500 ? 'translate-x-6' : 'translate-x-1'
-                }`}></div>
-              </div>
-              <span className="ml-3 text-sm font-medium text-gray-700 dark:text-gray-300">
-                Compare to S&P
-              </span>
-            </label>
-
-            <label className="flex items-center cursor-pointer">
-              <input
-                type="checkbox"
-                checked={showVFIFX}
-                onChange={(e) => setShowVFIFX(e.target.checked)}
-                className="sr-only"
-              />
-              <div className={`relative w-11 h-6 rounded-full transition-colors ${
-                showVFIFX ? 'bg-red-600' : 'bg-gray-300 dark:bg-gray-600'
-              }`}>
-                <div className={`absolute w-4 h-4 bg-white rounded-full top-1 transition-transform ${
-                  showVFIFX ? 'translate-x-6' : 'translate-x-1'
-                }`}></div>
-              </div>
-              <span className="ml-3 text-sm font-medium text-gray-700 dark:text-gray-300">
-                Compare to VFIFX
-              </span>
-            </label>
-            
+          <div className="flex items-center gap-4">
             <label className="flex items-center cursor-pointer">
               <input
                 type="checkbox"
@@ -319,7 +301,7 @@ export default function PerformanceChart({ performanceData, showSP500, setShowSP
                 }`}></div>
               </div>
               <span className="ml-3 text-sm font-medium text-gray-700 dark:text-gray-300">
-                Remove MYRA Fees
+                Show without fees
               </span>
             </label>
           </div>
@@ -409,31 +391,34 @@ export default function PerformanceChart({ performanceData, showSP500, setShowSP
               name="Principal Invested"
             />
             
-            {/* S&P 500 Alternative Line - Purple */}
-            {showSP500 && (
-              <Line 
-                type="monotone" 
-                dataKey="sp500Alternative" 
-                stroke="#8b5cf6" 
-                strokeWidth={2}
-                dot={{ fill: '#8b5cf6', strokeWidth: 2, r: 3 }}
-                activeDot={{ r: 5, stroke: '#8b5cf6', strokeWidth: 2, fill: '#fff' }}
-                name="S&P 500 Alternative"
-              />
-            )}
-
-            {/* VFIFX Alternative Line - Vanguard Red */}
-            {showVFIFX && (
-              <Line 
-                type="monotone" 
-                dataKey="vfifxAlternative" 
-                stroke="#dc2626" 
-                strokeWidth={2}
-                dot={{ fill: '#dc2626', strokeWidth: 2, r: 3 }}
-                activeDot={{ r: 5, stroke: '#dc2626', strokeWidth: 2, fill: '#fff' }}
-                name="VFIFX Alternative"
-              />
-            )}
+            {/* Dynamic Benchmark Lines */}
+            {Array.from(activeBenchmarks).map(benchmarkId => {
+              const config = BENCHMARK_CONFIGS[benchmarkId];
+              if (!config) return null;
+              
+              // Map benchmark IDs to their dataKey names
+              const dataKeyMap: Record<string, string> = {
+                'SP500': 'sp500Alternative',
+                'VFIFX': 'vfifxAlternative',
+                'PELOSI': 'pelosiAlternative'
+              };
+              
+              const dataKey = dataKeyMap[benchmarkId];
+              if (!dataKey) return null;
+              
+              return (
+                <Line 
+                  key={benchmarkId}
+                  type="monotone" 
+                  dataKey={dataKey} 
+                  stroke={config.color} 
+                  strokeWidth={2}
+                  dot={{ fill: config.color, strokeWidth: 2, r: 3 }}
+                  activeDot={{ r: 5, stroke: config.color, strokeWidth: 2, fill: '#fff' }}
+                  name={`${config.name} Alternative`}
+                />
+              );
+            })}
             
             {/* Account Balance Line - Black/Orange depending on fees toggle */}
             <Line 
@@ -455,17 +440,32 @@ export default function PerformanceChart({ performanceData, showSP500, setShowSP
               startIndex={0} // Start from the beginning
               endIndex={chartDataWithCumulative.length - 1} // End at the last data point
             >
-              {/* Mini chart in the brush showing account balance and S&P 500 alternative */}
+              {/* Mini chart in the brush showing account balance and active benchmarks */}
               <ComposedChart>
-                {showSP500 && (
-                  <Line 
-                    type="monotone" 
-                    dataKey="sp500Alternative" 
-                    stroke="#8b5cf6"
-                    strokeWidth={1}
-                    dot={false}
-                  />
-                )}
+                {Array.from(activeBenchmarks).map(benchmarkId => {
+                  const config = BENCHMARK_CONFIGS[benchmarkId];
+                  if (!config) return null;
+                  
+                  const dataKeyMap: Record<string, string> = {
+                    'SP500': 'sp500Alternative',
+                    'VFIFX': 'vfifxAlternative',
+                    'PELOSI': 'pelosiAlternative'
+                  };
+                  
+                  const dataKey = dataKeyMap[benchmarkId];
+                  if (!dataKey) return null;
+                  
+                  return (
+                    <Line 
+                      key={benchmarkId}
+                      type="monotone" 
+                      dataKey={dataKey} 
+                      stroke={config.color}
+                      strokeWidth={1}
+                      dot={false}
+                    />
+                  );
+                })}
                 <Line 
                   type="monotone" 
                   dataKey={showWithoutFees ? "accountValueWithoutFees" : "accountValue"}
@@ -484,12 +484,18 @@ export default function PerformanceChart({ performanceData, showSP500, setShowSP
           <div className="w-4 h-0.5 bg-gray-300 mr-2"></div>
           <span className="text-gray-600 dark:text-gray-400">Principal Invested</span>
         </div>
-        {showSP500 && (
-          <div className="flex items-center">
-            <div className="w-4 h-0.5 bg-purple-500 mr-2"></div>
-            <span className="text-gray-600 dark:text-gray-400">S&P 500 Alternative</span>
-          </div>
-        )}
+        {/* Dynamic benchmark legends */}
+        {Array.from(activeBenchmarks).map(benchmarkId => {
+          const config = BENCHMARK_CONFIGS[benchmarkId];
+          if (!config) return null;
+          
+          return (
+            <div key={benchmarkId} className="flex items-center">
+              <div className="w-4 h-0.5 mr-2" style={{ backgroundColor: config.color }}></div>
+              <span className="text-gray-600 dark:text-gray-400">{config.name} Alternative</span>
+            </div>
+          );
+        })}
         <div className="flex items-center">
           <div className={`w-4 h-0.5 mr-2 ${showWithoutFees ? 'bg-orange-600' : 'bg-black'}`}></div>
           <span className="text-gray-600 dark:text-gray-400">

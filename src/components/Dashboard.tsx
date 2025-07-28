@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import { SchwabDataService } from '@/services/schwabDataService'
 import { AccountData, Transaction, PerformanceData } from '@/types/financial'
+import { BENCHMARK_CONFIGS } from '@/config/benchmarks'
 import PerformanceChart from './PerformanceChart'
 import TransactionHistory from './TransactionHistory'
 
@@ -13,8 +14,23 @@ export default function Dashboard() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [schwabService] = useState(() => new SchwabDataService())
-  const [showSP500, setShowSP500] = useState(false)
+  
+  // Dynamic benchmark state - replaces individual showSP500, showVFIFX etc.
+  const [activeBenchmarks, setActiveBenchmarks] = useState<Set<string>>(new Set())
   const [showWithoutFees, setShowWithoutFees] = useState(false)
+
+  // Helper functions for benchmark management
+  const toggleBenchmark = useCallback((benchmarkId: string) => {
+    setActiveBenchmarks(prev => {
+      const newSet = new Set(prev)
+      if (newSet.has(benchmarkId)) {
+        newSet.delete(benchmarkId)
+      } else {
+        newSet.add(benchmarkId)
+      }
+      return newSet
+    })
+  }, [])
 
   const loadData = useCallback(async () => {
     try {
@@ -102,26 +118,6 @@ export default function Dashboard() {
       <div className="bg-white p-4 sm:p-6 rounded-lg shadow">
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-6 gap-4">
           <h2 className="text-xl sm:text-2xl font-bold">Investment Dashboard</h2>
-          <div className="flex items-center justify-center sm:justify-end">
-            <label className="flex items-center cursor-pointer">
-              <input
-                type="checkbox"
-                checked={showSP500}
-                onChange={(e) => setShowSP500(e.target.checked)}
-                className="sr-only"
-              />
-              <div className={`relative w-11 h-6 rounded-full transition-colors ${
-                showSP500 ? 'bg-purple-600' : 'bg-gray-300 dark:bg-gray-600'
-              }`}>
-                <div className={`absolute w-4 h-4 bg-white rounded-full top-1 transition-transform ${
-                  showSP500 ? 'translate-x-6' : 'translate-x-1'
-                }`}></div>
-              </div>
-              <span className="ml-3 text-sm font-medium text-gray-700 dark:text-gray-300">
-                Compare to S&P
-              </span>
-            </label>
-          </div>
         </div>
         
         {/* Calculate values for all three scenarios */}
@@ -131,7 +127,7 @@ export default function Dashboard() {
                                   performanceData.timeSeriesData[performanceData.timeSeriesData.length - 1]?.withdrawals || 0;
           const years = 3.7; // Investment period from Nov 2021 to July 2025
           
-          // Scenario 1: Actual Portfolio (always shows real account with fees)
+                    // Scenario 1: Actual Portfolio (always shows real account with fees)
           const totalFees = performanceData.fees || 0;
           const actualPortfolioValue = currentBalance; // Always the real account balance
           const actualInvestmentGains = actualPortfolioValue - principalInvested;
@@ -141,39 +137,10 @@ export default function Dashboard() {
           const portfolioWithoutFeesValue = currentBalance + performanceData.fees;
           const portfolioWithoutFeesGains = portfolioWithoutFeesValue - principalInvested;
           const portfolioWithoutFeesReturn = ((portfolioWithoutFeesValue / principalInvested) ** (1/years) - 1) * 100;
-          
-          // Scenario 3: S&P 500 Alternative (calculated the same way as in the chart)
-          // This takes your actual deposit/withdrawal pattern and applies S&P 500 returns
-          let sp500Alternative = 0;
-          let prevSp500Alt = performanceData.timeSeriesData[0]?.deposits || 0; // Start with initial deposit
-          
-          // Calculate S&P 500 alternative by applying S&P returns to your actual cash flows
-          for (let i = 1; i < performanceData.timeSeriesData.length; i++) {
-            const currentPoint = performanceData.timeSeriesData[i];
-            const prevPoint = performanceData.timeSeriesData[i - 1];
-            
-            const newDeposits = (currentPoint.deposits || 0) - (prevPoint.deposits || 0);
-            const newWithdrawals = (currentPoint.withdrawals || 0) - (prevPoint.withdrawals || 0);
-            
-            // Calculate S&P 500 monthly return
-            const sp500MonthlyReturn = prevPoint.spyValue && prevPoint.spyValue > 0 
-              ? ((currentPoint.spyValue || 0) - prevPoint.spyValue) / prevPoint.spyValue 
-              : 0;
-            
-            sp500Alternative = (prevSp500Alt + newDeposits - newWithdrawals) * (1 + sp500MonthlyReturn);
-            prevSp500Alt = sp500Alternative;
-          }
-          
-          const sp500Value = Math.max(0, sp500Alternative);
-          const sp500Gains = sp500Value - principalInvested;
-          const sp500Return = ((sp500Value / principalInvested) ** (1/years) - 1) * 100;
-
           return (
             <div className={`grid grid-cols-1 gap-4 sm:gap-6 ${
-              // Calculate number of columns based on both toggles
-              (showSP500 && showWithoutFees) ? 'lg:grid-cols-3' : // S&P on, fees on = 3 cols (actual without fees, with fees, S&P)
-              (showSP500 || showWithoutFees) ? 'md:grid-cols-2' : // Either S&P on OR fees on = 2 cols
-              'md:grid-cols-1' // Both S&P off AND fees off = 1 col (just actual with fees)
+              // Calculate number of columns based on fees toggle
+              showWithoutFees ? 'md:grid-cols-2' : 'md:grid-cols-1'
             }`}>
               {/* Actual Portfolio Column */}
               <div className="bg-gray-50 p-4 sm:p-6 rounded-lg border-4 border-gray-800">
@@ -248,43 +215,6 @@ export default function Dashboard() {
                   </div>
                 </div>
               </div>
-              )}              {/* S&P 500 Column - Only show when toggle is on */}
-              {showSP500 && (
-                <div className="bg-purple-50 p-6 rounded-lg">
-                  <h3 className="text-lg font-bold text-purple-900 mb-4">S&P 500 Alternative</h3>
-                  
-                  <div className="space-y-4">
-                    <div>
-                      <p className="text-sm text-purple-700">Annual Return</p>
-                      <p className="text-2xl font-bold text-purple-600">
-                        {sp500Return.toFixed(2)}%
-                      </p>
-                      <p className="text-xs text-purple-600">
-                        ({sp500Return > actualAnnualReturn ? '+' : ''}{(sp500Return - actualAnnualReturn).toFixed(2)}% vs your portfolio)
-                      </p>
-                    </div>
-                    
-                    <div>
-                      <p className="text-sm text-purple-700">Ending Portfolio Value</p>
-                      <p className="text-xl font-bold text-purple-900">
-                        ${sp500Value.toLocaleString()}
-                      </p>
-                      <p className="text-xs text-purple-600">
-                        ({sp500Value > actualPortfolioValue ? '+' : ''}${(sp500Value - actualPortfolioValue).toLocaleString()} vs your portfolio)
-                      </p>
-                    </div>
-                    
-                    <div>
-                      <p className="text-sm text-purple-700">Investment Gains</p>
-                      <p className={`text-xl font-bold ${sp500Gains >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                        {sp500Gains >= 0 ? '+' : ''}${sp500Gains.toLocaleString()}
-                      </p>
-                      <p className="text-xs text-purple-600">
-                        ({sp500Gains > actualInvestmentGains ? '+' : ''}${(sp500Gains - actualInvestmentGains).toLocaleString()} vs your portfolio)
-                      </p>
-                    </div>
-                  </div>
-                </div>
               )}
             </div>
           );
@@ -307,12 +237,9 @@ export default function Dashboard() {
         <div className="col-span-2">
           <PerformanceChart 
             performanceData={performanceData} 
-            showSP500={showSP500}
-            setShowSP500={setShowSP500}
+            activeBenchmarks={activeBenchmarks}
             showWithoutFees={showWithoutFees}
             setShowWithoutFees={setShowWithoutFees}
-            showVFIFX={false}
-            setShowVFIFX={() => {}}
           />
         </div>
       )}

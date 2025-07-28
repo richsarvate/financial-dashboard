@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2025-07-28T06:35:18.008Z",
+  "lastUpdated": "2025-07-28T07:23:48.333Z",
   "accounts": {
     "Contributory IRA": {
-      "lastUpdated": "2025-07-28T06:35:12.280Z",
+      "lastUpdated": "2025-07-28T07:23:42.792Z",
       "accountName": "Contributory IRA",
       "account": {
         "accountId": "CONTRIBUTORY_IRA",
@@ -52,7 +52,8 @@
             "deposits": 411247.47,
             "withdrawals": 0,
             "spyValue": 411247.47,
-            "vfifxValue": 411247.47
+            "vfifxValue": 411247.47,
+            "pelosiValue": 411247.47
           },
           {
             "date": "2021-10-31",
@@ -61,7 +62,8 @@
             "deposits": 411247.47,
             "withdrawals": 0,
             "spyValue": 429753.60614999995,
-            "vfifxValue": 425641.1314499999
+            "vfifxValue": 425641.1314499999,
+            "pelosiValue": 430987.34856
           },
           {
             "date": "2021-11-30",
@@ -70,7 +72,8 @@
             "deposits": 411247.47,
             "withdrawals": 0,
             "spyValue": 459406.6049743499,
-            "vfifxValue": 449051.3936797499
+            "vfifxValue": 449051.3936797499,
+            "pelosiValue": 467621.2731876
           },
           {
             "date": "2021-12-31",
@@ -79,7 +82,8 @@
             "deposits": 411247.47,
             "withdrawals": 0,
             "spyValue": 455731.3521345551,
-            "vfifxValue": 446806.13671135117
+            "vfifxValue": 446806.13671135117,
+            "pelosiValue": 482585.1539296032
           },
           {
             "date": "2022-01-31",
@@ -88,7 +92,8 @@
             "deposits": 411247.47,
             "withdrawals": 0,
             "spyValue": 475327.800276341,
-            "vfifxValue": 461997.5453595371
+            "vfifxValue": 461997.5453595371,
+            "pelosiValue": 514918.3592428866
           },
           {
             "date": "2022-02-28",
@@ -97,7 +102,8 @@
             "deposits": 411247.47,
             "withdrawals": 0,
             "spyValue": 450610.75466197124,
-            "vfifxValue": 442593.64845443657
+            "vfifxValue": 442593.64845443657,
+            "pelosiValue": 466001.1151148124
           },
           {
             "date": "2022-03-31",
@@ -106,7 +112,8 @@
             "deposits": 411247.47,
             "withdrawals": 0,
             "spyValue": 437092.4320221121,
-            "vfifxValue": 431971.4008915301
+            "vfifxValue": 431971.4008915301,
+            "pelosiValue": 449691.07608579396
           },
           {
             "date": "2022-04-30",
@@ -115,7 +122,8 @@
             "deposits": 411247.47,
             "withdrawals": 0,
             "spyValue": 452390.66714288597,
-            "vfifxValue": 444066.60011649295
+            "vfifxValue": 444066.60011649295,
+            "pelosiValue": 460933.3529879388
           },
           {
             "date": "2022-05-31",
@@ -124,7 +132,8 @@
             "deposits": 411247.47,
             "withdrawals": 0,
             "spyValue": 413032.6791014549,
-            "vfifxValue": 412981.9381083384
+            "vfifxValue": 412981.9381083384,
+            "pelosiValue": 420371.2179250002
           },
           {
             "date": "2022-06-30",
@@ -133,7 +142,8 @@
             "deposits": 411247.47,
             "withdrawals": 0,
             "spyValue": 413445.7117805563,
-            "vfifxValue": 413807.90198455506
+            "vfifxValue": 413807.90198455506,
+            "pelosiValue": 425415.6725401002
           },
           {
             "date": "2022-07-31",
@@ -142,7 +152,8 @@
             "deposits": 411247.47,
             "withdrawals": 0,
             "spyValue": 379543.1634145507,
-            "vfifxValue": 386496.5804535744
+            "vfifxValue": 386496.5804535744,
+            "pelosiValue": 392233.2500819724
           },
           {
             "date": "2022-08-31",
@@ -151,7 +162,8 @@
             "deposits": 411247.47,
             "withdrawals": 0,
             "spyValue": 414081.59128527483,
-            "vfifxValue": 414710.83082668536
+            "vfifxValue": 414710.83082668536,
+            "pelosiValue": 429495.40883975977
           },
           {
             "date": "2022-09-30",
@@ -160,7 +172,8 @@
             "deposits": 411247.47,
             "withdrawals": 0,
             "spyValue": 397104.24604257854,
-            "vfifxValue": 401025.3734094047
+            "vfifxValue": 401025.3734094047,
+            "pelosiValue": 411456.60166848986
           },
           {
             "date": "2022-10-31",
@@ -169,7 +182,8 @@
             "deposits": 411247.47,
             "withdrawals": 0,
             "spyValue": 360173.5511606187,
-            "vfifxValue": 370948.4704036994
+            "vfifxValue": 370948.4704036994,
+            "pelosiValue": 371133.8547049779
           },
           {
             "date": "2022-11-30",
@@ -178,7 +192,8 @@
             "deposits": 411247.47,
             "withdrawals": 0,
             "spyValue": 388987.4352534682,
-            "vfifxValue": 394689.17250953615
+            "vfifxValue": 394689.17250953615,
+            "pelosiValue": 404164.7677737209
           },
           {
             "date": "2022-12-31",
@@ -187,7 +202,8 @@
             "deposits": 411247.47,
             "withdrawals": 0,
             "spyValue": 410381.744192409,
-            "vfifxValue": 412055.49609995575
+            "vfifxValue": 412055.49609995575,
+            "pelosiValue": 454685.363745436
           },
           {
             "date": "2023-01-31",
@@ -196,7 +212,8 @@
             "deposits": 411247.47,
             "withdrawals": 0,
             "spyValue": 387400.3665176341,
-            "vfifxValue": 393512.99877545773
+            "vfifxValue": 393512.99877545773,
+            "pelosiValue": 425130.8151019827
           },
           {
             "date": "2023-02-28",
@@ -205,7 +222,8 @@
             "deposits": 411247.47,
             "withdrawals": 0,
             "spyValue": 411419.1892417274,
-            "vfifxValue": 413188.6487142306
+            "vfifxValue": 413188.6487142306,
+            "pelosiValue": 486774.78329177015
           },
           {
             "date": "2023-03-31",
@@ -214,7 +232,8 @@
             "deposits": 411247.47,
             "withdrawals": 0,
             "spyValue": 401133.7095106842,
-            "vfifxValue": 404924.87573994603
+            "vfifxValue": 404924.87573994603,
+            "pelosiValue": 474605.4137094759
           },
           {
             "date": "2023-04-30",
@@ -223,7 +242,8 @@
             "deposits": 411247.47,
             "withdrawals": 0,
             "spyValue": 415173.3893435581,
-            "vfifxValue": 416262.77226066455
+            "vfifxValue": 416262.77226066455,
+            "pelosiValue": 511624.63597881503
           },
           {
             "date": "2023-05-31",
@@ -232,7 +252,8 @@
             "deposits": 411247.47,
             "withdrawals": 0,
             "spyValue": 421400.99018371146,
-            "vfifxValue": 421257.92552779254
+            "vfifxValue": 421257.92552779254,
+            "pelosiValue": 575577.7154761669
           },
           {
             "date": "2023-06-30",
@@ -241,7 +262,8 @@
             "deposits": 411247.47,
             "withdrawals": 0,
             "spyValue": 423507.99513462995,
-            "vfifxValue": 422942.9572299037
+            "vfifxValue": 422942.9572299037,
+            "pelosiValue": 626804.1321535457
           },
           {
             "date": "2023-07-31",
@@ -250,7 +272,8 @@
             "deposits": 411247.47,
             "withdrawals": 0,
             "spyValue": 451036.0148183809,
-            "vfifxValue": 444935.99100585876
+            "vfifxValue": 444935.99100585876,
+            "pelosiValue": 667546.4007435262
           },
           {
             "date": "2023-08-31",
@@ -259,7 +282,8 @@
             "deposits": 411247.47,
             "withdrawals": 0,
             "spyValue": 465018.13127775065,
-            "vfifxValue": 456059.3907810052
+            "vfifxValue": 456059.3907810052,
+            "pelosiValue": 730963.3088141611
           },
           {
             "date": "2023-09-30",
@@ -268,7 +292,8 @@
             "deposits": 415606.75,
             "withdrawals": 0,
             "spyValue": 462428.22951279575,
-            "vfifxValue": 454902.0654491815
+            "vfifxValue": 454902.0654491815,
+            "pelosiValue": 705469.5979380794
           },
           {
             "date": "2023-10-31",
@@ -277,7 +302,8 @@
             "deposits": 415606.76,
             "withdrawals": 0,
             "spyValue": 440231.68508868694,
-            "vfifxValue": 437615.7974916767
+            "vfifxValue": 437615.7974916767,
+            "pelosiValue": 666668.7860923401
           },
           {
             "date": "2023-11-30",
@@ -286,7 +312,8 @@
             "deposits": 415606.76,
             "withdrawals": 0,
             "spyValue": 430986.8197018245,
-            "vfifxValue": 430176.3289343182
+            "vfifxValue": 430176.3289343182,
+            "pelosiValue": 650002.0664400316
           },
           {
             "date": "2023-12-31",
@@ -295,7 +322,8 @@
             "deposits": 415606.76,
             "withdrawals": 0,
             "spyValue": 469344.6466552869,
-            "vfifxValue": 460718.84828865476
+            "vfifxValue": 460718.84828865476,
+            "pelosiValue": 711752.2627518346
           },
           {
             "date": "2024-01-31",
@@ -304,7 +332,8 @@
             "deposits": 415606.76,
             "withdrawals": 0,
             "spyValue": 490465.15575477475,
-            "vfifxValue": 477304.72682704637
+            "vfifxValue": 477304.72682704637,
+            "pelosiValue": 743781.1145756671
           },
           {
             "date": "2024-02-29",
@@ -313,7 +342,8 @@
             "deposits": 415606.76,
             "withdrawals": 0,
             "spyValue": 498312.5982468512,
-            "vfifxValue": 483509.68827579793
+            "vfifxValue": 483509.68827579793,
+            "pelosiValue": 836753.7538976255
           },
           {
             "date": "2024-03-31",
@@ -322,7 +352,8 @@
             "deposits": 415606.76,
             "withdrawals": 0,
             "spyValue": 524723.1659539343,
-            "vfifxValue": 503817.09518338146
+            "vfifxValue": 503817.09518338146,
+            "pelosiValue": 911224.8379945141
           },
           {
             "date": "2024-04-30",
@@ -331,7 +362,8 @@
             "deposits": 415606.76,
             "withdrawals": 0,
             "spyValue": 540989.5840985063,
-            "vfifxValue": 516412.5225629659
+            "vfifxValue": 516412.5225629659,
+            "pelosiValue": 943117.7073243221
           },
           {
             "date": "2024-05-31",
@@ -340,7 +372,8 @@
             "deposits": 415606.76,
             "withdrawals": 0,
             "spyValue": 518809.0111504675,
-            "vfifxValue": 499370.90931838803
+            "vfifxValue": 499370.90931838803,
+            "pelosiValue": 900677.4104947275
           },
           {
             "date": "2024-06-30",
@@ -349,7 +382,8 @@
             "deposits": 415606.76,
             "withdrawals": 0,
             "spyValue": 543711.84368569,
-            "vfifxValue": 518347.0038724868
+            "vfifxValue": 518347.0038724868,
+            "pelosiValue": 970930.2485133164
           },
           {
             "date": "2024-07-31",
@@ -358,7 +392,8 @@
             "deposits": 415606.76,
             "withdrawals": 0,
             "spyValue": 562741.7582146891,
-            "vfifxValue": 532860.7199809165
+            "vfifxValue": 532860.7199809165,
+            "pelosiValue": 1063168.6221220815
           },
           {
             "date": "2024-08-31",
@@ -367,7 +402,8 @@
             "deposits": 415606.76,
             "withdrawals": 0,
             "spyValue": 568931.9175550506,
-            "vfifxValue": 537656.4664607446
+            "vfifxValue": 537656.4664607446,
+            "pelosiValue": 1025957.7203478086
           },
           {
             "date": "2024-09-30",
@@ -376,7 +412,8 @@
             "deposits": 415606.76,
             "withdrawals": 0,
             "spyValue": 582586.2835763718,
-            "vfifxValue": 547871.9393234988
+            "vfifxValue": 547871.9393234988,
+            "pelosiValue": 1082385.394966938
           },
           {
             "date": "2024-10-31",
@@ -385,7 +422,8 @@
             "deposits": 415606.76,
             "withdrawals": 0,
             "spyValue": 554622.141964706,
-            "vfifxValue": 527052.8056292058
+            "vfifxValue": 527052.8056292058,
+            "pelosiValue": 1055325.7600927646
           },
           {
             "date": "2024-11-30",
@@ -394,7 +432,8 @@
             "deposits": 415606.76,
             "withdrawals": 0,
             "spyValue": 549075.9205450589,
-            "vfifxValue": 522836.3831841721
+            "vfifxValue": 522836.3831841721,
+            "pelosiValue": 1208347.9953062155
           },
           {
             "date": "2024-12-31",
@@ -403,7 +442,8 @@
             "deposits": 415606.76,
             "withdrawals": 0,
             "spyValue": 579275.0961750371,
-            "vfifxValue": 545841.1840442757
+            "vfifxValue": 545841.1840442757,
+            "pelosiValue": 1315890.9668884687
           },
           {
             "date": "2025-01-31",
@@ -412,7 +452,8 @@
             "deposits": 415606.76,
             "withdrawals": 0,
             "spyValue": 593756.973579413,
-            "vfifxValue": 556758.0077251612
+            "vfifxValue": 556758.0077251612,
+            "pelosiValue": 1480377.3377495273
           },
           {
             "date": "2025-02-28",
@@ -421,7 +462,8 @@
             "deposits": 415606.76,
             "withdrawals": 0,
             "spyValue": 612757.1967339542,
-            "vfifxValue": 571233.7159260154
+            "vfifxValue": 571233.7159260154,
+            "pelosiValue": 1621013.1848357324
           },
           {
             "date": "2025-03-31",
@@ -430,7 +472,8 @@
             "deposits": 415606.76,
             "withdrawals": 0,
             "spyValue": 601727.5671927431,
-            "vfifxValue": 563236.4439030512
+            "vfifxValue": 563236.4439030512,
+            "pelosiValue": 1726379.0418500549
           },
           {
             "date": "2025-04-30",
@@ -439,7 +482,8 @@
             "deposits": 415606.76,
             "withdrawals": 0,
             "spyValue": 618575.9390741399,
-            "vfifxValue": 575627.6456689184
+            "vfifxValue": 575627.6456689184,
+            "pelosiValue": 1855857.469988809
           },
           {
             "date": "2025-05-31",
@@ -448,7 +492,8 @@
             "deposits": 415606.76,
             "withdrawals": 0,
             "spyValue": 632184.6097337711,
-            "vfifxValue": 585988.9432909589
+            "vfifxValue": 585988.9432909589,
+            "pelosiValue": 2013605.3549378577
           },
           {
             "date": "2025-06-30",
@@ -457,12 +502,13 @@
             "deposits": 415606.76,
             "withdrawals": 0,
             "spyValue": 644196.1173187126,
-            "vfifxValue": 594778.7774403233
+            "vfifxValue": 594778.7774403233,
+            "pelosiValue": 2204897.8636569544
           }
         ],
         "totalReturn": -415532.63999999996,
         "totalReturnPercent": -99.98216583387624,
-        "annualizedReturn": -89.40854519644972,
+        "annualizedReturn": -89.40797476872481,
         "deposits": 4359.29,
         "withdrawals": 0,
         "fees": 13324.249999999998,
@@ -3537,12 +3583,12 @@
         "totalInvested": 415606.75999999995,
         "totalGains": -428856.88999999996,
         "totalFeespaid": 13324.249999999998,
-        "yearsInvested": 3.844693901944381,
-        "annualizedReturn": -89.40854519644972
+        "yearsInvested": 3.844786130504221,
+        "annualizedReturn": -89.40797476872481
       }
     },
     "General Investment Account": {
-      "lastUpdated": "2025-07-28T06:35:15.221Z",
+      "lastUpdated": "2025-07-28T07:23:45.610Z",
       "accountName": "General Investment Account",
       "account": {
         "accountId": "GENERAL_INVESTMENT_ACCOUNT",
@@ -3616,7 +3662,8 @@
             "deposits": 413279,
             "withdrawals": 0,
             "spyValue": 413279,
-            "vfifxValue": 413279
+            "vfifxValue": 413279,
+            "pelosiValue": 413279
           },
           {
             "date": "2021-10-31",
@@ -3625,7 +3672,8 @@
             "deposits": 413279,
             "withdrawals": 0,
             "spyValue": 431876.555,
-            "vfifxValue": 427743.76499999996
+            "vfifxValue": 427743.76499999996,
+            "pelosiValue": 433116.392
           },
           {
             "date": "2021-11-30",
@@ -3634,7 +3682,8 @@
             "deposits": 413279,
             "withdrawals": 0,
             "spyValue": 461676.037295,
-            "vfifxValue": 451269.67207499995
+            "vfifxValue": 451269.67207499995,
+            "pelosiValue": 469931.28531999997
           },
           {
             "date": "2021-12-31",
@@ -3643,7 +3692,8 @@
             "deposits": 413279,
             "withdrawals": 0,
             "spyValue": 457982.62899664,
-            "vfifxValue": 449013.323714625
+            "vfifxValue": 449013.323714625,
+            "pelosiValue": 484969.08645024
           },
           {
             "date": "2022-01-31",
@@ -3652,7 +3702,8 @@
             "deposits": 413279,
             "withdrawals": 0,
             "spyValue": 477675.8820434955,
-            "vfifxValue": 464279.77672092227
+            "vfifxValue": 464279.77672092227,
+            "pelosiValue": 517462.01524240605
           },
           {
             "date": "2022-02-28",
@@ -3661,7 +3712,8 @@
             "deposits": 413279,
             "withdrawals": 0,
             "spyValue": 452836.7361772337,
-            "vfifxValue": 444780.0260986435
+            "vfifxValue": 444780.0260986435,
+            "pelosiValue": 468303.1237943775
           },
           {
             "date": "2022-03-31",
@@ -3670,7 +3722,8 @@
             "deposits": 413279,
             "withdrawals": 0,
             "spyValue": 439251.63409191667,
-            "vfifxValue": 434105.30547227606
+            "vfifxValue": 434105.30547227606,
+            "pelosiValue": 451912.51446157426
           },
           {
             "date": "2022-04-30",
@@ -3679,7 +3732,8 @@
             "deposits": 413279,
             "withdrawals": 0,
             "spyValue": 454625.4412851337,
-            "vfifxValue": 446260.2540254998
+            "vfifxValue": 446260.2540254998,
+            "pelosiValue": 463210.32732311357
           },
           {
             "date": "2022-05-31",
@@ -3688,7 +3742,8 @@
             "deposits": 413279,
             "withdrawals": 0,
             "spyValue": 415073.0278933271,
-            "vfifxValue": 415022.0362437148
+            "vfifxValue": 415022.0362437148,
+            "pelosiValue": 422447.8185186796
           },
           {
             "date": "2022-06-30",
@@ -3697,7 +3752,8 @@
             "deposits": 403279,
             "withdrawals": 10000,
             "spyValue": 405434.6479047056,
-            "vfifxValue": 405789.8201888741
+            "vfifxValue": 405789.8201888741,
+            "pelosiValue": 417172.6746581542
           },
           {
             "date": "2022-07-31",
@@ -3706,7 +3762,8 @@
             "deposits": 403279,
             "withdrawals": 10000,
             "spyValue": 372189.00677651976,
-            "vfifxValue": 379007.6920564084
+            "vfifxValue": 379007.6920564084,
+            "pelosiValue": 384633.2060348182
           },
           {
             "date": "2022-08-31",
@@ -3715,7 +3772,8 @@
             "deposits": 403279,
             "withdrawals": 10000,
             "spyValue": 406058.20639318303,
-            "vfifxValue": 406675.2535765262
+            "vfifxValue": 406675.2535765262,
+            "pelosiValue": 421173.3606081259
           },
           {
             "date": "2022-09-30",
@@ -3724,7 +3782,8 @@
             "deposits": 403279,
             "withdrawals": 10000,
             "spyValue": 389409.8199310625,
-            "vfifxValue": 393254.9702085008
+            "vfifxValue": 393254.9702085008,
+            "pelosiValue": 403484.07946258463
           },
           {
             "date": "2022-10-31",
@@ -3733,7 +3792,8 @@
             "deposits": 403279,
             "withdrawals": 10000,
             "spyValue": 353194.70667747373,
-            "vfifxValue": 363760.8474428633
+            "vfifxValue": 363760.8474428633,
+            "pelosiValue": 363942.6396752513
           },
           {
             "date": "2022-11-30",
@@ -3742,7 +3802,8 @@
             "deposits": 403279,
             "withdrawals": 10000,
             "spyValue": 381450.28321167163,
-            "vfifxValue": 387041.54167920654
+            "vfifxValue": 387041.54167920654,
+            "pelosiValue": 396333.53460634866
           },
           {
             "date": "2022-12-31",
@@ -3751,7 +3812,8 @@
             "deposits": 403279,
             "withdrawals": 10000,
             "spyValue": 402430.0487883135,
-            "vfifxValue": 404071.36951309163
+            "vfifxValue": 404071.36951309163,
+            "pelosiValue": 445875.22643214226
           },
           {
             "date": "2023-01-31",
@@ -3760,7 +3822,8 @@
             "deposits": 403279,
             "withdrawals": 10000,
             "spyValue": 379893.96605616796,
-            "vfifxValue": 385888.1578850025
+            "vfifxValue": 385888.1578850025,
+            "pelosiValue": 416893.33671405306
           },
           {
             "date": "2023-02-28",
@@ -3769,7 +3832,8 @@
             "deposits": 403279,
             "withdrawals": 10000,
             "spyValue": 403447.3919516504,
-            "vfifxValue": 405182.5657792526
+            "vfifxValue": 405182.5657792526,
+            "pelosiValue": 477342.87053759076
           },
           {
             "date": "2023-03-31",
@@ -3778,7 +3842,8 @@
             "deposits": 403279,
             "withdrawals": 10000,
             "spyValue": 393361.20715285913,
-            "vfifxValue": 397078.91446366755
+            "vfifxValue": 397078.91446366755,
+            "pelosiValue": 465409.29877415096
           },
           {
             "date": "2023-04-30",
@@ -3787,7 +3852,8 @@
             "deposits": 403279,
             "withdrawals": 10000,
             "spyValue": 407128.84940320917,
-            "vfifxValue": 408197.12406865024
+            "vfifxValue": 408197.12406865024,
+            "pelosiValue": 501711.22407853475
           },
           {
             "date": "2023-05-31",
@@ -3796,7 +3862,8 @@
             "deposits": 403279,
             "withdrawals": 10000,
             "spyValue": 413235.7821442573,
-            "vfifxValue": 413095.48955747404
+            "vfifxValue": 413095.48955747404,
+            "pelosiValue": 564425.1270883516
           },
           {
             "date": "2023-06-30",
@@ -3805,7 +3872,8 @@
             "deposits": 403279,
             "withdrawals": 10000,
             "spyValue": 415301.96105497854,
-            "vfifxValue": 414747.8715157039
+            "vfifxValue": 414747.8715157039,
+            "pelosiValue": 614658.9633992149
           },
           {
             "date": "2023-07-31",
@@ -3814,7 +3882,8 @@
             "deposits": 403279,
             "withdrawals": 10000,
             "spyValue": 442296.5885235521,
-            "vfifxValue": 436314.7608345205
+            "vfifxValue": 436314.7608345205,
+            "pelosiValue": 654611.7960201638
           },
           {
             "date": "2023-08-31",
@@ -3823,7 +3892,8 @@
             "deposits": 403279,
             "withdrawals": 10000,
             "spyValue": 456007.78276778216,
-            "vfifxValue": 447222.6298553835
+            "vfifxValue": 447222.6298553835,
+            "pelosiValue": 716799.9166420794
           },
           {
             "date": "2023-09-30",
@@ -3832,7 +3902,8 @@
             "deposits": 407204.16000000003,
             "withdrawals": 10000,
             "spyValue": 453079.01943133806,
-            "vfifxValue": 445705.0166858431
+            "vfifxValue": 445705.0166858431,
+            "pelosiValue": 691206.6635922379
           },
           {
             "date": "2023-10-31",
@@ -3841,7 +3912,8 @@
             "deposits": 387204.17000000004,
             "withdrawals": 30000,
             "spyValue": 410146.22628483333,
-            "vfifxValue": 407709.1085973982
+            "vfifxValue": 407709.1085973982,
+            "pelosiValue": 621108.6027180887
           },
           {
             "date": "2023-11-30",
@@ -3850,7 +3922,8 @@
             "deposits": 387204.17000000004,
             "withdrawals": 30000,
             "spyValue": 401533.1555328518,
-            "vfifxValue": 400778.05375124246
+            "vfifxValue": 400778.05375124246,
+            "pelosiValue": 605580.8876501365
           },
           {
             "date": "2023-12-31",
@@ -3859,7 +3932,8 @@
             "deposits": 387204.17000000004,
             "withdrawals": 30000,
             "spyValue": 437269.6063752756,
-            "vfifxValue": 429233.2955675807
+            "vfifxValue": 429233.2955675807,
+            "pelosiValue": 663111.0719768994
           },
           {
             "date": "2024-01-31",
@@ -3868,7 +3942,8 @@
             "deposits": 387204.17000000004,
             "withdrawals": 30000,
             "spyValue": 456946.73866216297,
-            "vfifxValue": 444685.6942080136
+            "vfifxValue": 444685.6942080136,
+            "pelosiValue": 692951.0702158598
           },
           {
             "date": "2024-02-29",
@@ -3877,7 +3952,8 @@
             "deposits": 387204.17000000004,
             "withdrawals": 30000,
             "spyValue": 464257.88648075756,
-            "vfifxValue": 450466.6082327177
+            "vfifxValue": 450466.6082327177,
+            "pelosiValue": 779569.9539928422
           },
           {
             "date": "2024-03-31",
@@ -3886,7 +3962,8 @@
             "deposits": 387204.17000000004,
             "withdrawals": 30000,
             "spyValue": 488863.5544642377,
-            "vfifxValue": 469386.2057784919
+            "vfifxValue": 469386.2057784919,
+            "pelosiValue": 848951.6798982052
           },
           {
             "date": "2024-04-30",
@@ -3895,7 +3972,8 @@
             "deposits": 387204.17000000004,
             "withdrawals": 30000,
             "spyValue": 504018.32465262903,
-            "vfifxValue": 481120.86092295416
+            "vfifxValue": 481120.86092295416,
+            "pelosiValue": 878664.9886946423
           },
           {
             "date": "2024-05-31",
@@ -3904,7 +3982,8 @@
             "deposits": 387204.17000000004,
             "withdrawals": 30000,
             "spyValue": 483353.5733418712,
-            "vfifxValue": 465243.87251249666
+            "vfifxValue": 465243.87251249666,
+            "pelosiValue": 839125.0642033834
           },
           {
             "date": "2024-06-30",
@@ -3913,7 +3992,8 @@
             "deposits": 387204.17000000004,
             "withdrawals": 30000,
             "spyValue": 506554.54486228107,
-            "vfifxValue": 482923.1396679715
+            "vfifxValue": 482923.1396679715,
+            "pelosiValue": 904576.8192112474
           },
           {
             "date": "2024-07-31",
@@ -3922,7 +4002,8 @@
             "deposits": 387204.17000000004,
             "withdrawals": 30000,
             "spyValue": 524283.95393246086,
-            "vfifxValue": 496444.98757867474
+            "vfifxValue": 496444.98757867474,
+            "pelosiValue": 990511.6170363158
           },
           {
             "date": "2024-08-31",
@@ -3931,7 +4012,8 @@
             "deposits": 387204.17000000004,
             "withdrawals": 30000,
             "spyValue": 530051.0774257178,
-            "vfifxValue": 500912.99246688274
+            "vfifxValue": 500912.99246688274,
+            "pelosiValue": 955843.7104400448
           },
           {
             "date": "2024-09-30",
@@ -3940,7 +4022,8 @@
             "deposits": 367204.17000000004,
             "withdrawals": 50000,
             "spyValue": 514736.84574824077,
-            "vfifxValue": 484065.41978666483
+            "vfifxValue": 484065.41978666483,
+            "pelosiValue": 956328.1179039449
           },
           {
             "date": "2024-10-31",
@@ -3949,7 +4032,8 @@
             "deposits": 367204.17000000004,
             "withdrawals": 50000,
             "spyValue": 490029.4771523252,
-            "vfifxValue": 465670.93383477157
+            "vfifxValue": 465670.93383477157,
+            "pelosiValue": 932419.9149563463
           },
           {
             "date": "2024-11-30",
@@ -3958,7 +4042,8 @@
             "deposits": 367204.17000000004,
             "withdrawals": 50000,
             "spyValue": 485129.18238080194,
-            "vfifxValue": 461945.5663640934
+            "vfifxValue": 461945.5663640934,
+            "pelosiValue": 1067620.8026250165
           },
           {
             "date": "2024-12-31",
@@ -3967,7 +4052,8 @@
             "deposits": 367204.17000000004,
             "withdrawals": 50000,
             "spyValue": 511811.28741174605,
-            "vfifxValue": 482271.17128411354
+            "vfifxValue": 482271.17128411354,
+            "pelosiValue": 1162639.054058643
           },
           {
             "date": "2025-01-31",
@@ -3976,7 +4062,8 @@
             "deposits": 347204.17000000004,
             "withdrawals": 70000,
             "spyValue": 496033.55150756444,
-            "vfifxValue": 465124.0561223502
+            "vfifxValue": 465124.0561223502,
+            "pelosiValue": 1236729.6067083569
           },
           {
             "date": "2025-02-28",
@@ -3985,7 +4072,8 @@
             "deposits": 347204.17000000004,
             "withdrawals": 70000,
             "spyValue": 511906.6251558065,
-            "vfifxValue": 477217.28158153134
+            "vfifxValue": 477217.28158153134,
+            "pelosiValue": 1354218.9193456508
           },
           {
             "date": "2025-03-31",
@@ -3994,7 +4082,8 @@
             "deposits": 347204.17000000004,
             "withdrawals": 70000,
             "spyValue": 502692.305903002,
-            "vfifxValue": 470536.2396393899
+            "vfifxValue": 470536.2396393899,
+            "pelosiValue": 1442243.149103118
           },
           {
             "date": "2025-04-30",
@@ -4003,7 +4092,8 @@
             "deposits": 347204.17000000004,
             "withdrawals": 70000,
             "spyValue": 516767.69046828605,
-            "vfifxValue": 480888.0369114565
+            "vfifxValue": 480888.0369114565,
+            "pelosiValue": 1550411.385285852
           },
           {
             "date": "2025-05-31",
@@ -4012,7 +4102,8 @@
             "deposits": 347204.17000000004,
             "withdrawals": 70000,
             "spyValue": 528136.5796585884,
-            "vfifxValue": 489544.0215758627
+            "vfifxValue": 489544.0215758627,
+            "pelosiValue": 1682196.3530351494
           },
           {
             "date": "2025-06-30",
@@ -4021,12 +4112,13 @@
             "deposits": 347204.17000000004,
             "withdrawals": 70000,
             "spyValue": 538171.1746721015,
-            "vfifxValue": 496887.1818995006
+            "vfifxValue": 496887.1818995006,
+            "pelosiValue": 1842005.0065734885
           }
         ],
         "totalReturn": -127377.89000000001,
         "totalReturnPercent": -23.27793557073124,
-        "annualizedReturn": -6.687575617868157,
+        "annualizedReturn": -6.687420026135971,
         "deposits": 203925.17,
         "withdrawals": 70000,
         "fees": 14594.789999999999,
@@ -7281,12 +7373,12 @@
         "totalInvested": 547204.41,
         "totalGains": -141972.68000000002,
         "totalFeespaid": 14594.789999999999,
-        "yearsInvested": 3.8282668904162547,
-        "annualizedReturn": -6.687575617868157
+        "yearsInvested": 3.8283591150784595,
+        "annualizedReturn": -6.687420026135971
       }
     },
     "Joint LLC": {
-      "lastUpdated": "2025-07-28T06:35:18.008Z",
+      "lastUpdated": "2025-07-28T07:23:48.333Z",
       "accountName": "Joint LLC",
       "account": {
         "accountId": "JOINT_LLC",
@@ -7348,7 +7440,8 @@
             "deposits": 78527.13,
             "withdrawals": 0,
             "spyValue": 78527.13,
-            "vfifxValue": 78527.13
+            "vfifxValue": 78527.13,
+            "pelosiValue": 78527.13
           },
           {
             "date": "2022-01-31",
@@ -7357,7 +7450,8 @@
             "deposits": 78527.13,
             "withdrawals": 0,
             "spyValue": 85425.65984337,
-            "vfifxValue": 83957.75220228001
+            "vfifxValue": 83957.75220228001,
+            "pelosiValue": 89402.27370657
           },
           {
             "date": "2022-02-28",
@@ -7366,7 +7460,8 @@
             "deposits": 78527.13,
             "withdrawals": 500,
             "spyValue": 80983.52553151475,
-            "vfifxValue": 80431.52660978425
+            "vfifxValue": 80431.52660978425,
+            "pelosiValue": 80909.05770444586
           },
           {
             "date": "2022-03-31",
@@ -7375,7 +7470,8 @@
             "deposits": 78527.13,
             "withdrawals": 500,
             "spyValue": 80983.52553151475,
-            "vfifxValue": 80431.52660978425
+            "vfifxValue": 80431.52660978425,
+            "pelosiValue": 80909.05770444586
           },
           {
             "date": "2022-04-30",
@@ -7384,7 +7480,8 @@
             "deposits": 78527.13,
             "withdrawals": 500,
             "spyValue": 83817.94892511776,
-            "vfifxValue": 82683.60935485821
+            "vfifxValue": 82683.60935485821,
+            "pelosiValue": 82931.784147057
           },
           {
             "date": "2022-05-31",
@@ -7393,7 +7490,8 @@
             "deposits": 78527.13,
             "withdrawals": 500,
             "spyValue": 76525.78736863252,
-            "vfifxValue": 76895.75670001813
+            "vfifxValue": 76895.75670001813,
+            "pelosiValue": 75633.78714211598
           },
           {
             "date": "2022-06-30",
@@ -7402,7 +7500,8 @@
             "deposits": 78527.13,
             "withdrawals": 500,
             "spyValue": 76602.31315600114,
-            "vfifxValue": 77049.54821341817
+            "vfifxValue": 77049.54821341817,
+            "pelosiValue": 76541.39258782138
           },
           {
             "date": "2022-07-31",
@@ -7411,7 +7510,8 @@
             "deposits": 78527.13,
             "withdrawals": 500,
             "spyValue": 70320.92347720904,
-            "vfifxValue": 71964.27803133256
+            "vfifxValue": 71964.27803133256,
+            "pelosiValue": 70571.16396597131
           },
           {
             "date": "2022-08-31",
@@ -7420,7 +7520,8 @@
             "deposits": 79527.13,
             "withdrawals": 500,
             "spyValue": 77697.11632646492,
-            "vfifxValue": 78200.99507573708
+            "vfifxValue": 78200.99507573708,
+            "pelosiValue": 78259.48475915984
           },
           {
             "date": "2022-09-30",
@@ -7429,7 +7530,8 @@
             "deposits": 80527.13,
             "withdrawals": 500,
             "spyValue": 75448.46682858367,
-            "vfifxValue": 76571.23726966715
+            "vfifxValue": 76571.23726966715,
+            "pelosiValue": 75915.31608660666
           },
           {
             "date": "2022-10-31",
@@ -7438,7 +7540,8 @@
             "deposits": 81527.13,
             "withdrawals": 500,
             "spyValue": 69281.55698377936,
-            "vfifxValue": 71707.95387851426
+            "vfifxValue": 71707.95387851426,
+            "pelosiValue": 69325.95728809225
           },
           {
             "date": "2022-11-30",
@@ -7447,7 +7550,8 @@
             "deposits": 82527.13,
             "withdrawals": 500,
             "spyValue": 75741.862918356,
-            "vfifxValue": 77233.11413267197
+            "vfifxValue": 77233.11413267197,
+            "pelosiValue": 76421.99011854513
           },
           {
             "date": "2022-12-31",
@@ -7456,7 +7560,8 @@
             "deposits": 83527.13,
             "withdrawals": 500,
             "spyValue": 80875.92473041294,
-            "vfifxValue": 81608.39981350338
+            "vfifxValue": 81608.39981350338,
+            "pelosiValue": 87016.51434415249
           },
           {
             "date": "2023-01-31",
@@ -7465,7 +7570,8 @@
             "deposits": 84527.13,
             "withdrawals": 500,
             "spyValue": 77260.90977337056,
-            "vfifxValue": 78869.0841912348
+            "vfifxValue": 78869.0841912348,
+            "pelosiValue": 82334.50096762052
           },
           {
             "date": "2023-02-28",
@@ -7474,7 +7580,8 @@
             "deposits": 85527.13,
             "withdrawals": 500,
             "spyValue": 83021.79329050759,
-            "vfifxValue": 83792.25388860263
+            "vfifxValue": 83792.25388860263,
+            "pelosiValue": 95388.30237185994
           },
           {
             "date": "2023-03-31",
@@ -7483,7 +7590,8 @@
             "deposits": 86527.13,
             "withdrawals": 500,
             "spyValue": 81892.68789165326,
-            "vfifxValue": 83076.52998888052
+            "vfifxValue": 83076.52998888052,
+            "pelosiValue": 94091.0111073995
           },
           {
             "date": "2023-04-30",
@@ -7492,7 +7600,8 @@
             "deposits": 87527.13,
             "withdrawals": 500,
             "spyValue": 85738.49678143884,
-            "vfifxValue": 86389.67739960451
+            "vfifxValue": 86389.67739960451,
+            "pelosiValue": 102602.34473960997
           },
           {
             "date": "2023-05-31",
@@ -7501,7 +7610,8 @@
             "deposits": 88527.13,
             "withdrawals": 500,
             "spyValue": 88018.83251894171,
-            "vfifxValue": 88425.20215428754
+            "vfifxValue": 88425.20215428754,
+            "pelosiValue": 116746.40194362367
           },
           {
             "date": "2023-06-30",
@@ -7510,7 +7620,8 @@
             "deposits": 89527.13,
             "withdrawals": 500,
             "spyValue": 89458.15625874668,
-            "vfifxValue": 89781.74698329599
+            "vfifxValue": 89781.74698329599,
+            "pelosiValue": 128572.96583409769
           },
           {
             "date": "2023-07-31",
@@ -7519,7 +7630,8 @@
             "deposits": 90527.13,
             "withdrawals": 500,
             "spyValue": 96337.11591529414,
-            "vfifxValue": 95505.38973587906
+            "vfifxValue": 95505.38973587906,
+            "pelosiValue": 138459.69144844246
           },
           {
             "date": "2023-08-31",
@@ -7528,7 +7640,8 @@
             "deposits": 91527.13,
             "withdrawals": 500,
             "spyValue": 100420.73557288873,
-            "vfifxValue": 98974.39118646398
+            "vfifxValue": 98974.39118646398,
+            "pelosiValue": 153288.14584051011
           },
           {
             "date": "2023-09-30",
@@ -7537,7 +7650,8 @@
             "deposits": 95534.12,
             "withdrawals": 500,
             "spyValue": 103140.0077448652,
-            "vfifxValue": 101964.42035050856
+            "vfifxValue": 101964.42035050856,
+            "pelosiValue": 152799.03296362603
           },
           {
             "date": "2023-10-31",
@@ -7546,7 +7660,8 @@
             "deposits": 96534.12,
             "withdrawals": 500,
             "spyValue": 99217.08024306333,
-            "vfifxValue": 99116.52357746391
+            "vfifxValue": 99116.52357746391,
+            "pelosiValue": 145906.5365743142
           },
           {
             "date": "2023-11-30",
@@ -7555,7 +7670,8 @@
             "deposits": 97534.12,
             "withdrawals": 500,
             "spyValue": 98139.73077764177,
-            "vfifxValue": 98440.83910651712
+            "vfifxValue": 98440.83910651712,
+            "pelosiValue": 143732.53732305177
           },
           {
             "date": "2023-12-31",
@@ -7564,7 +7680,8 @@
             "deposits": 98534.12,
             "withdrawals": 500,
             "spyValue": 107969.92865708635,
-            "vfifxValue": 106511.09515947063
+            "vfifxValue": 106511.09515947063,
+            "pelosiValue": 159000.79062733124
           },
           {
             "date": "2024-01-31",
@@ -7573,7 +7690,8 @@
             "deposits": 99534.12,
             "withdrawals": 500,
             "spyValue": 113973.64656970026,
-            "vfifxValue": 111465.36549475252
+            "vfifxValue": 111465.36549475252,
+            "pelosiValue": 167842.10326578718
           },
           {
             "date": "2024-02-29",
@@ -7582,7 +7700,8 @@
             "deposits": 100534.12,
             "withdrawals": 500,
             "spyValue": 116960.61717582929,
-            "vfifxValue": 114048.84447754915
+            "vfifxValue": 114048.84447754915,
+            "pelosiValue": 190719.42786676483
           },
           {
             "date": "2024-03-31",
@@ -7591,7 +7710,8 @@
             "deposits": 101534.12,
             "withdrawals": 500,
             "spyValue": 124384.58193699572,
-            "vfifxValue": 120020.97120468848
+            "vfifxValue": 120020.97120468848,
+            "pelosiValue": 209759.35713031646
           },
           {
             "date": "2024-04-30",
@@ -7600,7 +7720,8 @@
             "deposits": 102534.12,
             "withdrawals": 500,
             "spyValue": 129503.53264146633,
-            "vfifxValue": 124233.12262536504
+            "vfifxValue": 124233.12262536504,
+            "pelosiValue": 219239.14131970616
           },
           {
             "date": "2024-05-31",
@@ -7609,7 +7730,8 @@
             "deposits": 103534.12,
             "withdrawals": 500,
             "spyValue": 125405.13229234862,
-            "vfifxValue": 121305.07302364882
+            "vfifxValue": 121305.07302364882,
+            "pelosiValue": 211415.36734910592
           },
           {
             "date": "2024-06-30",
@@ -7618,7 +7740,8 @@
             "deposits": 104534.12,
             "withdrawals": 500,
             "spyValue": 132693.96286704444,
-            "vfifxValue": 127130.83169437537
+            "vfifxValue": 127130.83169437537,
+            "pelosiValue": 230107.02840744794
           },
           {
             "date": "2024-07-31",
@@ -7627,7 +7750,8 @@
             "deposits": 105534.12,
             "withdrawals": 500,
             "spyValue": 138652.06423991735,
-            "vfifxValue": 131940.71352272882
+            "vfifxValue": 131940.71352272882,
+            "pelosiValue": 254377.57843975307
           },
           {
             "date": "2024-08-31",
@@ -7636,7 +7760,8 @@
             "deposits": 106534.12,
             "withdrawals": 500,
             "spyValue": 141505.50155848064,
-            "vfifxValue": 134389.65045221255
+            "vfifxValue": 134389.65045221255,
+            "pelosiValue": 247800.38214628323
           },
           {
             "date": "2024-09-30",
@@ -7645,7 +7770,8 @@
             "deposits": 107534.12,
             "withdrawals": 500,
             "spyValue": 146261.7765584945,
-            "vfifxValue": 138228.49225823165
+            "vfifxValue": 138228.49225823165,
+            "pelosiValue": 263883.353158606
           },
           {
             "date": "2024-10-31",
@@ -7654,7 +7780,8 @@
             "deposits": 208534.12,
             "withdrawals": 500,
             "spyValue": 270021.67742459493,
-            "vfifxValue": 257871.57998132374
+            "vfifxValue": 257871.57998132374,
+            "pelosiValue": 498938.9950160901
           },
           {
             "date": "2024-11-30",
@@ -7663,7 +7790,8 @@
             "deposits": 179534.12,
             "withdrawals": 30500,
             "spyValue": 230146.14200772054,
-            "vfifxValue": 220234.33482960446
+            "vfifxValue": 220234.33482960446,
+            "pelosiValue": 491838.8249724474
           },
           {
             "date": "2024-12-31",
@@ -7672,7 +7800,8 @@
             "deposits": 180534.12,
             "withdrawals": 30500,
             "spyValue": 244156.59227221314,
-            "vfifxValue": 231205.31937253437
+            "vfifxValue": 231205.31937253437,
+            "pelosiValue": 538595.8268496689
           },
           {
             "date": "2025-01-31",
@@ -7681,7 +7810,8 @@
             "deposits": 181534.12,
             "withdrawals": 30500,
             "spyValue": 251646.72984443835,
-            "vfifxValue": 237135.71304662083
+            "vfifxValue": 237135.71304662083,
+            "pelosiValue": 609276.5699673858
           },
           {
             "date": "2025-02-28",
@@ -7690,7 +7820,8 @@
             "deposits": 182534.12,
             "withdrawals": 30500,
             "spyValue": 261130.00709337342,
-            "vfifxValue": 244641.4923419213
+            "vfifxValue": 244641.4923419213,
+            "pelosiValue": 670832.9540281392
           },
           {
             "date": "2025-03-31",
@@ -7699,7 +7830,8 @@
             "deposits": 183534.12,
             "withdrawals": 30500,
             "spyValue": 257834.49838551544,
-            "vfifxValue": 242537.99869463747
+            "vfifxValue": 242537.99869463747,
+            "pelosiValue": 718351.0880982197
           },
           {
             "date": "2025-04-30",
@@ -7708,7 +7840,8 @@
             "deposits": 184534.12,
             "withdrawals": 30500,
             "spyValue": 266498.03103988763,
-            "vfifxValue": 249224.39463082378
+            "vfifxValue": 249224.39463082378,
+            "pelosiValue": 776434.961168207
           },
           {
             "date": "2025-05-31",
@@ -7717,7 +7850,8 @@
             "deposits": 185534.12,
             "withdrawals": 30500,
             "spyValue": 273836.9260897338,
-            "vfifxValue": 255085.303778451
+            "vfifxValue": 255085.303778451,
+            "pelosiValue": 846997.1153544475
           },
           {
             "date": "2025-06-30",
@@ -7726,12 +7860,13 @@
             "deposits": 186534.12,
             "withdrawals": 30500,
             "spyValue": 280543.80888137943,
-            "vfifxValue": 260307.0764300642
+            "vfifxValue": 260307.0764300642,
+            "pelosiValue": 932460.7161363233
           }
         ],
         "totalReturn": -186014,
         "totalReturnPercent": -99.1894168378533,
-        "annualizedReturn": -73.23635109597015,
+        "annualizedReturn": -73.23546049956316,
         "deposits": 139506.99,
         "withdrawals": 30500,
         "fees": 20664.489999999998,
@@ -10069,8 +10204,8 @@
         "totalInvested": 187534.12,
         "totalGains": -206678.49,
         "totalFeespaid": 20664.489999999998,
-        "yearsInvested": 3.653044528354501,
-        "annualizedReturn": -73.23635109597015
+        "yearsInvested": 3.6531367509886685,
+        "annualizedReturn": -73.23546049956316
       }
     }
   },

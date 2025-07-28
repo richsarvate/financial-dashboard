@@ -177,6 +177,23 @@ export class FinancialCalculator {
   }
 
   /**
+   * Get Nancy Pelosi portfolio value from time series data
+   */
+  static getPelosiValue(timeSeriesData: PerformanceDataPoint[], fallbackPrincipal: number): number {
+    if (!timeSeriesData.length) return this.validateFinancialValue(fallbackPrincipal, 0);
+    
+    const mostRecent = timeSeriesData[timeSeriesData.length - 1];
+    if (!mostRecent) return this.validateFinancialValue(fallbackPrincipal, 0);
+    
+    // Check if pelosiValue exists in the data
+    const pelosiValue = (mostRecent as any).pelosiValue ?? fallbackPrincipal;
+    const validatedValue = this.validateFinancialValue(pelosiValue, fallbackPrincipal);
+    
+    // Pelosi portfolio value should not be negative
+    return Math.max(validatedValue, 0);
+  }
+
+  /**
    * Calculate time period from time series data
    */
   static calculateTimePeriodFromSeries(timeSeriesData: PerformanceDataPoint[]): number {
