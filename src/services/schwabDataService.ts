@@ -9,7 +9,7 @@ export class SchwabDataService {
     try {
       // Add cache-busting timestamp to ensure fresh data
       const timestamp = new Date().getTime()
-      const response = await fetch(`/api/schwab/data?t=${timestamp}`)
+      const response = await fetch(`/api/schwab/multi-account?t=${timestamp}`)
       
       if (!response.ok) {
         throw new Error(`Failed to fetch data: ${response.statusText}`)

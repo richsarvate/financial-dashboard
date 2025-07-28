@@ -66,6 +66,7 @@ export interface PerformanceDataPoint {
 export interface BenchmarkComparison {
   sp500Return: number
   sp500ReturnPercent: number
+  sp500Value: number // What the account would be worth if invested in S&P 500
   outperformance: number
   outperformancePercent: number
   beta: number // Correlation with S&P 500

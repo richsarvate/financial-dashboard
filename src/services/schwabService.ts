@@ -225,6 +225,7 @@ export class SchwabService {
     const benchmarkComparison: BenchmarkComparison = {
       sp500Return,
       sp500ReturnPercent,
+      sp500Value: finalSpyValue,
       outperformance,
       outperformancePercent,
       beta: 0.85, // Mock beta

@@ -9,11 +9,13 @@ interface PerformanceChartProps {
   performanceData: PerformanceData
   showSP500: boolean
   setShowSP500: (show: boolean) => void
+  showVFIFX: boolean
+  setShowVFIFX: (show: boolean) => void
   showWithoutFees: boolean
   setShowWithoutFees: (show: boolean) => void
 }
 
-export default function PerformanceChart({ performanceData, showSP500, setShowSP500, showWithoutFees, setShowWithoutFees }: PerformanceChartProps) {
+export default function PerformanceChart({ performanceData, showSP500, setShowSP500, showVFIFX, setShowVFIFX, showWithoutFees, setShowWithoutFees }: PerformanceChartProps) {
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
@@ -49,18 +51,20 @@ export default function PerformanceChart({ performanceData, showSP500, setShowSP
     }
   }
 
+  // Use the real statement balance from accountValue for each month
   const chartData = performanceData.timeSeriesData.map(point => ({
     date: formatDate(point.date),
     fullDate: formatFullDate(point.date),
     rawDate: point.date,
-    accountValue: point.accountValue,
-    principalInvested: (point.deposits || 0) - (point.withdrawals || 0), // Running total of money you put in
+    accountValue: point.accountValue, // Always use the real statement balance
+    principalInvested: (point as any).principalInvested || ((point.deposits || 0) - (point.withdrawals || 0)),
     deposits: point.deposits || 0,
     withdrawals: point.withdrawals || 0,
     fees: point.fees || 0,
-    gainsMade: point.accountValue - ((point.deposits || 0) - (point.withdrawals || 0)), // Money created by investments
-    largeFees: (point as any).largeFees || [], // Large fees for this period
-    spyValue: point.spyValue || 0, // S&P 500 benchmark value
+    gainsMade: point.accountValue - ((point as any).principalInvested || ((point.deposits || 0) - (point.withdrawals || 0))),
+    largeFees: (point as any).largeFees || [],
+    spyValue: point.spyValue || 0,
+    vfifxValue: (point as any).vfifxValue || 0,
   }))
 
   // Calculate cumulative principal invested over time and S&P 500 alternative
@@ -68,85 +72,32 @@ export default function PerformanceChart({ performanceData, showSP500, setShowSP
   // Initial balance ($78,527) + Monthly contributions (~$31k) + Net Oct 2024 contribution ($70k) = ~$180k
   const initialBalance = performanceData.timeSeriesData[0]?.deposits || 0 // $78,527.13
   
-  // First pass: calculate basic data with cumulative principal, fees, and S&P 500 alternative
-  // Since individual monthly fees are mostly 0 in the data, we'll use the total fees
-  // and distribute them proportionally across the timeline
-  const totalFees = performanceData.fees || 0
-  const totalMonths = chartData.length
-  
-  let cumulativeFees = 0
-  const chartDataWithCumulative = chartData.map((point, index) => {
-    const cumulativePrincipal = point.deposits - point.withdrawals
-    
-    // Distribute total fees proportionally across months
-    // This gives a more realistic view of fee impact over time
-    const monthlyFeeEstimate = totalFees / totalMonths
-    cumulativeFees += monthlyFeeEstimate
-    
-    const accountValueWithoutFees = point.accountValue + cumulativeFees // Add back accumulated fees
-    const isPositive = point.accountValue >= cumulativePrincipal
-    
-    // Debug logging for the last few data points
-    if (index >= chartData.length - 3) {
-      console.log(`Point ${index}:`, {
-        date: point.date,
-        accountValue: point.accountValue,
-        accountValueWithoutFees,
-        monthlyFeeEstimate: monthlyFeeEstimate,
-        cumulativeFees,
-        difference: accountValueWithoutFees - point.accountValue,
-        totalFeesInData: totalFees
-      })
-    }
-    
-    // Calculate what your portfolio would be worth if you had invested the same amounts in S&P 500
-    let sp500Alternative = 0
-    
-    if (index === 0) {
-      // First month - just the initial deposit
-      sp500Alternative = point.deposits
-    } else {
-      // For subsequent months, we need to look at the previously calculated result
-      // We'll calculate this in a second pass to avoid the circular reference
-      sp500Alternative = 0 // Placeholder, will be calculated below
-    }
-    
+  // Only use the real statement balance for accountValue; do not estimate or override
+  const chartDataWithCumulative = chartData.map((point) => {
+    const cumulativePrincipal = point.principalInvested;
+    const accountValueWithoutFees = point.accountValue; // No synthetic fee adjustment
+    const isPositive = point.accountValue >= cumulativePrincipal;
+    let sp500Alternative = point.spyValue || 0;
+    let vfifxAlternative = point.vfifxValue || 0;
     return {
       ...point,
       cumulativePrincipal: Math.max(0, cumulativePrincipal),
-      cumulativeFees,
+      cumulativeFees: 0,
       accountValueWithoutFees,
       gainsMade: point.accountValue - cumulativePrincipal,
       sp500Alternative: Math.max(0, sp500Alternative),
-      sp500Gains: 0, // Will be calculated after sp500Alternative is set
-      isPositive, // Track if account is above or below principal
-      // Create separate values for winning and losing periods
+      sp500Gains: 0,
+      vfifxAlternative: Math.max(0, vfifxAlternative),
+      vfifxGains: 0,
+      isPositive,
       winningValue: isPositive ? point.accountValue : cumulativePrincipal,
       losingValue: !isPositive ? point.accountValue : cumulativePrincipal,
       baseValue: cumulativePrincipal
-    }
-  })
+    };
+  });
   
-  // Second pass: calculate S&P 500 alternative values properly
-  for (let i = 1; i < chartDataWithCumulative.length; i++) {
-    const currentPoint = chartDataWithCumulative[i]
-    const prevPoint = chartDataWithCumulative[i - 1]
-    const currentOriginal = chartData[i]
-    const prevOriginal = chartData[i - 1]
-    
-    const newDeposits = currentOriginal.deposits - prevOriginal.deposits
-    const newWithdrawals = currentOriginal.withdrawals - prevOriginal.withdrawals
-    
-    // Calculate S&P 500 monthly return based on the spyValue growth
-    const sp500MonthlyReturn = prevOriginal.spyValue > 0 
-      ? (currentOriginal.spyValue - prevOriginal.spyValue) / prevOriginal.spyValue 
-      : 0
-    
-    const sp500Alternative = (prevPoint.sp500Alternative + newDeposits - newWithdrawals) * (1 + sp500MonthlyReturn)
-    
-    currentPoint.sp500Alternative = Math.max(0, sp500Alternative)
-    currentPoint.sp500Gains = currentPoint.sp500Alternative - currentPoint.cumulativePrincipal
-  }
+  // S&P 500 values are now properly calculated in the data generation
+  // No need for second pass calculation since we use spyValue from data
 
   // Custom tooltip component
   const CustomTooltip = ({ active, payload, label }: any) => {
@@ -220,6 +171,31 @@ export default function PerformanceChart({ performanceData, showSP500, setShowSP
               </>
             )}
 
+            {showVFIFX && (
+              <>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-600 dark:text-gray-400">VFIFX Alternative:</span>
+                  <span className="font-semibold text-blue-600 dark:text-blue-400">
+                    {formatCurrency(payload?.[0]?.payload?.vfifxAlternative || 0)}
+                  </span>
+                </div>
+                
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-600 dark:text-gray-400">VFIFX Gains:</span>
+                  <span className={`font-semibold ${((payload?.[0]?.payload?.vfifxAlternative || 0) - cumulativePrincipal) >= 0 ? 'text-blue-600 dark:text-blue-400' : 'text-red-600 dark:text-red-400'}`}>
+                    {((payload?.[0]?.payload?.vfifxAlternative || 0) - cumulativePrincipal) >= 0 ? '+' : ''}{formatCurrency((payload?.[0]?.payload?.vfifxAlternative || 0) - cumulativePrincipal)}
+                  </span>
+                </div>
+                
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-600 dark:text-gray-400">vs VFIFX:</span>
+                  <span className={`font-semibold ${(accountValue - (payload?.[0]?.payload?.vfifxAlternative || 0)) >= 0 ? 'text-emerald-600 dark:text-emerald-400' : 'text-red-600 dark:text-red-400'}`}>
+                    {(accountValue - (payload?.[0]?.payload?.vfifxAlternative || 0)) >= 0 ? '+' : ''}{formatCurrency(accountValue - (payload?.[0]?.payload?.vfifxAlternative || 0))}
+                  </span>
+                </div>
+              </>
+            )}
+
             <hr className="border-gray-200 dark:border-gray-600 my-2" />
             
             <div className="flex justify-between items-center text-xs">
@@ -278,18 +254,18 @@ export default function PerformanceChart({ performanceData, showSP500, setShowSP
   const fillColor = isWinning ? 'rgba(34, 197, 94, 0.1)' : 'rgba(239, 68, 68, 0.1)' // Green if winning, red if losing
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 sm:p-6 border border-gray-200 dark:border-gray-700">
       <div className="mb-6">
-        <div className="flex justify-between items-start mb-4">
+        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-4 gap-4">
           <div>
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+            <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2">
               Portfolio Growth vs Principal Investment vs S&P 500 Alternative
             </h3>
-            <p className="text-gray-600 dark:text-gray-400">
+            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
               See how your managed portfolio compares to what you would have earned investing the same amounts directly in S&P 500
             </p>
           </div>
-          <div className="flex items-center ml-4 space-x-6">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
             <label className="flex items-center cursor-pointer">
               <input
                 type="checkbox"
@@ -331,11 +307,16 @@ export default function PerformanceChart({ performanceData, showSP500, setShowSP
         </div>
       </div>
 
-      <div className="h-96">
+      <div className="h-64 sm:h-80 lg:h-96">
         <ResponsiveContainer width="100%" height="100%">
           <ComposedChart 
             data={chartDataWithCumulative} 
-            margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+            margin={{ 
+              top: 20, 
+              right: 10, 
+              left: 10, 
+              bottom: 5 
+            }}
           >
             <CartesianGrid strokeDasharray="3 3" className="opacity-30" />
             <XAxis 
@@ -419,6 +400,19 @@ export default function PerformanceChart({ performanceData, showSP500, setShowSP
                 dot={{ fill: '#8b5cf6', strokeWidth: 2, r: 3 }}
                 activeDot={{ r: 5, stroke: '#8b5cf6', strokeWidth: 2, fill: '#fff' }}
                 name="S&P 500 Alternative"
+              />
+            )}
+
+            {/* VFIFX Alternative Line - Blue */}
+            {showVFIFX && (
+              <Line 
+                type="monotone" 
+                dataKey="vfifxAlternative" 
+                stroke="#2563eb" 
+                strokeWidth={2}
+                dot={{ fill: '#2563eb', strokeWidth: 2, r: 3 }}
+                activeDot={{ r: 5, stroke: '#2563eb', strokeWidth: 2, fill: '#fff' }}
+                name="VFIFX Alternative"
               />
             )}
             

@@ -112,28 +112,46 @@ export default function TransactionHistory({ transactions }: TransactionHistoryP
           displayedTransactions.map((transaction) => (
             <div
               key={transaction.id}
-              className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
+              className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors gap-3 sm:gap-4"
             >
-              <div className="flex items-center space-x-4">
-                <div className="text-2xl">{getTransactionIcon(transaction.type)}</div>
-                <div>
-                  <div className="font-medium text-gray-900 dark:text-white">
+              <div className="flex items-center space-x-3 sm:space-x-4 min-w-0 flex-1">
+                <div className="text-xl sm:text-2xl flex-shrink-0">{getTransactionIcon(transaction.type)}</div>
+                <div className="min-w-0 flex-1">
+                  <div className="font-medium text-gray-900 dark:text-white text-sm sm:text-base truncate">
                     {transaction.description}
                   </div>
-                  <div className="text-sm text-gray-500 dark:text-gray-400">
-                    {formatDate(transaction.date)}
-                    {transaction.symbol && ` • ${transaction.symbol}`}
-                    {transaction.quantity && ` • ${transaction.quantity} shares`}
-                    {transaction.price && ` @ ${formatCurrency(transaction.price)}`}
+                  <div className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-1">
+                    <div className="sm:inline">{formatDate(transaction.date)}</div>
+                    {transaction.symbol && (
+                      <div className="sm:inline">
+                        <span className="hidden sm:inline"> • </span>
+                        <span className="sm:hidden block">{transaction.symbol}</span>
+                        <span className="hidden sm:inline">{transaction.symbol}</span>
+                      </div>
+                    )}
+                    {transaction.quantity && (
+                      <div className="sm:inline">
+                        <span className="hidden sm:inline"> • </span>
+                        <span className="sm:hidden block">{transaction.quantity} shares</span>
+                        <span className="hidden sm:inline">{transaction.quantity} shares</span>
+                      </div>
+                    )}
+                    {transaction.price && (
+                      <div className="sm:inline">
+                        <span className="hidden sm:inline"> @ </span>
+                        <span className="sm:hidden block">@ {formatCurrency(transaction.price)}</span>
+                        <span className="hidden sm:inline">{formatCurrency(transaction.price)}</span>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
-              <div className="text-right">
-                <div className={`font-bold ${getAmountClass(transaction.type, transaction.netAmount)}`}>
+              <div className="text-right flex-shrink-0 sm:ml-4">
+                <div className={`font-bold text-base sm:text-lg ${getAmountClass(transaction.type, transaction.netAmount)}`}>
                   {transaction.netAmount >= 0 ? '+' : ''}{formatCurrency(transaction.netAmount)}
                 </div>
                 {transaction.fees > 0 && (
-                  <div className="text-sm text-red-500">
+                  <div className="text-xs sm:text-sm text-red-500">
                     Fee: {formatCurrency(transaction.fees)}
                   </div>
                 )}
@@ -145,25 +163,25 @@ export default function TransactionHistory({ transactions }: TransactionHistoryP
 
       {/* Pagination */}
       {totalPages > 1 && (
-        <div className="mt-6 flex items-center justify-between">
-          <div className="text-sm text-gray-500 dark:text-gray-400">
+        <div className="mt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div className="text-sm text-gray-500 dark:text-gray-400 text-center sm:text-left">
             Showing {startIndex + 1}-{Math.min(startIndex + itemsPerPage, filteredTransactions.length)} of {filteredTransactions.length} transactions
           </div>
-          <div className="flex space-x-2">
+          <div className="flex justify-center sm:justify-end space-x-2">
             <button
               onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
               disabled={currentPage === 1}
-              className="px-3 py-1 rounded border border-gray-300 dark:border-gray-600 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-3 py-2 rounded border border-gray-300 dark:border-gray-600 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed min-w-[80px]"
             >
               Previous
             </button>
-            <span className="px-3 py-1 text-sm font-medium text-gray-700 dark:text-gray-300">
+            <span className="px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center">
               Page {currentPage} of {totalPages}
             </span>
             <button
               onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}
               disabled={currentPage === totalPages}
-              className="px-3 py-1 rounded border border-gray-300 dark:border-gray-600 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-3 py-2 rounded border border-gray-300 dark:border-gray-600 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed min-w-[80px]"
             >
               Next
             </button>

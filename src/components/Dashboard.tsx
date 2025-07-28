@@ -99,10 +99,10 @@ export default function Dashboard() {
 
   return (
     <div className="space-y-6">
-      <div className="bg-white p-6 rounded-lg shadow">
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-bold">Investment Dashboard</h2>
-          <div className="flex items-center">
+      <div className="bg-white p-4 sm:p-6 rounded-lg shadow">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-6 gap-4">
+          <h2 className="text-xl sm:text-2xl font-bold">Investment Dashboard</h2>
+          <div className="flex items-center justify-center sm:justify-end">
             <label className="flex items-center cursor-pointer">
               <input
                 type="checkbox"
@@ -169,34 +169,34 @@ export default function Dashboard() {
           const sp500Return = ((sp500Value / principalInvested) ** (1/years) - 1) * 100;
 
           return (
-            <div className={`grid grid-cols-1 gap-6 ${
+            <div className={`grid grid-cols-1 gap-4 sm:gap-6 ${
               // Calculate number of columns based on both toggles
-              (showSP500 && showWithoutFees) ? 'md:grid-cols-3' : // S&P on, fees on = 3 cols (actual without fees, with fees, S&P)
+              (showSP500 && showWithoutFees) ? 'lg:grid-cols-3' : // S&P on, fees on = 3 cols (actual without fees, with fees, S&P)
               (showSP500 || showWithoutFees) ? 'md:grid-cols-2' : // Either S&P on OR fees on = 2 cols
               'md:grid-cols-1' // Both S&P off AND fees off = 1 col (just actual with fees)
             }`}>
               {/* Actual Portfolio Column */}
-              <div className="bg-gray-50 p-6 rounded-lg border-4 border-gray-800">
-                <div className="flex items-center gap-2 mb-4">
-                  <h3 className="text-lg font-bold text-gray-900">
+              <div className="bg-gray-50 p-4 sm:p-6 rounded-lg border-4 border-gray-800">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2 mb-4">
+                  <h3 className="text-base sm:text-lg font-bold text-gray-900">
                     Your Actual Portfolio
                   </h3>
-                  <span className="bg-gray-600 text-white text-xs px-2 py-1 rounded-full font-medium">
+                  <span className="bg-gray-600 text-white text-xs px-2 py-1 rounded-full font-medium w-fit">
                     ACTUAL
                   </span>
                 </div>
                 
-                <div className="space-y-4">
+                <div className="space-y-3 sm:space-y-4">
                   <div>
                     <p className="text-sm text-gray-600">Annual Return</p>
-                    <p className="text-2xl font-bold text-blue-600">
+                    <p className="text-xl sm:text-2xl font-bold text-blue-600">
                       {actualAnnualReturn.toFixed(2)}%
                     </p>
                   </div>
                   
                   <div>
                     <p className="text-sm text-gray-600">Current Account Balance</p>
-                    <p className="text-xl font-bold text-gray-900">
+                    <p className="text-lg sm:text-xl font-bold text-gray-900">
                       ${actualPortfolioValue.toLocaleString()}
                     </p>
                     <p className="text-xs text-gray-500">This is your real account value</p>
@@ -311,6 +311,8 @@ export default function Dashboard() {
             setShowSP500={setShowSP500}
             showWithoutFees={showWithoutFees}
             setShowWithoutFees={setShowWithoutFees}
+            showVFIFX={false}
+            setShowVFIFX={() => {}}
           />
         </div>
       )}
