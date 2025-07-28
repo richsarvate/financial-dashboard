@@ -33,6 +33,16 @@ export interface DashboardMetrics {
   pelosiGains: number;
   pelosiReturn: number;
   
+  // QQQ (NASDAQ 100) benchmark metrics
+  qqqValue: number;
+  qqqGains: number;
+  qqqReturn: number;
+  
+  // VTI (Total Stock Market) benchmark metrics
+  vtiValue: number;
+  vtiGains: number;
+  vtiReturn: number;
+  
   // Comparison metrics
   outperformanceAmount: number;
   isOutperforming: boolean;
@@ -115,6 +125,24 @@ export function useDashboardMetrics(
       principalInvested,
       timePeriodYears
     );
+
+    // QQQ (NASDAQ 100) benchmark calculations
+    const qqqValue = FinancialCalculator.getQQQValue(timeSeriesData, principalInvested);
+    const qqqGains = FinancialCalculator.calculateInvestmentGains(qqqValue, principalInvested);
+    const qqqReturn = FinancialCalculator.calculateAnnualizedReturn(
+      qqqValue,
+      principalInvested,
+      timePeriodYears
+    );
+
+    // VTI (Total Stock Market) benchmark calculations
+    const vtiValue = FinancialCalculator.getVTIValue(timeSeriesData, principalInvested);
+    const vtiGains = FinancialCalculator.calculateInvestmentGains(vtiValue, principalInvested);
+    const vtiReturn = FinancialCalculator.calculateAnnualizedReturn(
+      vtiValue,
+      principalInvested,
+      timePeriodYears
+    );
     
     // Comparison calculations
     const outperformanceAmount = Math.abs(actualInvestmentGains - sp500Gains);
@@ -139,6 +167,12 @@ export function useDashboardMetrics(
       pelosiValue,
       pelosiGains,
       pelosiReturn,
+      qqqValue,
+      qqqGains,
+      qqqReturn,
+      vtiValue,
+      vtiGains,
+      vtiReturn,
       outperformanceAmount,
       isOutperforming,
     };

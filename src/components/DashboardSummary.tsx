@@ -86,6 +86,14 @@ export const DashboardSummary: React.FC<DashboardSummaryProps> = ({
           value: metrics.pelosiValue,
           gains: metrics.pelosiGains,
           return: metrics.pelosiReturn
+        } : benchmarkId === 'QQQ' ? {
+          value: metrics.qqqValue,
+          gains: metrics.qqqGains,
+          return: metrics.qqqReturn
+        } : benchmarkId === 'VTI' ? {
+          value: metrics.vtiValue,
+          gains: metrics.vtiGains,
+          return: metrics.vtiReturn
         } : {
           value: metrics.principalInvested,
           gains: 0,

@@ -194,6 +194,38 @@ export class FinancialCalculator {
   }
 
   /**
+   * Get QQQ (NASDAQ 100) portfolio value from time series data
+   * Always uses centralized calculation for consistency with chart
+   */
+  static getQQQValue(timeSeriesData: PerformanceDataPoint[], fallbackPrincipal: number): number {
+    if (!timeSeriesData.length) return this.validateFinancialValue(fallbackPrincipal, 0);
+    
+    // Always use centralized calculation
+    const { calculateBenchmarkPerformance } = require('@/config/benchmarks');
+    const benchmarkResult = calculateBenchmarkPerformance('QQQ', timeSeriesData, fallbackPrincipal);
+    
+    const validatedValue = this.validateFinancialValue(benchmarkResult.value, fallbackPrincipal);
+    
+    return Math.max(validatedValue, 0);
+  }
+
+  /**
+   * Get VTI (Total Stock Market) portfolio value from time series data
+   * Always uses centralized calculation for consistency with chart
+   */
+  static getVTIValue(timeSeriesData: PerformanceDataPoint[], fallbackPrincipal: number): number {
+    if (!timeSeriesData.length) return this.validateFinancialValue(fallbackPrincipal, 0);
+    
+    // Always use centralized calculation
+    const { calculateBenchmarkPerformance } = require('@/config/benchmarks');
+    const benchmarkResult = calculateBenchmarkPerformance('VTI', timeSeriesData, fallbackPrincipal);
+    
+    const validatedValue = this.validateFinancialValue(benchmarkResult.value, fallbackPrincipal);
+    
+    return Math.max(validatedValue, 0);
+  }
+
+  /**
    * Calculate time period from time series data
    */
   static calculateTimePeriodFromSeries(timeSeriesData: PerformanceDataPoint[]): number {

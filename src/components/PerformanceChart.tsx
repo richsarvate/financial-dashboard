@@ -79,21 +79,22 @@ export default function PerformanceChart({ performanceData, activeBenchmarks, sh
     let sp500Alternative = point.spyValue || 0;
     let vfifxAlternative = point.vfifxValue || 0;
     
-    // Use the SAME logic as dashboard for Pelosi calculation
-    let pelosiAlternative = 0;
-    if (index === 0) {
-      pelosiAlternative = cumulativePrincipal; // Start with principal
-    } else {
-      // Use the same approach as FinancialCalculator.getPelosiValue() - full time series up to this point
-      const timeSeriesSlice = performanceData.timeSeriesData.slice(0, index + 1);
-      
-      // Use the same principal calculation as dashboard
-      const principalInvested = FinancialCalculator.calculatePrincipalInvested(timeSeriesSlice);
-      
-      // Use FinancialCalculator.getPelosiValue logic directly for consistency
-      const benchmarkResult = calculateBenchmarkPerformance('PELOSI', timeSeriesSlice, principalInvested);
-      pelosiAlternative = Math.max(benchmarkResult.value, 0);
-    }
+    // Calculate all benchmark alternatives using centralized logic
+    const calculateBenchmarkValue = (benchmarkId: string) => {
+      if (index === 0) {
+        return cumulativePrincipal; // Start with principal
+      } else {
+        const timeSeriesSlice = performanceData.timeSeriesData.slice(0, index + 1);
+        const principalInvested = FinancialCalculator.calculatePrincipalInvested(timeSeriesSlice);
+        const benchmarkResult = calculateBenchmarkPerformance(benchmarkId, timeSeriesSlice, principalInvested);
+        return Math.max(benchmarkResult.value, 0);
+      }
+    };
+    
+    const pelosiAlternative = calculateBenchmarkValue('PELOSI');
+    const qqqAlternative = calculateBenchmarkValue('QQQ');
+    const vtiAlternative = calculateBenchmarkValue('VTI');
+    
     return {
       ...point,
       cumulativePrincipal: Math.max(0, cumulativePrincipal),
@@ -104,8 +105,12 @@ export default function PerformanceChart({ performanceData, activeBenchmarks, sh
       sp500Gains: 0,
       vfifxAlternative: Math.max(0, vfifxAlternative),
       vfifxGains: 0,
-      pelosiAlternative: Math.max(0, pelosiAlternative),
+      pelosiAlternative,
       pelosiGains: 0,
+      qqqAlternative,
+      qqqGains: 0,
+      vtiAlternative, 
+      vtiGains: 0,
       isPositive,
       winningValue: isPositive ? point.accountValue : cumulativePrincipal,
       losingValue: !isPositive ? point.accountValue : cumulativePrincipal,
@@ -145,7 +150,9 @@ export default function PerformanceChart({ performanceData, activeBenchmarks, sh
               const dataKeyMap: Record<string, string> = {
                 'SP500': 'sp500Alternative',
                 'VFIFX': 'vfifxAlternative',
-                'PELOSI': 'pelosiAlternative'
+                'PELOSI': 'pelosiAlternative',
+                'QQQ': 'qqqAlternative',
+                'VTI': 'vtiAlternative'
               };
               
               const dataKey = dataKeyMap[benchmarkId];
@@ -307,7 +314,9 @@ export default function PerformanceChart({ performanceData, activeBenchmarks, sh
               const dataKeyMap: Record<string, string> = {
                 'SP500': 'sp500Alternative',
                 'VFIFX': 'vfifxAlternative',
-                'PELOSI': 'pelosiAlternative'
+                'PELOSI': 'pelosiAlternative',
+                'QQQ': 'qqqAlternative',
+                'VTI': 'vtiAlternative'
               };
               
               const dataKey = dataKeyMap[benchmarkId];
@@ -356,7 +365,9 @@ export default function PerformanceChart({ performanceData, activeBenchmarks, sh
                   const dataKeyMap: Record<string, string> = {
                     'SP500': 'sp500Alternative',
                     'VFIFX': 'vfifxAlternative',
-                    'PELOSI': 'pelosiAlternative'
+                    'PELOSI': 'pelosiAlternative',
+                    'QQQ': 'qqqAlternative',
+                    'VTI': 'vtiAlternative'
                   };
                   
                   const dataKey = dataKeyMap[benchmarkId];
