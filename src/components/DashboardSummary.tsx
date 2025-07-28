@@ -1,5 +1,6 @@
 import React from 'react';
 import { PortfolioCard } from './PortfolioCard';
+import { CompactBenchmarkCard } from './CompactBenchmarkCard';
 import { DashboardMetrics } from '@/hooks/useDashboardMetrics';
 import { BENCHMARK_CONFIGS } from '@/config/benchmarks';
 import { UI_CONSTANTS } from '@/constants/financial';
@@ -69,59 +70,123 @@ export const DashboardSummary: React.FC<DashboardSummaryProps> = ({
       )}
 
       {/* Dynamic Benchmark Cards */}
-      {Array.from(activeBenchmarks).map(benchmarkId => {
-        const config = BENCHMARK_CONFIGS[benchmarkId];
-        if (!config) return null;
-        
-        // Map benchmark metrics dynamically
-        const benchmarkMetrics = benchmarkId === 'SP500' ? {
-          value: metrics.sp500Value,
-          gains: metrics.sp500Gains,
-          return: metrics.sp500Return
-        } : benchmarkId === 'VFIFX' ? {
-          value: metrics.vfifxValue,
-          gains: metrics.vfifxGains,
-          return: metrics.vfifxReturn
-        } : benchmarkId === 'PELOSI' ? {
-          value: metrics.pelosiValue,
-          gains: metrics.pelosiGains,
-          return: metrics.pelosiReturn
-        } : benchmarkId === 'QQQ' ? {
-          value: metrics.qqqValue,
-          gains: metrics.qqqGains,
-          return: metrics.qqqReturn
-        } : benchmarkId === 'VTI' ? {
-          value: metrics.vtiValue,
-          gains: metrics.vtiGains,
-          return: metrics.vtiReturn
-        } : {
-          value: metrics.principalInvested,
-          gains: 0,
-          return: 0
-        };
-        
-        const isOutperforming = metrics.actualInvestmentGains > benchmarkMetrics.gains;
-        
-        return (
-          <PortfolioCard
-            key={benchmarkId}
-            title={`${config.name} Alternative`}
-            badge={config.category}
-            badgeColor={`bg-[${config.color}]`}
-            backgroundColor={config.color + '10'} // Light version
-            borderColor={`border-[${config.color}]`}
-            annualReturn={benchmarkMetrics.return}
-            currentBalance={benchmarkMetrics.value}
-            principalInvested={metrics.principalInvested}
-            investmentGains={benchmarkMetrics.gains}
-            additionalMetric={{
-              label: isOutperforming ? 'Outperformed by' : 'Underperformed by',
-              value: Math.abs(metrics.actualInvestmentGains - benchmarkMetrics.gains),
-              color: isOutperforming ? UI_CONSTANTS.COLORS.SUCCESS : UI_CONSTANTS.COLORS.ERROR,
-            }}
-          />
-        );
-      })}
+      {activeBenchmarks.size > 0 && (
+        <div className="col-span-full">
+          {activeBenchmarks.size >= 4 ? (
+            /* Compact Layout for 4+ benchmarks */
+            <div>
+              <h3 className="text-lg font-bold text-gray-900 mb-4">Benchmark Alternatives</h3>
+              <div className="flex gap-3 overflow-x-auto pb-2">
+                {Array.from(activeBenchmarks).map(benchmarkId => {
+                  const config = BENCHMARK_CONFIGS[benchmarkId];
+                  if (!config) return null;
+                  
+                  // Map benchmark metrics dynamically
+                  const benchmarkMetrics = benchmarkId === 'SP500' ? {
+                    value: metrics.sp500Value,
+                    gains: metrics.sp500Gains,
+                    return: metrics.sp500Return
+                  } : benchmarkId === 'VFIFX' ? {
+                    value: metrics.vfifxValue,
+                    gains: metrics.vfifxGains,
+                    return: metrics.vfifxReturn
+                  } : benchmarkId === 'PELOSI' ? {
+                    value: metrics.pelosiValue,
+                    gains: metrics.pelosiGains,
+                    return: metrics.pelosiReturn
+                  } : benchmarkId === 'QQQ' ? {
+                    value: metrics.qqqValue,
+                    gains: metrics.qqqGains,
+                    return: metrics.qqqReturn
+                  } : benchmarkId === 'VTI' ? {
+                    value: metrics.vtiValue,
+                    gains: metrics.vtiGains,
+                    return: metrics.vtiReturn
+                  } : {
+                    value: metrics.principalInvested,
+                    gains: 0,
+                    return: 0
+                  };
+                  
+                  const isOutperforming = metrics.actualInvestmentGains > benchmarkMetrics.gains;
+                  const outperformanceAmount = Math.abs(metrics.actualInvestmentGains - benchmarkMetrics.gains);
+                  
+                  return (
+                    <CompactBenchmarkCard
+                      key={benchmarkId}
+                      title={`${config.name} Alternative`}
+                      shortName={config.shortName}
+                      color={config.color}
+                      annualReturn={benchmarkMetrics.return}
+                      currentBalance={benchmarkMetrics.value}
+                      investmentGains={benchmarkMetrics.gains}
+                      isOutperforming={isOutperforming}
+                      outperformanceAmount={outperformanceAmount}
+                    />
+                  );
+                })}
+              </div>
+            </div>
+          ) : (
+            /* Regular Layout for 1-3 benchmarks */
+            <div className={`grid gap-6 ${activeBenchmarks.size === 1 ? 'grid-cols-1' : activeBenchmarks.size === 2 ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'}`}>
+              {Array.from(activeBenchmarks).map(benchmarkId => {
+                const config = BENCHMARK_CONFIGS[benchmarkId];
+                if (!config) return null;
+                
+                // Map benchmark metrics dynamically
+                const benchmarkMetrics = benchmarkId === 'SP500' ? {
+                  value: metrics.sp500Value,
+                  gains: metrics.sp500Gains,
+                  return: metrics.sp500Return
+                } : benchmarkId === 'VFIFX' ? {
+                  value: metrics.vfifxValue,
+                  gains: metrics.vfifxGains,
+                  return: metrics.vfifxReturn
+                } : benchmarkId === 'PELOSI' ? {
+                  value: metrics.pelosiValue,
+                  gains: metrics.pelosiGains,
+                  return: metrics.pelosiReturn
+                } : benchmarkId === 'QQQ' ? {
+                  value: metrics.qqqValue,
+                  gains: metrics.qqqGains,
+                  return: metrics.qqqReturn
+                } : benchmarkId === 'VTI' ? {
+                  value: metrics.vtiValue,
+                  gains: metrics.vtiGains,
+                  return: metrics.vtiReturn
+                } : {
+                  value: metrics.principalInvested,
+                  gains: 0,
+                  return: 0
+                };
+                
+                const isOutperforming = metrics.actualInvestmentGains > benchmarkMetrics.gains;
+                
+                return (
+                  <PortfolioCard
+                    key={benchmarkId}
+                    title={`${config.name} Alternative`}
+                    badge={config.category}
+                    badgeColor={`bg-[${config.color}]`}
+                    backgroundColor={config.color + '10'} // Light version
+                    borderColor={`border-[${config.color}]`}
+                    annualReturn={benchmarkMetrics.return}
+                    currentBalance={benchmarkMetrics.value}
+                    principalInvested={metrics.principalInvested}
+                    investmentGains={benchmarkMetrics.gains}
+                    additionalMetric={{
+                      label: isOutperforming ? 'Outperformed by' : 'Underperformed by',
+                      value: Math.abs(metrics.actualInvestmentGains - benchmarkMetrics.gains),
+                      color: isOutperforming ? UI_CONSTANTS.COLORS.SUCCESS : UI_CONSTANTS.COLORS.ERROR,
+                    }}
+                  />
+                );
+              })}
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 };
