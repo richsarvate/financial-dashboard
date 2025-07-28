@@ -17,6 +17,8 @@ interface PortfolioCardProps {
     value: number;
     color?: string;
     isPositive?: boolean;
+    isClickable?: boolean;
+    onClick?: () => void;
   };
 }
 
@@ -99,6 +101,8 @@ interface AdditionalMetricRowProps {
   value: number;
   color?: string;
   isPositive?: boolean;
+  isClickable?: boolean;
+  onClick?: () => void;
 }
 
 const AdditionalMetricRow: React.FC<AdditionalMetricRowProps> = ({
@@ -106,6 +110,8 @@ const AdditionalMetricRow: React.FC<AdditionalMetricRowProps> = ({
   value,
   color,
   isPositive,
+  isClickable,
+  onClick,
 }) => {
   const formatValue = () => {
     if (label.includes('Fee')) {
@@ -115,6 +121,21 @@ const AdditionalMetricRow: React.FC<AdditionalMetricRowProps> = ({
     }
     return FinancialFormatter.formatCurrency(value);
   };
+
+  if (isClickable && onClick) {
+    return (
+      <div>
+        <p className="text-sm text-gray-600">{label}</p>
+        <button
+          onClick={onClick}
+          className={`text-base font-medium hover:underline cursor-pointer transition-colors ${color || UI_CONSTANTS.COLORS.ERROR}`}
+          title={`Click to view ${label.toLowerCase()} details`}
+        >
+          {formatValue()}
+        </button>
+      </div>
+    );
+  }
 
   return (
     <MetricRow

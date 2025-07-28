@@ -1,13 +1,18 @@
 'use client'
 
-import { AccountData, PerformanceData } from '@/types/financial'
+import React, { useState } from 'react'
+import { AccountData, PerformanceData, Transaction } from '@/types/financial'
+import { FeeTransactionModal } from './FeeTransactionModal'
 
 interface AccountSummaryProps {
   accountData: AccountData
   performanceData: PerformanceData
+  transactions?: Transaction[]
 }
 
-export default function AccountSummary({ accountData, performanceData }: AccountSummaryProps) {
+export default function AccountSummary({ accountData, performanceData, transactions = [] }: AccountSummaryProps) {
+  const [showFeeModal, setShowFeeModal] = useState(false);
+
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
@@ -103,7 +108,13 @@ export default function AccountSummary({ accountData, performanceData }: Account
           </div>
           <div>
             <span className="text-gray-500 dark:text-gray-400">Total Fees:</span>
-            <span className="ml-2 font-medium text-red-600">{formatCurrency(performanceData.fees)}</span>
+            <button
+              onClick={() => setShowFeeModal(true)}
+              className="ml-2 font-medium text-red-600 hover:text-red-700 hover:underline cursor-pointer transition-colors"
+              title="Click to view fee transactions"
+            >
+              {formatCurrency(performanceData.fees)}
+            </button>
           </div>
           <div>
             <span className="text-gray-500 dark:text-gray-400">Available Cash:</span>
@@ -111,6 +122,15 @@ export default function AccountSummary({ accountData, performanceData }: Account
           </div>
         </div>
       </div>
+
+      {/* Fee Transaction Modal */}
+      <FeeTransactionModal
+        isOpen={showFeeModal}
+        onClose={() => setShowFeeModal(false)}
+        transactions={transactions}
+        accountName={accountData.accountName || 'Account'}
+        totalFees={performanceData.fees}
+      />
     </div>
   )
 }

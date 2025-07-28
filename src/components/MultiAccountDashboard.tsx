@@ -247,6 +247,8 @@ export default function MultiAccountDashboard() {
                   metrics={dashboardMetrics!}
                   activeBenchmarks={activeBenchmarks}
                   showWithoutFees={showWithoutFees}
+                  transactions={currentAccountData.transactions}
+                  accountName={currentAccountData.accountData?.accountName || activeAccount}
                 />
               </div>
 

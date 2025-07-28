@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { PortfolioCard } from './PortfolioCard';
 import { CompactBenchmarkCard } from './CompactBenchmarkCard';
+import { FeeTransactionModal } from './FeeTransactionModal';
 import { DashboardMetrics } from '@/hooks/useDashboardMetrics';
 import { BENCHMARK_CONFIGS } from '@/config/benchmarks';
 import { UI_CONSTANTS } from '@/constants/financial';
+import { Transaction } from '@/types/financial';
 
 interface DashboardSummaryProps {
   metrics: DashboardMetrics;
   activeBenchmarks: Set<string>;
   showWithoutFees: boolean;
+  transactions?: Transaction[];
+  accountName?: string;
 }
 
 /**
@@ -19,7 +23,11 @@ export const DashboardSummary: React.FC<DashboardSummaryProps> = ({
   metrics,
   activeBenchmarks,
   showWithoutFees,
+  transactions = [],
+  accountName = 'Account'
 }) => {
+  const [showFeeModal, setShowFeeModal] = useState(false);
+  
   const getGridClasses = () => {
     const activeToggleCount = activeBenchmarks.size + (showWithoutFees ? 1 : 0);
     
@@ -45,6 +53,8 @@ export const DashboardSummary: React.FC<DashboardSummaryProps> = ({
           label: 'Total Fees Paid',
           value: metrics.totalFees,
           color: UI_CONSTANTS.COLORS.ERROR,
+          isClickable: true,
+          onClick: () => setShowFeeModal(true),
         }}
       />
 
@@ -187,6 +197,15 @@ export const DashboardSummary: React.FC<DashboardSummaryProps> = ({
           )}
         </div>
       )}
+      
+      {/* Fee Transaction Modal */}
+      <FeeTransactionModal
+        isOpen={showFeeModal}
+        onClose={() => setShowFeeModal(false)}
+        transactions={transactions}
+        accountName={accountName}
+        totalFees={metrics.totalFees}
+      />
     </div>
   );
 };
