@@ -4,7 +4,7 @@ import { PerformanceData } from '@/types/financial'
 import { ComposedChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine, Area, Brush } from 'recharts'
 import { format, parseISO } from 'date-fns'
 import { useState } from 'react'
-import { BENCHMARK_CONFIGS, BENCHMARK_MONTHLY_RETURNS } from '@/config/benchmarks'
+import { BENCHMARK_CONFIGS, calculateBenchmarkPerformance } from '@/config/benchmarks'
 import { FinancialCalculator } from '@/utils/financialCalculations'
 
 interface PerformanceChartProps {
@@ -71,10 +71,6 @@ export default function PerformanceChart({ performanceData, activeBenchmarks, sh
   // Initial balance ($78,527) + Monthly contributions (~$31k) + Net Oct 2024 contribution ($70k) = ~$180k
   const initialBalance = performanceData.timeSeriesData[0]?.deposits || 0 // $78,527.13
   
-  // Calculate progressive Pelosi values for each time point
-  const startDate = performanceData.timeSeriesData[0]?.date || '2021-11-30';
-  let pelosiProgressiveValue = initialBalance; // Start with initial investment
-  
   // Only use the real statement balance for accountValue; do not estimate or override
   const chartDataWithCumulative = chartData.map((point, index) => {
     const cumulativePrincipal = point.principalInvested;
@@ -83,24 +79,20 @@ export default function PerformanceChart({ performanceData, activeBenchmarks, sh
     let sp500Alternative = point.spyValue || 0;
     let vfifxAlternative = point.vfifxValue || 0;
     
-    // Calculate progressive Pelosi value for this specific date
-    let pelosiAlternative = (point as any).pelosiValue || 0;
-    if (pelosiAlternative === 0) {
-      // Calculate Pelosi performance from start date to this point's date
-      if (index === 0) {
-        pelosiAlternative = cumulativePrincipal; // Start with principal
-      } else {
-        // Get the previous month's value and apply this month's return
-        const currentMonth = point.rawDate.substring(0, 7); // YYYY-MM format
-        const monthlyReturn = BENCHMARK_MONTHLY_RETURNS['PELOSI']?.[currentMonth] || 0;
-        const prevPoint = chartData[index - 1];
-        const prevPrincipal = (prevPoint as any).principalInvested || ((prevPoint.deposits || 0) - (prevPoint.withdrawals || 0));
-        const principalChange = cumulativePrincipal - prevPrincipal;
-        
-        // Apply monthly return to previous value, then add any new principal
-        pelosiProgressiveValue = pelosiProgressiveValue * (1 + monthlyReturn) + principalChange;
-        pelosiAlternative = pelosiProgressiveValue;
-      }
+    // Use the SAME logic as dashboard for Pelosi calculation
+    let pelosiAlternative = 0;
+    if (index === 0) {
+      pelosiAlternative = cumulativePrincipal; // Start with principal
+    } else {
+      // Use the same approach as FinancialCalculator.getPelosiValue() - full time series up to this point
+      const timeSeriesSlice = performanceData.timeSeriesData.slice(0, index + 1);
+      
+      // Use the same principal calculation as dashboard
+      const principalInvested = FinancialCalculator.calculatePrincipalInvested(timeSeriesSlice);
+      
+      // Use FinancialCalculator.getPelosiValue logic directly for consistency
+      const benchmarkResult = calculateBenchmarkPerformance('PELOSI', timeSeriesSlice, principalInvested);
+      pelosiAlternative = Math.max(benchmarkResult.value, 0);
     }
     return {
       ...point,
@@ -124,54 +116,27 @@ export default function PerformanceChart({ performanceData, activeBenchmarks, sh
   // S&P 500 values are now properly calculated in the data generation
   // No need for second pass calculation since we use spyValue from data
 
-  // Custom tooltip component
+  // Custom tooltip component - simplified to show just values
   const CustomTooltip = ({ active, payload, label }: any) => {
     if (active && payload && payload.length) {
       const data = payload[0].payload
       const accountValue = showWithoutFees ? data.accountValueWithoutFees : data.accountValue
-      const cumulativePrincipal = data.cumulativePrincipal
-      const gainsMade = accountValue - cumulativePrincipal
-      const deposits = data.deposits
-      const withdrawals = data.withdrawals
-      const monthlyFeeEstimate = (performanceData.fees || 0) / performanceData.timeSeriesData.length
-      const cumulativeFees = data.cumulativeFees
-      const largeFees = data.largeFees || []
-      const sp500Alternative = data.sp500Alternative || 0
-      const sp500Gains = data.sp500Gains || 0
 
       return (
-        <div className="bg-white dark:bg-gray-800 p-4 border border-gray-200 dark:border-gray-600 rounded-lg shadow-lg min-w-[280px]">
-          <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">
+        <div className="bg-white dark:bg-gray-800 p-3 border border-gray-200 dark:border-gray-600 rounded-lg shadow-lg">
+          <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
             {data.fullDate}
           </h4>
           
-          <div className="space-y-2 text-sm">
+          <div className="space-y-1 text-sm">
             <div className="flex justify-between items-center">
-              <span className="text-gray-600 dark:text-gray-400">
-                Account Balance {showWithoutFees ? '(without fees)' : '(with fees)'}:
-              </span>
+              <span className="text-gray-600 dark:text-gray-400">Portfolio:</span>
               <span className="font-semibold text-black dark:text-white">
                 {formatCurrency(accountValue)}
               </span>
             </div>
             
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600 dark:text-gray-400">Principal Invested:</span>
-              <span className="font-semibold text-gray-400 dark:text-gray-500">
-                {formatCurrency(cumulativePrincipal)}
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600 dark:text-gray-400">Investment Gains:</span>
-              <span className={`font-semibold ${gainsMade >= 0 ? 'text-emerald-600 dark:text-emerald-400' : 'text-red-600 dark:text-red-400'}`}>
-                {gainsMade >= 0 ? '+' : ''}{formatCurrency(gainsMade)}
-              </span>
-            </div>
-
-            <hr className="border-gray-200 dark:border-gray-600 my-2" />
-            
-            {/* Dynamic Benchmark Tooltips */}
+            {/* Show active benchmark values */}
             {Array.from(activeBenchmarks).map(benchmarkId => {
               const config = BENCHMARK_CONFIGS[benchmarkId];
               if (!config) return null;
@@ -186,75 +151,17 @@ export default function PerformanceChart({ performanceData, activeBenchmarks, sh
               const dataKey = dataKeyMap[benchmarkId];
               if (!dataKey) return null;
               
-              const alternativeValue = payload?.[0]?.payload?.[dataKey] || 0;
-              const gains = alternativeValue - cumulativePrincipal;
-              const vsPortfolio = accountValue - alternativeValue;
+              const alternativeValue = data[dataKey] || 0;
               
               return (
-                <div key={benchmarkId}>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-600 dark:text-gray-400">{config.name} Alternative:</span>
-                    <span className="font-semibold" style={{ color: config.color }}>
-                      {formatCurrency(alternativeValue)}
-                    </span>
-                  </div>
-                  
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-600 dark:text-gray-400">{config.name} Gains:</span>
-                    <span className={`font-semibold ${gains >= 0 ? 'text-emerald-600 dark:text-emerald-400' : 'text-red-600 dark:text-red-400'}`}>
-                      {gains >= 0 ? '+' : ''}{formatCurrency(gains)}
-                    </span>
-                  </div>
-                  
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-600 dark:text-gray-400">vs {config.name}:</span>
-                    <span className={`font-semibold ${vsPortfolio >= 0 ? 'text-emerald-600 dark:text-emerald-400' : 'text-red-600 dark:text-red-400'}`}>
-                      {vsPortfolio >= 0 ? '+' : ''}{formatCurrency(vsPortfolio)}
-                    </span>
-                  </div>
+                <div key={benchmarkId} className="flex justify-between items-center">
+                  <span className="text-gray-600 dark:text-gray-400">{config.name}:</span>
+                  <span className="font-semibold" style={{ color: config.color }}>
+                    {formatCurrency(alternativeValue)}
+                  </span>
                 </div>
               );
             })}
-
-            <hr className="border-gray-200 dark:border-gray-600 my-2" />
-            
-            <div className="flex justify-between items-center text-xs">
-              <span className="text-gray-500 dark:text-gray-400">Total Fees Paid:</span>
-              <span className="text-red-600 dark:text-red-400">-{formatCurrency(cumulativeFees)}</span>
-            </div>
-            
-            {withdrawals > 0 && (
-              <div className="flex justify-between items-center text-xs">
-                <span className="text-gray-500 dark:text-gray-400">This Period - Withdrawals:</span>
-                <span className="text-red-600 dark:text-red-400">-{formatCurrency(withdrawals)}</span>
-              </div>
-            )}
-            
-            {monthlyFeeEstimate > 0 && (
-              <div className="flex justify-between items-center text-xs">
-                <span className="text-gray-500 dark:text-gray-400">Estimated Monthly Fees:</span>
-                <span className="text-red-600 dark:text-red-400">-{formatCurrency(monthlyFeeEstimate)}</span>
-              </div>
-            )}
-
-            {largeFees.length > 0 && (
-              <>
-                <hr className="border-red-200 dark:border-red-600 my-2" />
-                <div className="text-xs font-medium text-red-700 dark:text-red-400 mb-1">
-                  ⚠️ Large Management Fees:
-                </div>
-                {largeFees.map((fee: any, index: number) => (
-                  <div key={index} className="flex justify-between items-center text-xs">
-                    <span className="text-red-500 dark:text-red-400">
-                      {format(parseISO(fee.date), 'MMM dd')}:
-                    </span>
-                    <span className="font-semibold text-red-600 dark:text-red-400">
-                      -{formatCurrency(fee.amount)}
-                    </span>
-                  </div>
-                ))}
-              </>
-            )}
           </div>
         </div>
       )

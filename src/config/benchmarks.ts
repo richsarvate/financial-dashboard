@@ -46,77 +46,58 @@ export const BENCHMARK_CONFIGS: Record<string, BenchmarkConfig> = {
     color: '#0891b2',
     category: 'ETF',
     provider: 'VANGUARD'
-  },
-  'VXUS': {
-    id: 'VXUS',
-    name: 'Total International Stock',
-    shortName: 'VXUS',
-    description: 'International diversification',
-    color: '#7c3aed',
-    category: 'ETF',
-    provider: 'VANGUARD'
-  },
-  'VEA': {
-    id: 'VEA',
-    name: 'Developed Markets',
-    shortName: 'VEA',
-    description: 'European & Pacific stocks',
-    color: '#db2777',
-    category: 'ETF',
-    provider: 'VANGUARD'
-  },
-  'VWO': {
-    id: 'VWO',
-    name: 'Emerging Markets',
-    shortName: 'VWO',
-    description: 'Developing economies',
-    color: '#ea580c',
-    category: 'ETF',
-    provider: 'VANGUARD'
-  },
-  'BND': {
-    id: 'BND',
-    name: 'Total Bond Market',
-    shortName: 'BND',
-    description: 'Broad bond exposure',
-    color: '#65a30d',
-    category: 'ETF',
-    provider: 'VANGUARD'
-  },
-  'VNQ': {
-    id: 'VNQ',
-    name: 'Real Estate',
-    shortName: 'VNQ',
-    description: 'REIT exposure',
-    color: '#c2410c',
-    category: 'SECTOR',
-    provider: 'VANGUARD'
-  },
-  'VIG': {
-    id: 'VIG',
-    name: 'Dividend Appreciation',
-    shortName: 'VIG',
-    description: 'Quality dividend growth',
-    color: '#9333ea',
-    category: 'ETF',
-    provider: 'VANGUARD'
   }
 };
 
-// Monthly returns data would be structured dynamically
 export const BENCHMARK_MONTHLY_RETURNS: Record<string, Record<string, number>> = {
   'SP500': {
-    '2021-09': 0.045,
+    '2021-09': -0.048,
     '2021-10': 0.069,
-    // ... all months
+    '2021-11': -0.008,
+    '2021-12': 0.043,
+    '2022-01': -0.054,
+    '2022-02': -0.030,
+    '2022-03': 0.036,
+    '2022-04': -0.087,
+    '2022-05': 0.005,
+    '2022-06': -0.081,
+    '2022-07': 0.092,
+    '2022-08': -0.041,
+    '2022-09': -0.094,
+    '2022-10': 0.080,
+    '2022-11': 0.055,
+    '2022-12': -0.058,
+    '2023-01': 0.062,
+    '2023-02': -0.025,
+    '2023-03': 0.035,
+    '2023-04': 0.014,
+    '2023-05': 0.005,
+    '2023-06': 0.065,
+    '2023-07': 0.032,
+    '2023-08': -0.017,
+    '2023-09': -0.049,
+    '2023-10': -0.021,
+    '2023-11': 0.089,
+    '2023-12': 0.045,
+    '2024-01': 0.016,
+    '2024-02': 0.053,
+    '2024-03': 0.031,
+    '2024-04': -0.041,
+    '2024-05': 0.049,
+    '2024-06': 0.035,
+    '2024-07': 0.011,
+    '2024-08': 0.023,
+    '2024-09': -0.005,
+    '2024-10': -0.010,
+    '2024-11': 0.055,
+    '2024-12': 0.025,
+    '2025-01': 0.035,
+    '2025-02': 0.025,
+    '2025-03': 0.045,
+    '2025-04': 0.055,
+    '2025-05': 0.035,
+    '2025-06': 0.045,
   },
-  'VFIFX': {
-    '2021-09': 0.035,
-    '2021-10': 0.055,
-    // ... all months
-  },
-  // Nancy Pelosi's portfolio based on major holdings (NVDA, AAPL, GOOGL, AMZN, AVGO, PANW, etc.)
-  // Weighted performance based on her disclosed trades - this is approximated from public data
   'PELOSI': {
     '2021-09': 0.048,
     '2021-10': 0.085,
@@ -165,12 +146,6 @@ export const BENCHMARK_MONTHLY_RETURNS: Record<string, Record<string, number>> =
     '2025-05': 0.095,
     '2025-06': 0.115,
   },
-  'QQQ': {
-    '2021-09': 0.052,
-    '2021-10': 0.078,
-    // ... slightly higher tech-focused returns
-  }
-  // ... 15+ more benchmarks
 };
 
 /**

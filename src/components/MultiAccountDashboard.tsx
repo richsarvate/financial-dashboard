@@ -235,20 +235,10 @@ export default function MultiAccountDashboard() {
               <>
               {/* Dashboard Header & Summary */}
               <div className={CARD_STYLES}>
-                <div className="flex flex-col xl:flex-row xl:justify-between xl:items-start mb-8 gap-6">
+                <div className="mb-8">
                   <div className="flex-1">
                     <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">{activeAccount} Dashboard</h2>
                     <p className="text-gray-600 text-lg">Compare your portfolio performance against market benchmarks</p>
-                  </div>
-                  
-                  {/* Dynamic Benchmark Selector */}
-                  <div className="flex-shrink-0 xl:max-w-md w-full">
-                    <BenchmarkSelector
-                      benchmarks={BENCHMARK_CONFIGS}
-                      activeBenchmarks={activeBenchmarks}
-                      onToggleBenchmark={toggleBenchmark}
-                      maxActive={4}
-                    />
                   </div>
                 </div>
                 
@@ -262,10 +252,23 @@ export default function MultiAccountDashboard() {
 
               {/* Performance Chart */}
               <div className={CARD_STYLES}>
-                <div className="mb-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Performance Over Time</h3>
-                  <p className="text-gray-600">Track your portfolio growth compared to benchmark investments</p>
+                <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-6 gap-4">
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Performance Over Time</h3>
+                    <p className="text-gray-600">Track your portfolio growth compared to benchmark investments</p>
+                  </div>
+                  
+                  {/* Benchmark Selector - moved here from dashboard header */}
+                  <div className="flex-shrink-0 lg:max-w-md w-full">
+                    <BenchmarkSelector
+                      benchmarks={BENCHMARK_CONFIGS}
+                      activeBenchmarks={activeBenchmarks}
+                      onToggleBenchmark={toggleBenchmark}
+                      maxActive={4}
+                    />
+                  </div>
                 </div>
+                
                 <PerformanceChart 
                   performanceData={currentAccountData.performanceData!}
                   activeBenchmarks={activeBenchmarks}

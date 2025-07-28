@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2025-07-28T07:23:48.333Z",
+  "lastUpdated": "2025-07-28T16:23:20.108Z",
   "accounts": {
     "Contributory IRA": {
-      "lastUpdated": "2025-07-28T07:23:42.792Z",
+      "lastUpdated": "2025-07-28T16:23:13.745Z",
       "accountName": "Contributory IRA",
       "account": {
         "accountId": "CONTRIBUTORY_IRA",
@@ -508,7 +508,7 @@
         ],
         "totalReturn": -415532.63999999996,
         "totalReturnPercent": -99.98216583387624,
-        "annualizedReturn": -89.40797476872481,
+        "annualizedReturn": -89.40163019894317,
         "deposits": 4359.29,
         "withdrawals": 0,
         "fees": 13324.249999999998,
@@ -3583,12 +3583,12 @@
         "totalInvested": 415606.75999999995,
         "totalGains": -428856.88999999996,
         "totalFeespaid": 13324.249999999998,
-        "yearsInvested": 3.844786130504221,
-        "annualizedReturn": -89.40797476872481
+        "yearsInvested": 3.8458119041055085,
+        "annualizedReturn": -89.40163019894317
       }
     },
     "General Investment Account": {
-      "lastUpdated": "2025-07-28T07:23:45.610Z",
+      "lastUpdated": "2025-07-28T16:23:17.018Z",
       "accountName": "General Investment Account",
       "account": {
         "accountId": "GENERAL_INVESTMENT_ACCOUNT",
@@ -4118,7 +4118,7 @@
         ],
         "totalReturn": -127377.89000000001,
         "totalReturnPercent": -23.27793557073124,
-        "annualizedReturn": -6.687420026135971,
+        "annualizedReturn": -6.6856899125109726,
         "deposits": 203925.17,
         "withdrawals": 70000,
         "fees": 14594.789999999999,
@@ -7373,12 +7373,12 @@
         "totalInvested": 547204.41,
         "totalGains": -141972.68000000002,
         "totalFeespaid": 14594.789999999999,
-        "yearsInvested": 3.8283591150784595,
-        "annualizedReturn": -6.687420026135971
+        "yearsInvested": 3.8293849030661393,
+        "annualizedReturn": -6.6856899125109726
       }
     },
     "Joint LLC": {
-      "lastUpdated": "2025-07-28T07:23:48.333Z",
+      "lastUpdated": "2025-07-28T16:23:20.108Z",
       "accountName": "Joint LLC",
       "account": {
         "accountId": "JOINT_LLC",
@@ -7866,7 +7866,7 @@
         ],
         "totalReturn": -186014,
         "totalReturnPercent": -99.1894168378533,
-        "annualizedReturn": -73.23546049956316,
+        "annualizedReturn": -73.22555535903071,
         "deposits": 139506.99,
         "withdrawals": 30500,
         "fees": 20664.489999999998,
@@ -10204,8 +10204,8 @@
         "totalInvested": 187534.12,
         "totalGains": -206678.49,
         "totalFeespaid": 20664.489999999998,
-        "yearsInvested": 3.6531367509886685,
-        "annualizedReturn": -73.23546049956316
+        "yearsInvested": 3.6541625506375643,
+        "annualizedReturn": -73.22555535903071
       }
     }
   },

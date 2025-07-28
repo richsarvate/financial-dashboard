@@ -178,16 +178,16 @@ export class FinancialCalculator {
 
   /**
    * Get Nancy Pelosi portfolio value from time series data
+   * Always uses centralized calculation for consistency with chart
    */
   static getPelosiValue(timeSeriesData: PerformanceDataPoint[], fallbackPrincipal: number): number {
     if (!timeSeriesData.length) return this.validateFinancialValue(fallbackPrincipal, 0);
     
-    const mostRecent = timeSeriesData[timeSeriesData.length - 1];
-    if (!mostRecent) return this.validateFinancialValue(fallbackPrincipal, 0);
+    // Always use centralized calculation - ignore any stale pelosiValue in data
+    const { calculateBenchmarkPerformance } = require('@/config/benchmarks');
+    const benchmarkResult = calculateBenchmarkPerformance('PELOSI', timeSeriesData, fallbackPrincipal);
     
-    // Check if pelosiValue exists in the data
-    const pelosiValue = (mostRecent as any).pelosiValue ?? fallbackPrincipal;
-    const validatedValue = this.validateFinancialValue(pelosiValue, fallbackPrincipal);
+    const validatedValue = this.validateFinancialValue(benchmarkResult.value, fallbackPrincipal);
     
     // Pelosi portfolio value should not be negative
     return Math.max(validatedValue, 0);
